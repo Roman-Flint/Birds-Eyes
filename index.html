@@ -1,0 +1,2437 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birds-Eyes Drone Services | Drone photos and 4K video in Auckland</title>
+  <meta name="description" content="Aerial photos and 4K video of Auckland homes, lifestyle blocks, roofs and small businesses, from $75. Check whether your address is in the service area, then get a quote.">
+  <meta name="theme-color" content="#17321F">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_NZ">
+  <meta property="og:title" content="Birds-Eyes Drone Services">
+  <meta property="og:description" content="Drone photos and 4K video of Auckland properties, from $75.">
+  <meta property="og:image" content="assets/social-preview.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+  <link rel="preload" as="image" href="assets/video/hero-poster.jpg">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Birds-Eyes Drone Services","description":"Drone photos and 4K video of Auckland homes, lifestyle blocks, roofs and small businesses.","email":"romanflint@icloud.com","priceRange":"$75–$135","areaServed":{"@type":"City","name":"Auckland"},"address":{"@type":"PostalAddress","addressLocality":"Auckland","addressCountry":"NZ"}}
+  </script>
+  <style>
+    /* ======================================================================
+       Birds-Eyes Drone Services
+       Tokens
+       ====================================================================== */
+    :root {
+      --bush: #17321F;
+      --bush-2: #21432B;
+      --bush-3: #2C5638;
+      --canopy: #2E6B3F;
+      --pasture: #8FD16A;
+      --kowhai: #F2C230;
+      --kowhai-hover: #FFD34D;
+      --paper: #F1F3EE;
+      --paper-2: #E5EADF;
+      --white: #FFFFFF;
+      --ink: #15221A;
+      --ink-2: #435047;
+      --ink-3: #5B675F;
+      --line: #D3DAD0;
+      --line-2: #B9C4B6;
+      --good: #1F6B37;  --good-bg: #E3F1DB;  --good-line: #B7D8A6;
+      --warn: #7A5200;  --warn-bg: #FBF0D0;  --warn-line: #E9CF83;
+      --bad: #8F2A1E;   --bad-bg: #F8E4DF;   --bad-line: #E8BDB2;
+      --font: "Barlow", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+      --font-cond: "Barlow Condensed", "Arial Narrow", "Liberation Sans Narrow", "Roboto Condensed", sans-serif;
+      --wrap: 1240px;
+      --gutter: clamp(20px, 4vw, 48px);
+      --header-h: 72px;
+    }
+
+    /* ======================================================================
+       Base
+       ====================================================================== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 400 17px/1.6 var(--font);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body.no-scroll { overflow: hidden; }
+    img, video, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    h1, h2, h3, h4, p, figure, fieldset, dl, dd, blockquote { margin: 0; }
+    ul, ol { margin: 0; padding: 0; }
+    [hidden] { display: none !important; }
+
+    .wrap { width: 100%; max-width: calc(var(--wrap) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+    .visually-hidden {
+      position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+    :focus-visible { outline: 3px solid var(--canopy); outline-offset: 3px; }
+    .on-dark :focus-visible { outline-color: var(--kowhai); }
+
+    .skip {
+      position: absolute; left: 12px; top: -200px; z-index: 300;
+      background: var(--kowhai); color: var(--bush); padding: 10px 16px; border-radius: 6px; font-weight: 600; text-decoration: none;
+    }
+    .skip:focus { top: 12px; }
+
+    /* Type */
+    .h1 { font: 600 clamp(46px, 6.4vw, 94px)/0.94 var(--font-cond); letter-spacing: -0.012em; text-wrap: balance; }
+    .h2 { font: 600 clamp(38px, 4.6vw, 60px)/0.98 var(--font-cond); letter-spacing: -0.008em; text-wrap: balance; }
+    .lede { font-size: clamp(18px, 1.35vw, 20px); line-height: 1.55; color: var(--ink-2); max-width: 58ch; }
+    .on-dark .lede { color: rgba(255, 255, 255, 0.84); }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5em;
+      min-height: 48px; padding: 0.7em 1.35em; border-radius: 7px; border: 2px solid transparent;
+      font-weight: 600; font-size: 16px; line-height: 1.1; text-decoration: none; cursor: pointer;
+      transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+    }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn--go { background: var(--kowhai); color: var(--bush); border-color: #DDAA12; }
+    .btn--go:hover { background: var(--kowhai-hover); }
+    .btn--dark { background: var(--bush); color: #fff; }
+    .btn--dark:hover { background: var(--bush-3); }
+    .btn--ghost { border-color: rgba(255, 255, 255, 0.7); color: #fff; background: rgba(10, 30, 18, 0.18); }
+    .btn--ghost:hover { border-color: #fff; background: rgba(10, 30, 18, 0.35); }
+    .btn--line { border-color: var(--line-2); background: #fff; color: var(--ink); }
+    .btn--line:hover { border-color: var(--ink-3); }
+    .btn--small { min-height: 40px; padding: 0.5em 1em; font-size: 15px; }
+    .btn[disabled] { opacity: .6; cursor: not-allowed; }
+    .linkbtn {
+      display: inline; padding: 0; border: 0; background: none; cursor: pointer;
+      color: var(--canopy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px;
+    }
+    .linkbtn:hover { color: var(--bush); }
+    .linkbtn svg { display: inline-block; width: 16px; height: 16px; vertical-align: -3px; margin-right: 4px; }
+
+    /* ======================================================================
+       Header
+       ====================================================================== */
+    .site-header {
+      position: fixed; inset: 0 0 auto; z-index: 100; height: var(--header-h);
+      color: #fff; transition: background-color .25s ease, color .25s ease, box-shadow .25s ease;
+    }
+    .site-header.is-solid, .site-header.menu-open {
+      background: rgba(241, 243, 238, 0.97); color: var(--bush); box-shadow: 0 1px 0 var(--line);
+    }
+    @supports (backdrop-filter: blur(8px)) {
+      .site-header.is-solid { background: rgba(241, 243, 238, 0.95); backdrop-filter: saturate(1.3) blur(10px); }
+    }
+    .site-header__inner { height: 100%; display: flex; align-items: center; gap: 20px; }
+    .brand { display: inline-flex; color: inherit; border-radius: 4px; }
+    .brand svg { height: 50px; width: auto; fill: currentColor; }
+    .nav { margin-left: auto; display: flex; align-items: center; gap: 28px; }
+    .nav a:not(.btn) {
+      font-weight: 500; font-size: 16px; text-decoration: none; padding: 4px 0;
+      border-bottom: 2px solid transparent; transition: border-color .15s ease;
+    }
+    .nav a:not(.btn):hover { border-bottom-color: currentColor; }
+    .header-actions { display: none; margin-left: auto; align-items: center; gap: 10px; }
+    .menu-btn {
+      display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 8px;
+      border: 1.5px solid currentColor; background: transparent; cursor: pointer; color: inherit;
+    }
+    .menu-btn svg { width: 22px; height: 22px; }
+    .menu-btn .icon-close { display: none; }
+    .menu-btn[aria-expanded="true"] .icon-open { display: none; }
+    .menu-btn[aria-expanded="true"] .icon-close { display: block; }
+    .drawer {
+      position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0; z-index: 99;
+      background: var(--bush); color: #fff; overflow-y: auto; padding: 18px var(--gutter) 40px;
+    }
+    .drawer a {
+      display: block; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14);
+      font: 600 32px/1.1 var(--font-cond); text-decoration: none;
+    }
+    .drawer p { margin-top: 26px; color: rgba(255,255,255,.75); }
+    .drawer p a { display: inline; font: inherit; border: 0; padding: 0; text-decoration: underline; color: #fff; }
+    @media (max-width: 940px) {
+      :root { --header-h: 64px; }
+      .nav { display: none; }
+      .header-actions { display: flex; }
+      .brand svg { height: 42px; }
+    }
+
+    /* ======================================================================
+       Hero
+       ====================================================================== */
+    .hero {
+      position: relative; isolation: isolate; overflow: hidden;
+      min-height: max(600px, min(100svh, 940px));
+      display: grid; grid-template-rows: 1fr auto;
+      color: #fff; background: #183a24;
+    }
+    .hero__media { position: absolute; inset: 0; z-index: -1; background: #1b3d27 url("assets/video/hero-poster.jpg") center / cover no-repeat; }
+    .hero__video { width: 100%; height: 100%; object-fit: cover; }
+    /* the green tint: recolours the footage while keeping its light and shade */
+    .hero__tint { position: absolute; inset: 0; background: #2C8A4B; mix-blend-mode: color; opacity: .66; }
+    .hero__shade {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(7, 24, 13, .66) 0, rgba(7, 24, 13, 0) 24%),
+        linear-gradient(0deg, rgba(7, 24, 13, .9) 0, rgba(7, 24, 13, .42) 42%, rgba(7, 24, 13, 0) 74%),
+        linear-gradient(90deg, rgba(7, 24, 13, .55) 0, rgba(7, 24, 13, 0) 62%);
+    }
+    .hero__content { align-self: end; padding-top: calc(var(--header-h) + 56px); padding-bottom: 30px; }
+    .hero__title { max-width: 11.5em; }
+    .hero__lede { margin-top: 24px; max-width: 45ch; font-size: clamp(18px, 1.45vw, 21px); line-height: 1.5; color: rgba(255, 255, 255, .9); }
+    .hero__actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__foot {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding-bottom: 24px; font-size: 14px; color: rgba(255, 255, 255, .72);
+    }
+    .hero__toggle {
+      display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 6px 14px 6px 10px;
+      border-radius: 999px; border: 1px solid rgba(255, 255, 255, .38); background: rgba(7, 24, 13, .35);
+      color: #fff; font-size: 14px; cursor: pointer;
+    }
+    .hero__toggle:hover { border-color: #fff; }
+    .hero__toggle svg { width: 16px; height: 16px; }
+    .hero__toggle .icon-play { display: none; }
+    .hero__toggle.is-paused .icon-play { display: block; }
+    .hero__toggle.is-paused .icon-pause { display: none; }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero__title, .hero__lede, .hero__actions { animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; }
+      .hero__lede { animation-delay: .12s; }
+      .hero__actions { animation-delay: .24s; }
+      @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    }
+    @media (max-width: 640px) {
+      .hero { min-height: max(560px, 94svh); }
+      .hero__actions .btn { flex: 1 1 auto; }
+      .hero__caption { display: none; }
+      .hero__foot { justify-content: flex-end; }
+    }
+
+    /* ======================================================================
+       Sections
+       ====================================================================== */
+    .section { padding-block: clamp(68px, 9vw, 124px); }
+    .section-head { display: grid; gap: 16px; max-width: 780px; }
+    .section-head--split { max-width: none; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 22px 40px; }
+    .section-head__text { display: grid; gap: 16px; max-width: 700px; flex: 1 1 420px; }
+    .filters { flex: 0 1 auto; }
+
+    /* ======================================================================
+       Photos
+       ====================================================================== */
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter {
+      display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 16px;
+      border-radius: 999px; border: 1.5px solid var(--line-2); background: transparent; cursor: pointer;
+      font-weight: 500; font-size: 15px; color: var(--ink);
+    }
+    .filter:hover { border-color: var(--ink-3); }
+    .filter span { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+    .filter[aria-pressed="true"] { background: var(--bush); border-color: var(--bush); color: #fff; }
+    .filter[aria-pressed="true"] span { color: rgba(255, 255, 255, .75); }
+
+    .gallery {
+      list-style: none; margin-top: 36px;
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-flow: dense; gap: 10px;
+    }
+    .tile { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 5px; background: var(--paper-2); }
+    .tile--lg { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+    .tile--lg.tile--right { grid-column: 3 / span 2; }
+    .tile__btn { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: inherit; }
+    .tile__btn:focus-visible { outline-offset: -4px; outline-color: var(--kowhai); }
+    .tile img { width: 100%; height: 100%; object-fit: cover; transition: filter .2s ease; }
+    .tile__btn:hover img { filter: brightness(1.07) saturate(1.06); }
+    .gallery.is-filtered { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .gallery.is-filtered .tile--lg { grid-column: auto; grid-row: auto; aspect-ratio: 16 / 9; }
+    @media (max-width: 900px) {
+      .gallery, .gallery.is-filtered { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .tile--lg, .tile--lg.tile--right { grid-column: span 2; grid-row: auto; aspect-ratio: 16 / 9; }
+      .gallery.is-filtered .tile--lg { grid-column: auto; }
+    }
+
+    /* Viewer */
+    .viewer {
+      width: 100vw; height: 100vh; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0;
+      background: #0C1A11; color: #fff; overflow: hidden;
+    }
+    .viewer::backdrop { background: rgba(8, 18, 11, .94); }
+    .viewer[open] { display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+    .viewer__frame { position: relative; display: grid; place-items: center; padding: 20px 20px 0; min-height: 0; touch-action: pan-y; }
+    .viewer__img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 4px; user-select: none; }
+    .viewer__bar {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 18px;
+      padding: 16px 20px 20px; max-width: 1240px; width: 100%; margin-inline: auto;
+    }
+    .viewer__caption { font-size: 16px; color: rgba(255, 255, 255, .88); }
+    .viewer__count { font-size: 14px; color: rgba(255, 255, 255, .6); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .viewer__controls { display: flex; gap: 8px; }
+    .viewer__btn {
+      display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
+      border: 1.5px solid rgba(255, 255, 255, .4); background: transparent; color: #fff; cursor: pointer;
+    }
+    .viewer__btn:hover { border-color: #fff; background: rgba(255, 255, 255, .08); }
+    .viewer__btn svg { width: 20px; height: 20px; }
+    .viewer :focus-visible { outline-color: var(--kowhai); }
+    @media (max-width: 640px) {
+      .viewer__bar { grid-template-columns: 1fr auto; }
+      .viewer__caption { grid-column: 1 / -1; }
+    }
+
+    /* ======================================================================
+       Roof checks
+       ====================================================================== */
+    .roof { background: var(--bush); color: #fff; }
+    .roof__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(36px, 6vw, 84px); align-items: center; }
+    .roof__copy { display: grid; gap: 20px; justify-items: start; }
+    .roof__copy > p { color: rgba(255, 255, 255, .84); max-width: 52ch; font-size: 18px; }
+    .roof__list { list-style: none; display: grid; gap: 8px; }
+    .roof__list li { position: relative; padding-left: 22px; color: rgba(255, 255, 255, .9); }
+    .roof__list li::before { content: ""; position: absolute; left: 0; top: .62em; width: 9px; height: 9px; background: var(--pasture); border-radius: 2px; }
+    .roof__price { display: flex; align-items: baseline; gap: 10px; color: rgba(255, 255, 255, .78); }
+    .roof__price strong { font: 600 48px/1 var(--font-cond); color: #fff; }
+    .roof__note { font-size: 14px; color: rgba(255, 255, 255, .62); max-width: 46ch; }
+    .roof__pics { position: relative; }
+    .roof__pic { position: relative; }
+    .roof__pic img { width: 100%; height: auto; border-radius: 6px; }
+    .roof__pic--close { width: 64%; margin: -21% 0 0 auto; }
+    .roof__pic--close img { border: 6px solid var(--bush); border-radius: 12px; }
+    .roof__tag {
+      position: absolute; left: 12px; top: 12px; padding: 4px 10px; border-radius: 5px;
+      background: rgba(7, 24, 13, .78); color: #fff; font-size: 13px; font-weight: 600;
+    }
+    .roof__pic--close .roof__tag { left: 18px; top: 18px; }
+    @media (max-width: 900px) {
+      .roof__grid { grid-template-columns: 1fr; }
+      .roof__pics { order: -1; }
+    }
+
+    /* ======================================================================
+       Prices
+       ====================================================================== */
+    .price-list { list-style: none; margin-top: 40px; border-top: 1px solid var(--line); }
+    .price {
+      display: grid; grid-template-columns: minmax(0, 1fr) 140px 150px; align-items: center; gap: 10px 32px;
+      padding: 26px 0; border-bottom: 1px solid var(--line);
+    }
+    .price__name { font: 600 clamp(25px, 2.4vw, 31px)/1.1 var(--font-cond); }
+    .price__desc { margin-top: 6px; color: var(--ink-2); max-width: 64ch; }
+    .price__amount { font: 600 clamp(38px, 3.8vw, 50px)/1 var(--font-cond); text-align: right; font-variant-numeric: lining-nums; }
+    .price .btn { justify-self: end; }
+    .extras { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 48px; margin-top: 34px; }
+    .extra h3 { font: 600 24px/1.15 var(--font-cond); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+    .extra h3 span { font-size: 22px; color: var(--canopy); }
+    .extra p { margin-top: 6px; color: var(--ink-2); }
+    @media (max-width: 720px) {
+      .price { grid-template-columns: minmax(0, 1fr) auto; gap: 14px 16px; }
+      .price__main { grid-column: 1 / -1; }
+      .price__amount { text-align: left; }
+      .extras { grid-template-columns: 1fr; }
+    }
+
+    /* ======================================================================
+       Service area: an address box, a yes/no answer and a quiet map
+       ====================================================================== */
+    .coverage { background: var(--paper-2); }
+    .areacheck { margin-top: 32px; max-width: 680px; display: grid; gap: 12px; }
+    .areacheck__row { display: flex; gap: 8px; }
+    .areacheck__row .combo { flex: 1; min-width: 0; }
+    .areacheck__row .input { min-height: 54px; font-size: 17px; }
+    .areacheck__row .btn { min-height: 54px; padding-inline: 1.6em; }
+    .verdict {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px;
+      padding: 14px 18px; border-radius: 12px; border: 1px solid var(--line); background: #fff;
+    }
+    .verdict > svg { width: 24px; height: 24px; flex: none; }
+    .verdict__text { font: 600 24px/1.15 var(--font-cond); }
+    .verdict__addr { flex-basis: 100%; padding-left: 36px; font-size: 14px; color: var(--ink-3); }
+    .verdict .btn { margin-left: auto; }
+    .verdict--yes { background: var(--good-bg); border-color: var(--good-line); }
+    .verdict--yes > svg, .verdict--yes .verdict__text { color: var(--good); }
+    .verdict--no { background: var(--bad-bg); border-color: var(--bad-line); }
+    .verdict--no > svg, .verdict--no .verdict__text { color: var(--bad); }
+    .verdict--warn { background: var(--warn-bg); border-color: var(--warn-line); }
+    .verdict--warn > svg, .verdict--warn .verdict__text { color: var(--warn); }
+    .verdict--loading { color: var(--ink-2); }
+    @media (max-width: 560px) {
+      .verdict .btn { order: 2; margin-left: 36px; }
+      .verdict__addr { order: 1; }
+    }
+    .spinner {
+      display: inline-block; width: 18px; height: 18px; border-radius: 50%; flex: none;
+      border: 2.5px solid rgba(23, 50, 31, .2); border-top-color: var(--bush); animation: spin .8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .map {
+      position: relative; z-index: 0; isolation: isolate; margin-top: 22px;
+      height: clamp(380px, 50vw, 580px); border-radius: 16px; overflow: hidden;
+      border: 1px solid var(--line); background: #E6EAE3;
+    }
+    .map__canvas { position: absolute; inset: 0; }
+    .map__fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 32px; text-align: center; color: var(--ink-2); }
+    .map__chip {
+      position: absolute; left: 12px; top: 12px; z-index: 1000; max-width: calc(100% - 80px);
+      padding: 6px 12px; border-radius: 999px; background: #fff; color: var(--ink-2); font-size: 14px;
+      box-shadow: 0 2px 8px rgba(16, 36, 22, .15);
+    }
+    .map__hint {
+      position: absolute; left: 50%; top: 50%; z-index: 1000; transform: translate(-50%, -50%);
+      background: rgba(23, 50, 31, .9); color: #fff; padding: 10px 16px; border-radius: 8px;
+      font-weight: 600; font-size: 15px; pointer-events: none; opacity: 0; transition: opacity .2s ease; white-space: nowrap;
+    }
+    .map__hint.is-on { opacity: 1; }
+    /* Leaflet, quietened down: a pale base map so the green area is the only thing that stands out */
+    .map .leaflet-container { font: 14px/1.4 var(--font); background: #E6EAE3; }
+    .map .leaflet-tile-pane { filter: saturate(.12) brightness(1.07) contrast(.88); opacity: .9; }
+    .map .leaflet-bar { border: 0; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(16, 36, 22, .2); }
+    .map .leaflet-bar a { width: 40px; height: 40px; line-height: 40px; color: var(--bush); font-size: 20px; }
+    .map .leaflet-bar a:hover { background: var(--paper); }
+    .map .leaflet-control-attribution { font-size: 11px; background: rgba(255, 255, 255, .8); padding: 1px 6px; }
+    .map .leaflet-control-attribution a { color: var(--ink-3); }
+    .pin { display: grid; place-items: center; }
+    .pin--you span {
+      width: 24px; height: 24px; border-radius: 50%; background: var(--kowhai); border: 5px solid var(--bush);
+      box-shadow: 0 0 0 3px #fff, 0 6px 14px rgba(0, 0, 0, .3);
+    }
+
+    /* Combobox (address suggestions) */
+    .combo { position: relative; }
+    .combo__list {
+      position: absolute; z-index: 40; left: 0; right: 0; top: calc(100% + 4px); list-style: none;
+      margin: 0; padding: 6px; background: #fff; border: 1px solid var(--line-2); border-radius: 10px;
+      box-shadow: 0 14px 34px rgba(16, 36, 22, .18); max-height: 330px; overflow-y: auto;
+    }
+    .combo__opt { display: grid; gap: 1px; padding: 9px 10px; border-radius: 7px; cursor: pointer; }
+    .combo__opt strong { font-weight: 600; }
+    .combo__opt span { font-size: 14px; color: var(--ink-3); }
+    .combo__opt[aria-selected="true"], .combo__opt:hover { background: #ECF3E7; }
+    .combo__foot { padding: 6px 10px 2px; font-size: 12px; color: var(--ink-3); }
+
+    /* ======================================================================
+       Fields
+       ====================================================================== */
+    .field { display: grid; gap: 7px; margin-bottom: 18px; min-width: 0; }
+    .field__label { font-weight: 600; font-size: 15px; }
+    .field__label small { font-weight: 400; color: var(--ink-3); font-size: 14px; margin-left: 4px; }
+    .input {
+      width: 100%; min-height: 48px; padding: 11px 14px; border-radius: 8px;
+      border: 1.5px solid var(--line-2); background: #fff; color: var(--ink); font-size: 16px; line-height: 1.3;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    .input:hover { border-color: #9AA898; }
+    .input:focus { outline: none; border-color: var(--canopy); box-shadow: 0 0 0 3px rgba(46, 107, 63, .2); }
+    .input::placeholder { color: #87938B; }
+    textarea.input { min-height: 112px; resize: vertical; }
+    .input.is-invalid { border-color: #B0412E; box-shadow: 0 0 0 3px rgba(176, 65, 46, .14); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
+    @media (max-width: 560px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    /* ======================================================================
+       Quote
+       ====================================================================== */
+    .journey { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin: 44px 0 52px; }
+    .journey li { position: relative; padding-top: 36px; }
+    .journey li::before {
+      content: ""; position: absolute; left: 0; top: 0; z-index: 1; width: 22px; height: 22px; border-radius: 50%;
+      background: var(--paper); border: 4px solid var(--bush);
+    }
+    .journey li::after { content: ""; position: absolute; left: 22px; right: -28px; top: 9px; height: 4px; background: var(--bush); }
+    .journey li:last-child::after { display: none; }
+    .journey li:last-child::before { background: var(--kowhai); }
+    .journey h3 { font: 600 24px/1.1 var(--font-cond); }
+    .journey p { margin-top: 6px; color: var(--ink-2); font-size: 16px; max-width: 34ch; }
+    @media (max-width: 860px) {
+      .journey { grid-template-columns: 1fr; gap: 0; }
+      .journey li { padding: 0 0 24px 40px; }
+      .journey li::after { left: 9px; right: auto; top: 22px; bottom: 0; width: 4px; height: auto; }
+    }
+
+    .quote__grid { display: grid; grid-template-columns: minmax(0, 1fr) 370px; gap: 28px; align-items: start; }
+    .qform { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 3.4vw, 40px); }
+    .qstep { position: relative; border: 0; margin: 0; padding: 0 0 36px 58px; min-width: 0; }
+    .qstep::before { content: ""; position: absolute; left: 18px; top: 42px; bottom: 6px; width: 2px; background: var(--line); }
+    .qstep--last::before { display: none; }
+    .qstep__title { float: left; width: 100%; padding: 0; margin: 0 0 18px; font: 600 28px/1.15 var(--font-cond); position: relative; }
+    .qstep__title + * { clear: both; }
+    .qstep__num {
+      position: absolute; left: -58px; top: -2px; width: 38px; height: 38px; border-radius: 50%;
+      display: grid; place-items: center; background: #fff; border: 2px solid var(--bush);
+      font: 700 17px/1 var(--font); color: var(--bush);
+    }
+    .qstep__hint { margin: -10px 0 16px; color: var(--ink-3); font-size: 15px; }
+
+    .choices { display: grid; gap: 10px; }
+    .choices--services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .choice { position: relative; display: block; cursor: pointer; }
+    .choice input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+    .choice__body {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; height: 100%;
+      padding: 14px 16px; border: 1.5px solid var(--line-2); border-radius: 11px; background: #fff;
+      transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
+    }
+    .choice:hover .choice__body { border-color: var(--ink-3); }
+    .choice input:checked + .choice__body { border-color: var(--bush); background: #EEF5E9; box-shadow: inset 0 0 0 1px var(--bush); }
+    .choice input:focus-visible + .choice__body { outline: 3px solid var(--canopy); outline-offset: 2px; }
+    .choice__name { font-weight: 600; line-height: 1.3; }
+    .choice__meta { font-size: 14px; color: var(--ink-3); line-height: 1.35; }
+    .choice__price { grid-column: 2; grid-row: 1 / span 2; align-self: center; font: 600 28px/1 var(--font-cond); }
+    @media (max-width: 560px) { .choices--services { grid-template-columns: 1fr; } }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { position: relative; display: inline-block; }
+    .chip input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+    .chip span {
+      display: inline-flex; align-items: center; gap: 6px; min-height: 42px; padding: 8px 15px;
+      border: 1.5px solid var(--line-2); border-radius: 999px; background: #fff; font-weight: 500; font-size: 15px; white-space: nowrap;
+    }
+    .chip span small { font-size: 13px; color: var(--ink-3); }
+    .chip:hover span { border-color: var(--ink-3); }
+    .chip input:checked + span { background: var(--bush); border-color: var(--bush); color: #fff; }
+    .chip input:checked + span small { color: rgba(255, 255, 255, .78); }
+    .chip input:focus-visible + span { outline: 3px solid var(--canopy); outline-offset: 2px; }
+    .chip input:disabled + span { opacity: .45; }
+    .chip-group { margin-top: 16px; display: grid; gap: 8px; }
+    .chip-group > p { font-weight: 600; font-size: 15px; }
+
+    .switch { position: relative; display: flex; align-items: flex-start; gap: 14px; cursor: pointer; }
+    .switch input { position: absolute; left: 0; top: 0; width: 48px; height: 28px; margin: 0; opacity: 0; cursor: pointer; }
+    .switch__track { flex: none; position: relative; width: 48px; height: 28px; border-radius: 999px; background: #C5CEC1; transition: background-color .15s ease; }
+    .switch__track::after {
+      content: ""; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%;
+      background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .25); transition: transform .15s ease;
+    }
+    .switch input:checked + .switch__track { background: var(--canopy); }
+    .switch input:checked + .switch__track::after { transform: translateX(20px); }
+    .switch input:focus-visible + .switch__track { outline: 3px solid var(--canopy); outline-offset: 2px; }
+    .switch__text strong { display: block; font-weight: 600; line-height: 1.35; }
+    .switch__text small { display: block; margin-top: 2px; color: var(--ink-3); font-size: 14px; }
+    .print-box, .route-box { margin-top: 18px; padding: 18px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); }
+
+    .addr-check { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 2px; font-size: 15px; color: var(--ink-2); }
+    .addr-check svg { width: 18px; height: 18px; flex: none; }
+    .addr-check--yes { color: var(--good); }
+    .addr-check--close, .addr-check--error { color: var(--warn); }
+    .addr-check--no { color: var(--bad); }
+    .addr-check .linkbtn { font-size: 15px; }
+
+    .stop-card { padding: 16px; border-radius: 10px; background: #fff; border: 1px solid var(--line); margin-bottom: 12px; }
+    .stop-card__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+    .stop-card__head strong { font: 600 20px/1.1 var(--font-cond); }
+    .stop-card .field { margin-bottom: 10px; }
+    .stop-card .field:last-child { margin-bottom: 0; }
+    .route-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 16px 0 12px; font-size: 14px; color: var(--ink-3); }
+    .add-stop { width: 100%; border-style: dashed; }
+
+    .qform__submit { width: 100%; min-height: 56px; font-size: 18px; }
+    .qform__fine { margin-top: 14px; font-size: 14px; color: var(--ink-3); max-width: 70ch; }
+    .qform__feedback { margin-top: 10px; font-size: 15px; color: var(--bad); }
+    .trap { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+
+    .estimate {
+      position: sticky; top: calc(var(--header-h) + 20px); display: grid; gap: 14px;
+      background: var(--bush); color: #fff; border-radius: 18px; padding: 26px;
+    }
+    .estimate__title { font: 600 30px/1.05 var(--font-cond); }
+    .estimate__lines { display: grid; }
+    .estimate__lines div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(255, 255, 255, .14); font-size: 15px; }
+    .estimate__lines dt { color: rgba(255, 255, 255, .78); }
+    .estimate__lines dd { margin: 0; font-weight: 600; text-align: right; }
+    .estimate__total { display: flex; align-items: baseline; gap: 8px; }
+    .estimate__total span { font-weight: 600; font-size: 16px; }
+    .estimate__total strong { margin-left: auto; font: 600 58px/1 var(--font-cond); color: var(--kowhai); font-variant-numeric: tabular-nums; }
+    .estimate__total small { color: rgba(255, 255, 255, .7); font-size: 14px; }
+    .estimate__check { padding: 11px 13px; border-radius: 9px; background: rgba(255, 255, 255, .08); font-size: 14px; color: rgba(255, 255, 255, .9); }
+    .estimate__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .estimate__feedback { min-height: 20px; font-size: 14px; color: var(--pasture); }
+    .estimate__fine { font-size: 13px; color: rgba(255, 255, 255, .62); }
+
+    .minibar { display: none; }
+    @media (max-width: 1020px) {
+      .quote__grid { grid-template-columns: 1fr; }
+      .estimate { position: static; }
+      .minibar {
+        position: sticky; bottom: 0; z-index: 20; display: flex; align-items: center; gap: 12px;
+        margin: 6px calc(-1 * clamp(22px, 3.4vw, 40px)) calc(-1 * clamp(22px, 3.4vw, 40px)); padding: 12px clamp(22px, 3.4vw, 40px);
+        background: var(--bush); color: #fff; border-radius: 0 0 17px 17px;
+      }
+      .minibar strong { font: 600 30px/1 var(--font-cond); color: var(--kowhai); }
+      .minibar a { margin-left: auto; color: #fff; font-weight: 600; font-size: 15px; }
+    }
+    @media (max-width: 560px) {
+      .qstep { padding-left: 0; }
+      .qstep::before { display: none; }
+      .qstep__title { padding-left: 50px; }
+      .qstep__num { left: 0; }
+    }
+
+    .quote-success {
+      display: grid; gap: 10px; margin-bottom: 28px; padding: 24px 26px; border-radius: 16px;
+      background: var(--good-bg); border: 1px solid var(--good-line);
+    }
+    .quote-success:focus { outline: none; }
+    .quote-success h3 { font: 600 32px/1.05 var(--font-cond); color: var(--good); }
+    .quote-success p { color: var(--ink-2); max-width: 70ch; }
+    .quote-success .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+
+    /* ======================================================================
+       About
+       ====================================================================== */
+    .about { background: #fff; }
+    .about__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 92px); align-items: center; }
+    .about__photo { width: 100%; height: auto; max-width: 420px; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 72%; border-radius: 10px; background: var(--paper-2); }
+    .about__copy > p { margin-top: 18px; font-size: 18px; line-height: 1.7; color: var(--ink-2); max-width: 60ch; }
+    .about__contact { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-2); }
+    .about__contact a { color: var(--canopy); font-weight: 600; text-underline-offset: 3px; }
+    @media (max-width: 800px) {
+      .about__grid { grid-template-columns: 1fr; }
+      .about__photo { max-width: 300px; }
+    }
+
+    /* ======================================================================
+       Footer
+       ====================================================================== */
+    .footer { background: var(--bush); color: rgba(255, 255, 255, .8); padding: 68px 0 28px; }
+    .footer__grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
+    .footer__logo { width: 220px; height: auto; }
+    .footer__about p { margin-top: 18px; max-width: 38ch; }
+    .footer h2 { font: 600 22px/1.1 var(--font-cond); color: #fff; margin-bottom: 12px; }
+    .footer ul { list-style: none; display: grid; gap: 6px; }
+    .footer a { color: #fff; text-underline-offset: 3px; }
+    .footer__base {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px;
+      margin-top: 52px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, .14); font-size: 14px; color: rgba(255, 255, 255, .62);
+    }
+    @media (max-width: 760px) { .footer__grid { grid-template-columns: 1fr; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      .spinner { animation: spin 1.6s linear infinite !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="logo-compact" viewBox="4.8 16.7 920.8 385.3"><path d="M130.8 322.8C130.8 306.0 119.4 291.2 95.80000000000001 288.2C115.0 284.4 125.4 272.0 125.4 257.2C125.4 239.39999999999998 111.4 222.79999999999998 82.4 222.79999999999998H6.800000000000001V232.2H25.6V350.6H6.800000000000001V360.0H87.60000000000001C117.0 360.0 130.8 342.2 130.8 322.8ZM97.0 257.2C97.0 272.0 91.4 285.0 75.2 285.0H51.800000000000004V232.2H79.80000000000001C83.4 232.2 97.0 232.2 97.0 257.2ZM101.4 322.4C101.4 331.0 99.60000000000001 337.2 97.0 341.6C91.60000000000001 350.6 83.60000000000001 350.6 80.2 350.6H51.800000000000004V292.2H82.2C86.2 292.2 92.60000000000001 292.2 97.2 301.6C101.4 309.6 101.4 320.6 101.4 322.4Z M193.20000000000002 360.0V350.6H180.8V270.0L146.00000000000003 271.6V281.0C157.8 281.0 159.20000000000002 281.0 159.20000000000002 288.8V350.6H145.4V360.0L169.8 359.4ZM183.60000000000002 238.2C183.60000000000002 229.79999999999998 176.60000000000002 222.6 168.00000000000003 222.6C158.60000000000002 222.6 152.20000000000002 230.2 152.20000000000002 238.2C152.20000000000002 246.6 159.20000000000002 253.8 167.8 253.8C177.20000000000002 253.8 183.60000000000002 246.2 183.60000000000002 238.2Z M274.8 286.4C274.8 275.2 263.0 270.0 253.4 270.0C244.20000000000002 270.0 235.8 274.8 231.4 288.2H231.20000000000002V270.0L198.0 271.6V281.0C210.4 281.0 211.8 281.0 211.8 288.8V350.6H198.0V360.0L223.20000000000002 359.4C230.8 359.4 243.60000000000002 359.4 250.8 360.0V350.6H233.4V314.8C233.4 299.8 236.4 277.2 254.20000000000002 277.2C254.20000000000002 277.2 250.4 280.6 250.4 286.4C250.4 294.6 256.8 298.6 262.6 298.6C268.40000000000003 298.6 274.8 294.4 274.8 286.4Z M385.20000000000005 360.0V350.6C372.80000000000007 350.6 371.40000000000003 350.6 371.40000000000003 342.8V221.2L336.00000000000006 222.79999999999998V232.2C348.40000000000003 232.2 349.80000000000007 232.2 349.80000000000007 240.0V277.6C340.80000000000007 270.6 332.6 270.0 327.80000000000007 270.0C304.00000000000006 270.0 284.00000000000006 286.0 284.00000000000006 315.6C284.00000000000006 346.0 303.6 361.2 325.80000000000007 361.2C334.00000000000006 361.2 341.80000000000007 358.6 348.6 353.0V361.2ZM348.6 341.2C344.00000000000006 348.4 336.6 354.0 327.6 354.0C320.20000000000005 354.0 314.40000000000003 349.0 311.8 341.4C309.6 334.6 309.6 322.8 309.6 315.8C309.6 307.8 309.6 297.2 312.00000000000006 290.2C315.00000000000006 282.2 321.6 277.2 329.80000000000007 277.2C336.00000000000006 277.2 343.20000000000005 280.2 348.6 287.8Z M460.6 332.2C460.6 320.4 454.40000000000003 314.2 451.6 311.6C445.0 305.0 437.8 303.6 429.6 302.0C420.20000000000005 300.0 409.40000000000003 298.0 409.40000000000003 288.2C409.40000000000003 276.0 423.40000000000003 275.8 427.20000000000005 275.8C444.8 275.8 445.8 288.6 446.20000000000005 292.8C446.40000000000003 295.8 446.8 296.6 450.8 296.6C455.6 296.6 455.6 295.6 455.6 291.0V275.0C455.6 271.2 455.6 269.4 452.0 269.4C450.40000000000003 269.4 446.40000000000003 271.6 443.8 273.0C440.40000000000003 271.0 434.8 269.4 427.20000000000005 269.4C412.8 269.4 395.20000000000005 274.4 395.20000000000005 295.6C395.20000000000005 305.4 400.6 310.6 403.0 313.0C409.40000000000003 319.4 417.0 321.0 426.20000000000005 322.8C434.20000000000005 324.4 446.40000000000003 326.8 446.40000000000003 339.2C446.40000000000003 351.0 437.40000000000003 354.0 428.40000000000003 354.0C414.0 354.0 408.20000000000005 344.6 404.8 331.4C404.0 328.6 403.8 328.0 400.0 328.0C395.20000000000005 328.0 395.20000000000005 329.2 395.20000000000005 333.8V355.6C395.20000000000005 359.4 395.20000000000005 361.2 398.8 361.2C400.20000000000005 361.2 400.6 361.2 404.20000000000005 358.8C405.20000000000005 358.0 408.0 356.2 409.0 355.6C417.0 361.2 425.40000000000003 361.2 428.40000000000003 361.2C453.0 361.2 460.6 347.2 460.6 332.2Z M524.6 325.2V305.8H471.6V325.2Z M662.4 305.2H653.0C648.8 331.2 644.8 350.6 611.6 350.6H591.0V294.2H595.4C613.6 294.2 614.4 303.0 614.4 317.6H623.8V261.4H614.4C614.4 276.0 613.6 284.8 595.4 284.8H591.0V233.39999999999998H610.8C641.8 233.39999999999998 644.4 249.8 647.4 272.2H656.8L650.6 224.0H543.8V233.39999999999998H562.6V350.6H543.8V360.0H653.2Z M759.2 280.6V271.2C754.2 271.6 748.4000000000001 271.8 743.4000000000001 271.8C737.0 271.8 727.8000000000001 271.4 725.2 271.2V280.6C725.2 280.6 735.6 280.6 735.6 283.0L734.6 285.6L717.6 330.0L698.4000000000001 280.6H709.6V271.2L685.0 271.8L662.6 271.2V280.6H675.0L705.8000000000001 360.0C704.2 364.4 699.4000000000001 377.4 697.0 381.6C691.4000000000001 391.2 684.2 392.8 680.8000000000001 392.8C678.8000000000001 392.8 678.4000000000001 392.6 677.6 392.4C680.6 391.2 685.0 388.2 685.0 381.4C685.0 374.8 680.2 370.0 673.4000000000001 370.0C667.8000000000001 370.0 662.0 373.8 662.0 381.6C662.0 391.0 669.6 400.0 680.6 400.0C695.8000000000001 400.0 705.8000000000001 386.2 709.4000000000001 376.8L744.8000000000001 285.4C746.2 282.0 746.6 280.6 759.2 280.6Z M845.8000000000001 336.6C845.8000000000001 333.0 842.0 333.0 841.0 333.0C837.6 333.0 837.2 334.0 836.2 336.8C831.4000000000001 349.0 819.8000000000001 353.2 811.8000000000001 353.2C789.4000000000001 353.2 789.4000000000001 328.2 789.4000000000001 316.4H839.4000000000001C844.4000000000001 316.4 845.8000000000001 316.2 845.8000000000001 310.6C845.8000000000001 292.8 838.6 269.4 807.6 269.4C781.8000000000001 269.4 763.8000000000001 287.0 763.8000000000001 315.0C763.8000000000001 344.0 783.8000000000001 361.2 810.0 361.2C836.8000000000001 361.2 845.8000000000001 340.8 845.8000000000001 336.6ZM826.8000000000001 309.8H789.4000000000001C789.6 299.6 790.2 276.6 807.8000000000001 276.6C826.8000000000001 276.6 826.8000000000001 305.2 826.8000000000001 309.8Z M923.6 332.2C923.6 320.4 917.4 314.2 914.6 311.6C908.0 305.0 900.8000000000001 303.6 892.6 302.0C883.2 300.0 872.4 298.0 872.4 288.2C872.4 276.0 886.4 275.8 890.2 275.8C907.8000000000001 275.8 908.8000000000001 288.6 909.2 292.8C909.4 295.8 909.8000000000001 296.6 913.8000000000001 296.6C918.6 296.6 918.6 295.6 918.6 291.0V275.0C918.6 271.2 918.6 269.4 915.0 269.4C913.4 269.4 909.4 271.6 906.8000000000001 273.0C903.4 271.0 897.8000000000001 269.4 890.2 269.4C875.8000000000001 269.4 858.2 274.4 858.2 295.6C858.2 305.4 863.6 310.6 866.0 313.0C872.4 319.4 880.0 321.0 889.2 322.8C897.2 324.4 909.4 326.8 909.4 339.2C909.4 351.0 900.4 354.0 891.4 354.0C877.0 354.0 871.2 344.6 867.8000000000001 331.4C867.0 328.6 866.8000000000001 328.0 863.0 328.0C858.2 328.0 858.2 329.2 858.2 333.8V355.6C858.2 359.4 858.2 361.2 861.8000000000001 361.2C863.2 361.2 863.6 361.2 867.2 358.8C868.2 358.0 871.0 356.2 872.0 355.6C880.0 361.2 888.4 361.2 891.4 361.2C916.0 361.2 923.6 347.2 923.6 332.2Z"/><g transform="translate(-3.20 17.20)"><path d="M14.00 207.00 C14.17 206.63 13.19 206.07 15.05 204.76 C16.90 203.46 21.83 201.14 25.11 199.18 C28.40 197.22 31.69 195.21 34.76 193.01 C37.83 190.81 40.81 188.51 43.53 185.99 C46.25 183.46 48.74 180.72 51.09 177.85 C53.44 174.98 55.57 171.90 57.61 168.78 C59.64 165.66 61.53 162.39 63.29 159.13 C65.05 155.87 66.70 152.54 68.17 149.20 C69.64 145.86 70.92 142.53 72.12 139.08 C73.32 135.64 74.31 132.13 75.39 128.53 C76.46 124.92 77.47 121.16 78.58 117.45 C79.69 113.74 80.88 109.93 82.05 106.26 C83.22 102.58 84.36 99.05 85.59 95.39 C86.82 91.72 87.95 88.07 89.42 84.27 C90.89 80.47 92.49 76.47 94.38 72.61 C96.28 68.76 98.49 64.84 100.77 61.16 C103.05 57.48 105.51 53.99 108.08 50.56 C110.65 47.12 113.31 43.80 116.20 40.56 C119.09 37.32 122.15 34.12 125.41 31.13 C128.67 28.14 132.17 25.25 135.74 22.63 C139.31 20.00 143.05 17.59 146.83 15.37 C150.61 13.16 154.48 11.16 158.42 9.33 C162.36 7.50 166.38 5.85 170.48 4.39 C174.59 2.94 178.81 1.65 183.05 0.60 C187.29 -0.46 191.62 -1.30 195.90 -1.95 C200.19 -2.60 204.48 -3.02 208.76 -3.30 C213.04 -3.57 217.31 -3.66 221.59 -3.59 C225.86 -3.51 230.16 -3.27 234.42 -2.85 C238.68 -2.43 242.95 -1.84 247.17 -1.08 C251.39 -0.31 255.58 0.62 259.73 1.72 C263.88 2.83 268.01 4.11 272.06 5.55 C276.11 6.99 280.10 8.60 284.02 10.39 C287.95 12.17 291.82 14.10 295.62 16.27 C299.42 18.45 303.22 20.81 306.83 23.45 C310.44 26.08 314.02 29.01 317.30 32.08 C320.58 35.15 323.67 38.48 326.53 41.88 C329.39 45.28 332.01 48.79 334.45 52.50 C336.90 56.21 339.20 60.21 341.19 64.16 C343.19 68.11 345.09 72.91 346.43 76.22 C347.76 79.53 348.73 82.73 349.19 84.03 Q352.86 95.58 367.89 101.07 L600.00 186.00 L333.87 133.36 Q327.00 132.00 326.03 125.07 L323.14 104.42 C322.58 102.67 320.95 97.32 319.79 93.92 C318.62 90.51 317.46 87.12 316.16 84.01 C314.86 80.89 313.55 78.04 311.98 75.22 C310.41 72.40 308.63 69.72 306.72 67.09 C304.82 64.47 302.71 61.85 300.53 59.48 C298.35 57.11 296.08 54.92 293.65 52.87 C291.21 50.83 288.65 48.99 285.93 47.24 C283.20 45.48 280.28 43.87 277.29 42.37 C274.31 40.87 271.16 39.48 268.00 38.24 C264.85 37.00 261.61 35.88 258.35 34.91 C255.09 33.93 251.78 33.10 248.44 32.40 C245.11 31.70 241.72 31.13 238.33 30.70 C234.94 30.26 231.54 29.96 228.12 29.79 C224.71 29.62 221.27 29.58 217.84 29.66 C214.42 29.75 210.97 29.95 207.58 30.28 C204.20 30.61 200.84 31.06 197.55 31.65 C194.26 32.25 191.03 32.97 187.83 33.86 C184.62 34.74 181.44 35.78 178.31 36.95 C175.17 38.12 172.04 39.44 169.02 40.88 C166.00 42.32 163.02 43.88 160.19 45.56 C157.36 47.25 154.65 49.03 152.05 50.98 C149.46 52.94 147.01 55.02 144.61 57.28 C142.22 59.53 139.91 61.98 137.68 64.53 C135.45 67.08 133.25 69.83 131.23 72.57 C129.21 75.31 127.30 78.09 125.55 80.96 C123.80 83.82 122.31 86.66 120.73 89.75 C119.15 92.84 117.71 96.11 116.09 99.49 C114.47 102.86 112.78 106.51 111.03 109.99 C109.28 113.47 107.42 116.95 105.60 120.37 C103.78 123.78 102.00 127.07 100.12 130.49 C98.23 133.92 96.36 137.43 94.29 140.91 C92.21 144.38 90.02 147.97 87.66 151.35 C85.31 154.73 82.76 158.05 80.16 161.21 C77.56 164.37 74.85 167.36 72.07 170.29 C69.29 173.21 66.43 176.05 63.46 178.77 C60.48 181.48 57.42 184.13 54.22 186.55 C51.02 188.97 47.65 191.23 44.25 193.30 C40.86 195.36 37.33 197.16 33.86 198.97 C30.38 200.78 26.59 202.59 23.40 204.16 C20.20 205.73 16.25 207.92 14.68 208.39 C13.12 208.87 14.11 207.23 14.00 207.00 Z"/><path d="M211.00 93.00 a46.00 46.00 0 1 0 92.00 0 a46.00 46.00 0 1 0 -92.00 0 Z M222.00 93.00 a35.00 35.00 0 1 1 70.00 0 a35.00 35.00 0 1 1 -70.00 0 Z"/><path d="M256.50 80.50 a12.50 12.50 0 1 0 25.00 0 a12.50 12.50 0 1 0 -25.00 0 Z"/></g></symbol>
+    <symbol id="i-bus" viewBox="0 0 24 24"><path d="M6.5 2h11A3.5 3.5 0 0 1 21 5.5V16a2 2 0 0 1-1 1.73V20a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1v-1.5h-9V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2.27A2 2 0 0 1 3 16V5.5A3.5 3.5 0 0 1 6.5 2ZM6 5.5V11h12V5.5H6ZM7.5 13.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" fill="currentColor"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24"><path d="M7.5 2h9A3.5 3.5 0 0 1 20 5.5V15a3 3 0 0 1-2.15 2.88l1.85 2.55a.6.6 0 0 1-.49.95h-1.6a.8.8 0 0 1-.65-.33L15.3 18.5H8.7l-1.66 2.55a.8.8 0 0 1-.65.33H4.8a.6.6 0 0 1-.49-.95l1.84-2.55A3 3 0 0 1 4 15V5.5A3.5 3.5 0 0 1 7.5 2ZM6 6v5h12V6H6Zm2 6.75a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm8 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" fill="currentColor"/></symbol>
+    <symbol id="i-locate" viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm9 3h-2.07A7 7 0 0 0 13 5.07V3h-2v2.07A7 7 0 0 0 5.07 11H3v2h2.07A7 7 0 0 0 11 18.93V21h2v-2.07A7 7 0 0 0 18.93 13H21v-2Zm-9 6a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z" fill="currentColor"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 2 1 21h22L12 2Zm1 16h-2v-2h2v2Zm0-4h-2V9h2v5Z" fill="currentColor"/></symbol>
+    <symbol id="i-cross" viewBox="0 0 24 24"><path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7l-1.4-1.4L9.2 12 2.9 5.7l1.4-1.4 6.3 6.3 6.3-6.3z" fill="currentColor"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4-1.4 1.4L5.2 12 14 3.2z" fill="currentColor"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m8.6 4.6 7.4 7.4-7.4 7.4 1.4 1.4 8.8-8.8L10 3.2z" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zm6.5 0H17v14h-3.5z" fill="currentColor"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.2v13.6L19 12z" fill="currentColor"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" fill="currentColor"/></symbol>
+  </svg>
+
+  <!-- ====================================================================
+       Header
+       ==================================================================== -->
+  <header class="site-header" data-header>
+    <div class="wrap site-header__inner">
+      <a href="#top" class="brand" aria-label="Birds-Eyes Drone Services, back to top">
+        <svg viewBox="4.8 16.7 920.8 385.3" role="img" aria-hidden="true" focusable="false"><use href="#logo-compact"></use></svg>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#portfolio">Photos</a>
+        <a href="#services">Prices</a>
+        <a href="#coverage">Service area</a>
+        <a href="#about">About</a>
+        <a href="#quote" class="btn btn--go btn--small">Get a quote</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#quote" class="btn btn--go btn--small">Get a quote</a>
+        <button type="button" class="menu-btn" aria-expanded="false" aria-controls="drawer" data-menu>
+          <svg class="icon-open" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon-close" aria-hidden="true"><use href="#i-cross"></use></svg>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="drawer on-dark" id="drawer" hidden>
+    <nav aria-label="Mobile">
+      <a href="#portfolio">Photos</a>
+      <a href="#services">Prices</a>
+      <a href="#coverage">Service area</a>
+      <a href="#quote">Get a quote</a>
+      <a href="#about">About</a>
+    </nav>
+    <p>Questions? Email <a href="mailto:romanflint@icloud.com">romanflint@icloud.com</a></p>
+  </div>
+
+  <main id="main">
+    <!-- ==================================================================
+         Hero
+         ================================================================== -->
+    <section class="hero on-dark" id="top" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" data-hero-video>
+          <source src="assets/video/hero-720.mp4" type="video/mp4" media="(max-width: 900px)">
+          <source src="assets/video/hero-1080.mp4" type="video/mp4">
+        </video>
+        <div class="hero__tint"></div>
+        <div class="hero__shade"></div>
+      </div>
+      <div class="wrap hero__content">
+        <h1 class="h1 hero__title" id="hero-title">Drone photos and 4K video of Auckland properties</h1>
+        <p class="hero__lede">Aerial photography for homes, lifestyle blocks, roofs and small businesses around Auckland. Every shoot is planned, flown and edited for your property, from $75.</p>
+        <div class="hero__actions">
+          <a href="#quote" class="btn btn--go">Get a quote</a>
+          <a href="#coverage" class="btn btn--ghost" data-focus-checker>Check your address</a>
+        </div>
+      </div>
+      <div class="wrap hero__foot">
+        <p class="hero__caption">Vineyard rows, filmed on a recent shoot</p>
+        <button type="button" class="hero__toggle" data-video-toggle aria-pressed="false">
+          <svg class="icon-pause" aria-hidden="true"><use href="#i-pause"></use></svg>
+          <svg class="icon-play" aria-hidden="true"><use href="#i-play"></use></svg>
+          <span data-video-label>Pause video</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Photos
+         ================================================================== -->
+    <section class="section" id="portfolio" aria-labelledby="photos-title">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <div class="section-head__text">
+            <h2 class="h2" id="photos-title">Recent shoots</h2>
+            <p class="lede">Homes, lifestyle blocks, glasshouses and roofs from around Auckland. Select a photo to see it full size.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Show photos of">
+            <button type="button" class="filter" aria-pressed="true" data-filter="all">All <span>10</span></button>
+            <button type="button" class="filter" aria-pressed="false" data-filter="homes">Homes <span>3</span></button>
+            <button type="button" class="filter" aria-pressed="false" data-filter="rural">Lifestyle blocks <span>6</span></button>
+            <button type="button" class="filter" aria-pressed="false" data-filter="roofs">Roofs and sheds <span>3</span></button>
+          </div>
+        </div>
+        <ul class="gallery" role="list" data-gallery>
+          <li class="tile tile--lg" data-cats="rural">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/lifestyle-block-wide-1280.jpg" srcset="assets/photos/lifestyle-block-wide-640.jpg 640w, assets/photos/lifestyle-block-wide-1280.jpg 1280w, assets/photos/lifestyle-block-wide-2048.jpg 2048w" sizes="(max-width: 900px) 100vw, (max-width: 1340px) 50vw, 620px" width="1280" height="720" loading="lazy" decoding="async" alt="A lifestyle block from the air: house, olive grove, glasshouses, sheds and vineyard rows" data-base="assets/photos/lifestyle-block-wide" data-caption="A whole lifestyle block: house, olive grove, glasshouses and vines">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+          <li class="tile" data-cats="homes">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/home-pool-angled-1280.jpg" srcset="assets/photos/home-pool-angled-640.jpg 640w, assets/photos/home-pool-angled-1280.jpg 1280w, assets/photos/home-pool-angled-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 420px" width="1280" height="720" loading="lazy" decoding="async" alt="Two-storey weatherboard house with a deck and swimming pool, surrounded by garden" data-base="assets/photos/home-pool-angled" data-caption="House, deck and pool from an angle">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+          <li class="tile" data-cats="rural">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/glasshouse-paddock-1280.jpg" srcset="assets/photos/glasshouse-paddock-640.jpg 640w, assets/photos/glasshouse-paddock-1280.jpg 1280w, assets/photos/glasshouse-paddock-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 420px" width="1280" height="720" loading="lazy" decoding="async" alt="Twin-span glasshouse in a mown paddock, with bush and hills behind" data-base="assets/photos/glasshouse-paddock" data-caption="Glasshouse and paddock from a low angle">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+          <li class="tile" data-cats="roofs">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/roof-closeup-rust-1280.jpg" srcset="assets/photos/roof-closeup-rust-640.jpg 640w, assets/photos/roof-closeup-rust-1280.jpg 1280w, assets/photos/roof-closeup-rust-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 420px" width="1280" height="720" loading="lazy" decoding="async" alt="Close-up of a corrugated iron shed roof showing rust spots along the sheets" data-base="assets/photos/roof-closeup-rust" data-caption="Close pass over a shed roof, showing rust along the sheets">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+          <li class="tile" data-cats="roofs rural">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/shed-roofs-pergola-1280.jpg" srcset="assets/photos/shed-roofs-pergola-640.jpg 640w, assets/photos/shed-roofs-pergola-1280.jpg 1280w, assets/photos/shed-roofs-pergola-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 420px" width="1280" height="720" loading="lazy" decoding="async" alt="Two shed roofs and a grape pergola seen from directly above" data-base="assets/photos/shed-roofs-pergola" data-caption="Shed roofs and a grape pergola from directly above">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+          <li class="tile tile--lg tile--right" data-cats="homes">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/home-pool-overhead-1280.jpg" srcset="assets/photos/home-pool-overhead-640.jpg 640w, assets/photos/home-pool-overhead-1280.jpg 1280w, assets/photos/home-pool-overhead-2048.jpg 2048w" sizes="(max-width: 900px) 100vw, (max-width: 1340px) 50vw, 620px" width="1280" height="720" loading="lazy" decoding="async" alt="House, pool and garden from directly overhead, with the driveway and lawn" data-base="assets/photos/home-pool-overhead" data-caption="The same house from directly overhead">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+          <li class="tile" data-cats="rural roofs">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/packing-shed-vines-1280.jpg" srcset="assets/photos/packing-shed-vines-640.jpg 640w, assets/photos/packing-shed-vines-1280.jpg 1280w, assets/photos/packing-shed-vines-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 420px" width="1280" height="720" loading="lazy" decoding="async" alt="Large shed beside curving vineyard rows, with the house and olive trees to one side" data-base="assets/photos/packing-shed-vines" data-caption="Packing shed and curving vine rows">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+          <li class="tile" data-cats="rural">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/glasshouse-container-1280.jpg" srcset="assets/photos/glasshouse-container-640.jpg 640w, assets/photos/glasshouse-container-1280.jpg 1280w, assets/photos/glasshouse-container-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 420px" width="1280" height="720" loading="lazy" decoding="async" alt="Twin-span glasshouse with a shipping container in the gravel yard" data-base="assets/photos/glasshouse-container" data-caption="Glasshouse and yard">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+          <li class="tile" data-cats="homes">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/home-section-wide-1280.jpg" srcset="assets/photos/home-section-wide-640.jpg 640w, assets/photos/home-section-wide-1280.jpg 1280w, assets/photos/home-section-wide-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 420px" width="1280" height="720" loading="lazy" decoding="async" alt="Wide view of a property with the house, pool, lawn and a separate shed by the road" data-base="assets/photos/home-section-wide" data-caption="The whole section, including the shed by the road">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+          <li class="tile" data-cats="rural">
+            <button type="button" class="tile__btn">
+              <img src="assets/photos/lifestyle-block-overhead-1280.jpg" srcset="assets/photos/lifestyle-block-overhead-640.jpg 640w, assets/photos/lifestyle-block-overhead-1280.jpg 1280w, assets/photos/lifestyle-block-overhead-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 420px" width="1280" height="720" loading="lazy" decoding="async" alt="Top-down view of a house, sheds, glasshouse and vineyard rows on a lifestyle block" data-base="assets/photos/lifestyle-block-overhead" data-caption="Lifestyle block from directly overhead">
+              <span class="visually-hidden">Open full size</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Roof checks
+         ================================================================== -->
+    <section class="section roof on-dark" id="roof-checks" aria-labelledby="roof-title">
+      <div class="wrap roof__grid">
+        <div class="roof__copy">
+          <h2 class="h2" id="roof-title">Roof checks without a ladder</h2>
+          <p>Each roof check starts with an overview of the whole roof, then a close pass over anything worth a look. You get clear photos and video to show a roofer, builder or insurer, and nobody has to climb up.</p>
+          <ul class="roof__list" role="list">
+            <li>Rust, loose or lifted sheets</li>
+            <li>Gutters, valleys and flashings</li>
+            <li>Chimneys, skylights and ridge caps</li>
+            <li>Repeat visits from the same angles to track building progress</li>
+          </ul>
+          <p class="roof__price"><strong>$90</strong> per property</p>
+          <a href="#quote" class="btn btn--go" data-pick-service="roof-survey">Get a quote for a roof check</a>
+          <p class="roof__note">The photos show what’s up there. A qualified roofer or builder can tell you what needs fixing.</p>
+        </div>
+        <div class="roof__pics">
+          <figure class="roof__pic">
+            <img src="assets/photos/shed-roofs-pergola-1280.jpg" srcset="assets/photos/shed-roofs-pergola-640.jpg 640w, assets/photos/shed-roofs-pergola-1280.jpg 1280w, assets/photos/shed-roofs-pergola-2048.jpg 2048w" sizes="(max-width: 900px) 100vw, 680px" width="1280" height="720" loading="lazy" decoding="async" alt="Two shed roofs and a grape pergola seen from directly above">
+            <figcaption class="roof__tag">Overview pass</figcaption>
+          </figure>
+          <figure class="roof__pic roof__pic--close">
+            <img src="assets/photos/roof-closeup-rust-1280.jpg" srcset="assets/photos/roof-closeup-rust-640.jpg 640w, assets/photos/roof-closeup-rust-1280.jpg 1280w" sizes="(max-width: 900px) 64vw, 440px" width="1280" height="720" loading="lazy" decoding="async" alt="Close-up of the corrugated iron shed roof showing rust spots along the sheets">
+            <figcaption class="roof__tag">Close pass: rust along the sheets</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Prices
+         ================================================================== -->
+    <section class="section" id="services" aria-labelledby="prices-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="h2" id="prices-title">Prices</h2>
+          <p class="lede">Fixed prices in NZ dollars for most jobs. Bigger or more complicated commercial work gets a custom quote.</p>
+        </div>
+        <ul class="price-list" role="list">
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">Standard house shoot</h3>
+              <p class="price__desc">High-resolution photos of the house and section, edited and delivered by download link, with web-ready copies for listings.</p>
+            </div>
+            <p class="price__amount">$75</p>
+            <a href="#quote" class="btn btn--line btn--small" data-pick-service="house-photos">Get a quote<span class="visually-hidden"> for a standard house shoot</span></a>
+          </li>
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">House shoot with 4K video</h3>
+              <p class="price__desc">Everything in the house shoot, plus smooth, stabilised 4K video: sweeps, reveals and orbits around the property.</p>
+            </div>
+            <p class="price__amount">$105</p>
+            <a href="#quote" class="btn btn--line btn--small" data-pick-service="house-video">Get a quote<span class="visually-hidden"> for a house shoot with video</span></a>
+          </li>
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">Roof and property overview</h3>
+              <p class="price__desc">Close-range photos and video of the roof, gutters and flashings, so you can see what’s up there without a ladder.</p>
+            </div>
+            <p class="price__amount">$90</p>
+            <a href="#quote" class="btn btn--line btn--small" data-pick-service="roof-survey">Get a quote<span class="visually-hidden"> for a roof and property overview</span></a>
+          </li>
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">Small commercial property</h3>
+              <p class="price__desc">Photos and video for shops, offices, venues and small sites, including repeat visits to record construction progress.</p>
+            </div>
+            <p class="price__amount">$135</p>
+            <a href="#quote" class="btn btn--line btn--small" data-pick-service="commercial-pack">Get a quote<span class="visually-hidden"> for a small commercial property</span></a>
+          </li>
+        </ul>
+        <div class="extras">
+          <div class="extra">
+            <h3>Extra stops on the same trip <span>+$35 each</span></h3>
+            <p>Book up to six nearby properties in one outing. Handy for agents and neighbours.</p>
+          </div>
+          <div class="extra" id="print-delivery">
+            <h3>Prints <span>from $20</span></h3>
+            <p>A3 $20, A2 $32 or A1 $45 in matte. Gloss adds $5, canvas $25 and framed $40. Printed and delivered in 1–2 weeks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Service area
+         ================================================================== -->
+    <section class="section coverage" id="coverage" aria-labelledby="coverage-title">
+      <span id="transit-areas"></span>
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="h2" id="coverage-title">Service area</h2>
+          <p class="lede">Type your address to see if it’s in the service area. The green on the map shows the area covered.</p>
+        </div>
+        <form class="areacheck" data-check-form novalidate>
+          <label class="visually-hidden" for="check-address">Your address</label>
+          <div class="areacheck__row">
+            <div class="combo">
+              <input id="check-address" class="input" type="text" inputmode="search" autocomplete="off" spellcheck="false" placeholder="Type your address">
+              <ul id="check-address-list" class="combo__list" role="listbox" aria-label="Address suggestions" hidden></ul>
+            </div>
+            <button type="submit" class="btn btn--dark">Check</button>
+          </div>
+          <div data-result aria-live="polite"></div>
+        </form>
+        <div class="map" data-map-wrap>
+          <div class="map__canvas" id="coverage-map" role="region" aria-label="Map with the service area shaded green"></div>
+          <p class="map__chip" data-zone-note>Loading the service area…</p>
+          <p class="map__hint" data-map-hint></p>
+          <noscript><div class="map__fallback">The map needs JavaScript. You can still send a quote request below and the address will be checked for you.</div></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Quote
+         ================================================================== -->
+    <section class="section" id="quote" aria-labelledby="quote-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="h2" id="quote-title">Get a quote</h2>
+          <p class="lede">Choose a shoot and add the address. The estimate updates as you go, and nothing is booked or paid for until the details are confirmed with you by email.</p>
+        </div>
+
+        <ol class="journey" role="list" aria-label="How booking works">
+          <li><h3>Send a request</h3><p>Pick a shoot, add the address and choose a day that suits.</p></li>
+          <li><h3>Get a confirmation</h3><p>Once the weather and airspace rules for your area are checked, you get an email confirming the time and price.</p></li>
+          <li><h3>Shoot day</h3><p>The shoot is flown on site, covering the angles you asked for.</p></li>
+          <li><h3>Delivery</h3><p>Photos and video arrive by download link. Prints take 1–2 weeks.</p></li>
+        </ol>
+
+        <div class="quote-success" id="quote-success" tabindex="-1" hidden>
+          <h3>Quote request sent</h3>
+          <p>Thanks. Once the weather and airspace rules for your address are checked, you’ll get an email to confirm. It isn’t a booking until then, and you won’t be asked to pay anything yet.</p>
+          <div class="actions">
+            <button type="button" class="btn btn--line btn--small" data-download-saved hidden>Download a copy of your request</button>
+            <button type="button" class="btn btn--line btn--small" data-dismiss-success>Start another request</button>
+          </div>
+        </div>
+
+        <div class="quote__grid">
+          <form class="qform" id="quote-form" action="https://formsubmit.co/romanflint@icloud.com" method="POST">
+            <input type="hidden" name="_subject" id="form-subject" value="New Birds-Eyes quote request">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" id="form-next" value="">
+            <input type="hidden" name="message" id="form-summary" value="">
+            <input type="hidden" name="booking_type" id="booking-type" value="single">
+            <input type="hidden" name="coverage_check" id="coverage-check" value="Not checked">
+            <input type="hidden" name="map_link" id="map-link" value="">
+
+            <fieldset class="qstep">
+              <legend class="qstep__title"><span class="qstep__num" aria-hidden="true">1</span>What do you need?</legend>
+              <div class="choices choices--services">
+                <label class="choice">
+                  <input type="radio" name="service" value="house-photos" data-price="75" data-label="Standard house shoot — photos" checked>
+                  <span class="choice__body"><span class="choice__name">Standard house shoot</span><span class="choice__meta">Photos</span><span class="choice__price">$75</span></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="service" value="house-video" data-price="105" data-label="House shoot — photos + 4K video">
+                  <span class="choice__body"><span class="choice__name">House shoot with video</span><span class="choice__meta">Photos and 4K video</span><span class="choice__price">$105</span></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="service" value="roof-survey" data-price="90" data-label="Roof / property overview">
+                  <span class="choice__body"><span class="choice__name">Roof and property overview</span><span class="choice__meta">Close-range photos and video</span><span class="choice__price">$90</span></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="service" value="commercial-pack" data-price="135" data-label="Small commercial property shoot">
+                  <span class="choice__body"><span class="choice__name">Small commercial property</span><span class="choice__meta">Photos and video</span><span class="choice__price">$135</span></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="qstep">
+              <legend class="qstep__title"><span class="qstep__num" aria-hidden="true">2</span>Where is it?</legend>
+              <div>
+                <div class="field">
+                  <label class="field__label" for="main-address">Street address</label>
+                  <div class="combo">
+                    <input id="main-address" name="street_address" class="input" type="text" required autocomplete="off" spellcheck="false" placeholder="Street number and name" aria-describedby="main-address-check">
+                    <ul id="main-address-list" class="combo__list" role="listbox" aria-label="Address suggestions" hidden></ul>
+                  </div>
+                  <div class="addr-check" id="main-address-check" data-form-check aria-live="polite">
+                    <button type="button" class="linkbtn" data-form-check-btn>Check it’s in the service area</button>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="location-input">Suburb</label>
+                  <input id="location-input" name="location" class="input" type="text" required list="suburb-list" autocomplete="off" placeholder="For example, Henderson">
+                </div>
+                <div class="route-box">
+                  <label class="switch">
+                    <input type="checkbox" id="route-toggle">
+                    <span class="switch__track" aria-hidden="true"></span>
+                    <span class="switch__text"><strong>Add more stops to this trip</strong><small>$35 for each extra property, up to six in total.</small></span>
+                  </label>
+                  <div id="route-builder" hidden>
+                    <div class="route-head"><span>Extra stops</span><span id="route-count">1 of 6 locations</span></div>
+                    <div id="extra-stops"></div>
+                    <button type="button" class="btn btn--line btn--small add-stop" id="add-stop-btn">Add another stop</button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="qstep">
+              <legend class="qstep__title"><span class="qstep__num" aria-hidden="true">3</span>When suits you?</legend>
+              <div>
+                <div class="field" style="max-width: 280px;">
+                  <label class="field__label" for="preferred-date">Preferred date <small>optional</small></label>
+                  <input type="date" id="preferred-date" name="preferred_date" class="input">
+                </div>
+                <div class="chip-group" role="radiogroup" aria-labelledby="time-label">
+                  <p id="time-label">Time of day</p>
+                  <div class="chips">
+                    <label class="chip"><input type="radio" name="preferred_time" value="Flexible" checked><span>Flexible</span></label>
+                    <label class="chip"><input type="radio" name="preferred_time" value="Morning"><span>Morning</span></label>
+                    <label class="chip"><input type="radio" name="preferred_time" value="Midday"><span>Midday</span></label>
+                    <label class="chip"><input type="radio" name="preferred_time" value="Afternoon"><span>Afternoon</span></label>
+                    <label class="chip"><input type="radio" name="preferred_time" value="Sunset (weather permitting)"><span>Sunset <small>weather permitting</small></span></label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="qstep">
+              <legend class="qstep__title"><span class="qstep__num" aria-hidden="true">4</span>Want a print?</legend>
+              <div class="print-box">
+                <label class="switch">
+                  <input type="checkbox" id="print-enabled" name="include_print" value="Yes">
+                  <span class="switch__track" aria-hidden="true"></span>
+                  <span class="switch__text"><strong>Add a printed photo</strong><small>Printed and delivered to your door in 1–2 weeks.</small></span>
+                </label>
+                <div id="print-fields" hidden>
+                  <div class="chip-group" role="radiogroup" aria-labelledby="size-label">
+                    <p id="size-label">Size</p>
+                    <div class="chips">
+                      <label class="chip"><input type="radio" name="print_size" value="A3" data-add="20"><span>A3 <small>+$20</small></span></label>
+                      <label class="chip"><input type="radio" name="print_size" value="A2" data-add="32" checked><span>A2 <small>+$32</small></span></label>
+                      <label class="chip"><input type="radio" name="print_size" value="A1" data-add="45"><span>A1 <small>+$45</small></span></label>
+                    </div>
+                  </div>
+                  <div class="chip-group" role="radiogroup" aria-labelledby="finish-label">
+                    <p id="finish-label">Finish</p>
+                    <div class="chips">
+                      <label class="chip"><input type="radio" name="print_finish" value="Matte" data-add="0" checked><span>Matte <small>included</small></span></label>
+                      <label class="chip"><input type="radio" name="print_finish" value="Gloss" data-add="5"><span>Gloss <small>+$5</small></span></label>
+                      <label class="chip"><input type="radio" name="print_finish" value="Canvas" data-add="25"><span>Canvas <small>+$25</small></span></label>
+                      <label class="chip"><input type="radio" name="print_finish" value="Framed" data-add="40"><span>Framed <small>+$40</small></span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="qstep qstep--last">
+              <legend class="qstep__title"><span class="qstep__num" aria-hidden="true">5</span>Your details</legend>
+              <div>
+                <div class="grid-2">
+                  <div class="field">
+                    <label class="field__label" for="full-name">Your name</label>
+                    <input type="text" id="full-name" name="name" class="input" required autocomplete="name">
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="email-addr">Email</label>
+                    <input type="email" id="email-addr" name="email" class="input" required autocomplete="email" placeholder="you@example.co.nz">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="phone-number">Phone <small>optional</small></label>
+                  <input type="tel" id="phone-number" name="phone" class="input" autocomplete="tel">
+                </div>
+                <div class="field">
+                  <label class="field__label" for="notes-input">Anything else to mention? <small>optional</small></label>
+                  <textarea id="notes-input" name="notes" rows="4" class="input" placeholder="Access, gates or animals, the angles you want, or anything special about the job"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn--go qform__submit" data-submit>Send quote request</button>
+            <p class="qform__feedback" data-form-feedback role="alert"></p>
+            <p class="qform__fine">This sends your request by email. It isn’t a confirmed booking, and you won’t be asked to pay anything at this stage.</p>
+            <div class="trap" aria-hidden="true"><label for="company-website">Leave this field empty</label><input id="company-website" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+
+            <div class="minibar">
+              <span>Estimate</span><strong data-mini-total>$75</strong><a href="#estimate-title">See the breakdown</a>
+            </div>
+          </form>
+
+          <aside class="estimate on-dark" aria-labelledby="estimate-title">
+            <h3 class="estimate__title" id="estimate-title">Your estimate</h3>
+            <dl class="estimate__lines">
+              <div><dt id="est-service-label">Standard house shoot — photos</dt><dd id="est-base-price">$75</dd></div>
+              <div><dt>Extra stops <span id="est-stop-count">(none)</span></dt><dd id="est-route-price">$0</dd></div>
+              <div><dt>Print</dt><dd id="est-print-price">Not included</dd></div>
+            </dl>
+            <p class="estimate__total"><span>Total</span><strong id="est-total-price">$75</strong><small>NZD</small></p>
+            <p class="estimate__check" id="est-check">Area not checked yet</p>
+            <div class="estimate__actions">
+              <button type="button" class="btn btn--ghost btn--small" data-copy-summary>Copy summary</button>
+              <button type="button" class="btn btn--ghost btn--small" data-download-summary>Download summary</button>
+            </div>
+            <p class="estimate__feedback" id="action-feedback" role="status"></p>
+            <p class="estimate__fine">Extra-stop pricing assumes the properties are close together on the same outing. Longer trips or complex commercial jobs may need a custom quote.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         About
+         ================================================================== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about__grid">
+        <img class="about__photo" src="assets/roman.jpg" width="720" height="961" loading="lazy" decoding="async" alt="Roman, founder of Birds-Eyes">
+        <div class="about__copy">
+          <h2 class="h2" id="about-title">A little about me</h2>
+          <p>Hi, I’m Roman. I’m 15 and I’m passionate about drone photography. I started Birds-Eyes as a way to turn that interest into something useful: capturing homes, properties and local places from a different perspective.</p>
+          <p>I enjoy finding a good angle, planning a shoot carefully and creating clear photos and smooth video that people can use to show off their property. I’m based in Auckland and appreciate every opportunity to work with local people and businesses.</p>
+          <p class="about__contact"><a href="mailto:romanflint@icloud.com">romanflint@icloud.com</a><span>Auckland, New Zealand</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       Footer
+       ==================================================================== -->
+  <footer class="footer on-dark">
+    <div class="wrap footer__grid">
+      <div class="footer__about">
+        <img class="footer__logo" src="assets/logo-white.svg" width="220" height="110" alt="Birds-Eyes Drone Services">
+        <p>Aerial photos and 4K video for homes, properties and businesses around Auckland.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>On this page</h2>
+        <ul role="list">
+          <li><a href="#portfolio">Recent shoots</a></li>
+          <li><a href="#services">Prices</a></li>
+          <li><a href="#coverage">Service area</a></li>
+          <li><a href="#quote">Get a quote</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Contact</h2>
+        <ul role="list">
+          <li><a href="mailto:romanflint@icloud.com">romanflint@icloud.com</a></li>
+          <li>Auckland, New Zealand</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer__base">
+      <p>© <span data-year>2026</span> Birds-Eyes Drone Services</p>
+      <p>Map data © OpenStreetMap contributors</p>
+    </div>
+  </footer>
+
+  <!-- Full-size photo viewer -->
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-caption">
+    <div class="viewer__frame" data-viewer-frame>
+      <img class="viewer__img" alt="" data-viewer-img>
+    </div>
+    <div class="viewer__bar">
+      <p class="viewer__caption" id="viewer-caption" data-viewer-caption></p>
+      <p class="viewer__count" data-viewer-count></p>
+      <div class="viewer__controls">
+        <button type="button" class="viewer__btn" data-viewer-prev><svg aria-hidden="true"><use href="#i-left"></use></svg><span class="visually-hidden">Previous photo</span></button>
+        <button type="button" class="viewer__btn" data-viewer-next><svg aria-hidden="true"><use href="#i-right"></use></svg><span class="visually-hidden">Next photo</span></button>
+        <button type="button" class="viewer__btn" data-viewer-close><svg aria-hidden="true"><use href="#i-cross"></use></svg><span class="visually-hidden">Close</span></button>
+      </div>
+    </div>
+  </dialog>
+
+  <datalist id="suburb-list">
+    <option value="Henderson"></option>
+    <option value="Westgate"></option>
+    <option value="Massey"></option>
+    <option value="Hobsonville"></option>
+    <option value="Whenuapai"></option>
+    <option value="Te Atatū Peninsula"></option>
+    <option value="Te Atatū South"></option>
+    <option value="New Lynn"></option>
+    <option value="Titirangi"></option>
+    <option value="Glen Eden"></option>
+    <option value="Oratia"></option>
+    <option value="Swanson"></option>
+    <option value="Ranui"></option>
+    <option value="Sunnyvale"></option>
+    <option value="Glenavon"></option>
+    <option value="Green Bay"></option>
+    <option value="Laingholm"></option>
+    <option value="Kumeū"></option>
+    <option value="Huapai"></option>
+    <option value="Waimauku"></option>
+    <option value="Auckland CBD"></option>
+    <option value="Freemans Bay"></option>
+    <option value="Ponsonby"></option>
+    <option value="Grey Lynn"></option>
+    <option value="Westmere"></option>
+    <option value="Herne Bay"></option>
+    <option value="Parnell"></option>
+    <option value="Newmarket"></option>
+    <option value="Mount Eden"></option>
+    <option value="Epsom"></option>
+    <option value="Kingsland"></option>
+    <option value="Morningside"></option>
+    <option value="Mount Albert"></option>
+    <option value="Sandringham"></option>
+    <option value="Three Kings"></option>
+    <option value="One Tree Hill"></option>
+    <option value="Onehunga"></option>
+    <option value="Ellerslie"></option>
+    <option value="Greenlane"></option>
+    <option value="Ōrākei"></option>
+    <option value="Mission Bay"></option>
+    <option value="Saint Heliers"></option>
+    <option value="Kohimarama"></option>
+    <option value="Glendowie"></option>
+    <option value="Devonport"></option>
+    <option value="Takapuna"></option>
+    <option value="Belmont"></option>
+    <option value="Bayswater"></option>
+    <option value="Milford"></option>
+    <option value="Hauraki"></option>
+    <option value="Northcote"></option>
+    <option value="Birkenhead"></option>
+    <option value="Beach Haven"></option>
+    <option value="Glenfield"></option>
+    <option value="Wairau Valley"></option>
+    <option value="Mairangi Bay"></option>
+    <option value="Campbells Bay"></option>
+    <option value="Albany"></option>
+    <option value="Rosedale"></option>
+    <option value="Sunnynook"></option>
+    <option value="Long Bay"></option>
+    <option value="Torbay"></option>
+    <option value="Silverdale"></option>
+    <option value="Ōrewa"></option>
+    <option value="Glen Innes"></option>
+    <option value="Panmure"></option>
+    <option value="Point England"></option>
+    <option value="Half Moon Bay"></option>
+    <option value="Pakuranga"></option>
+    <option value="Highland Park"></option>
+    <option value="Howick"></option>
+    <option value="Botany"></option>
+    <option value="Dannemora"></option>
+    <option value="Flat Bush"></option>
+    <option value="East Tāmaki"></option>
+    <option value="Beachlands"></option>
+    <option value="Maraetai"></option>
+    <option value="Penrose"></option>
+    <option value="Mount Wellington"></option>
+    <option value="Ōtāhuhu"></option>
+    <option value="Ōtara"></option>
+    <option value="Papatoetoe"></option>
+    <option value="Manukau"></option>
+    <option value="Wiri"></option>
+    <option value="Manurewa"></option>
+    <option value="Clendon Park"></option>
+    <option value="Takanini"></option>
+    <option value="Papakura"></option>
+    <option value="Drury"></option>
+    <option value="Pukekohe"></option>
+    <option value="Waiuku"></option>
+    <option value="Clevedon"></option>
+    <option value="Warkworth"></option>
+    <option value="Matakana"></option>
+    <option value="Snells Beach"></option>
+    <option value="Helensville"></option>
+    <option value="Riverhead"></option>
+  </datalist>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ==================================================================
+       Settings. Change these if a map service ever moves.
+       ================================================================== */
+    var CFG = {
+      zoneRadius: 350,          // metres around each bus stop and train station that count as the service area (about a five-minute walk)
+      searchRadius: 600,        // backup only: metres searched around an address if the area data can't load
+      // The area comes from Auckland Transport's official open data (bus stops, then train stations).
+      areaLayers: [
+        'https://services2.arcgis.com/JkPEgZJGxhSjYOo0/ArcGIS/rest/services/BusService/FeatureServer/0/query',
+        'https://services2.arcgis.com/JkPEgZJGxhSjYOo0/ArcGIS/rest/services/TrainService/FeatureServer/0/query'
+      ],
+      leafletJs: ['https://unpkg.com/leaflet@1.9.4/dist/leaflet.js', 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js'],
+      leafletCss: ['https://unpkg.com/leaflet@1.9.4/dist/leaflet.css', 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css'],
+      tiles: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+      photon: 'https://photon.komoot.io',
+      nominatim: 'https://nominatim.openstreetmap.org',
+      overpass: [   // backup only, used for a single small lookup if Auckland Transport's service is down
+        'https://overpass-api.de/api/interpreter',
+        'https://overpass.private.coffee/api/interpreter',
+        'https://maps.mail.ru/osm/tools/overpass/api/interpreter'
+      ],
+      cacheKey: 'birdseye:area:v3',
+      cacheDays: 7,
+      aucklandBox: { s: -37.45, w: 174.15, n: -35.85, e: 175.6 },
+      mapCentre: [-36.88, 174.76],
+      zoneColour: '#2E8B4E'
+    };
+
+    var $ = function (s, el) { return (el || document).querySelector(s); };
+    var $$ = function (s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); };
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+
+    function esc(str) {
+      return String(str == null ? '' : str).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+    function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+    function money(amount) {
+      return new Intl.NumberFormat('en-NZ', { style: 'currency', currency: 'NZD', maximumFractionDigits: 0 }).format(amount);
+    }
+    function icon(id) { return '<svg aria-hidden="true"><use href="#' + id + '"></use></svg>'; }
+
+    /* ==================================================================
+       Header, menu and year
+       ================================================================== */
+    var header = $('[data-header]');
+    var hero = $('.hero');
+    var drawer = $('#drawer');
+    var menuBtn = $('[data-menu]');
+
+    function syncHeader() {
+      header.classList.toggle('is-solid', window.scrollY > 24);
+    }
+    var headerTicking = false;
+    window.addEventListener('scroll', function () {
+      if (headerTicking) return;
+      headerTicking = true;
+      requestAnimationFrame(function () { syncHeader(); headerTicking = false; });
+    }, { passive: true });
+    window.addEventListener('resize', syncHeader);
+    syncHeader();
+
+    function setMenu(open) {
+      menuBtn.setAttribute('aria-expanded', String(open));
+      drawer.hidden = !open;
+      header.classList.toggle('menu-open', open);
+      document.body.classList.toggle('no-scroll', open);
+    }
+    menuBtn.addEventListener('click', function () { setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'); });
+    drawer.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !drawer.hidden) { setMenu(false); menuBtn.focus(); }
+    });
+    window.matchMedia('(min-width: 941px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+
+    var yearEl = $('[data-year]');
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+    /* ==================================================================
+       Hero video
+       ================================================================== */
+    var video = $('[data-hero-video]');
+    var videoBtn = $('[data-video-toggle]');
+    var videoLabel = $('[data-video-label]');
+    var userPaused = false;
+
+    function showVideoState(playing) {
+      videoBtn.classList.toggle('is-paused', !playing);
+      videoBtn.setAttribute('aria-pressed', String(!playing));
+      videoLabel.textContent = playing ? 'Pause video' : 'Play video';
+    }
+    function playVideo() {
+      var p = video.play();
+      if (p && typeof p.catch === 'function') p.catch(function () { showVideoState(false); });
+    }
+    if (video) {
+      var saveData = navigator.connection && navigator.connection.saveData;
+      if (reduceMotion || saveData) {
+        video.removeAttribute('autoplay');
+        video.pause();
+        userPaused = true;
+      }
+      video.addEventListener('play', function () { showVideoState(true); });
+      video.addEventListener('pause', function () { showVideoState(false); });
+      showVideoState(!video.paused);
+      videoBtn.addEventListener('click', function () {
+        if (video.paused) { userPaused = false; playVideo(); } else { userPaused = true; video.pause(); }
+      });
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          if (userPaused) return;
+          if (entries[0].isIntersecting) playVideo(); else video.pause();
+        }).observe(hero);
+      }
+    }
+
+    /* ==================================================================
+       Gallery and full-size viewer
+       ================================================================== */
+    var gallery = $('[data-gallery]');
+    var tiles = $$('.tile', gallery);
+    var filterBtns = $$('[data-filter]');
+    var visibleTiles = tiles.slice();
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var f = btn.dataset.filter;
+        filterBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+        visibleTiles = [];
+        tiles.forEach(function (t) {
+          var show = f === 'all' || t.dataset.cats.split(' ').indexOf(f) !== -1;
+          t.hidden = !show;
+          if (show) visibleTiles.push(t);
+        });
+        gallery.classList.toggle('is-filtered', f !== 'all');
+      });
+    });
+
+    var viewer = $('#viewer');
+    var vImg = $('[data-viewer-img]');
+    var vCap = $('[data-viewer-caption]');
+    var vCount = $('[data-viewer-count]');
+    var vIndex = 0;
+    var lastTileBtn = null;
+
+    function viewerShow(i) {
+      if (!visibleTiles.length) return;
+      vIndex = (i + visibleTiles.length) % visibleTiles.length;
+      var img = $('img', visibleTiles[vIndex]);
+      var base = img.dataset.base;
+      vImg.removeAttribute('srcset');
+      vImg.src = base + '-1280.jpg';
+      vImg.srcset = base + '-1280.jpg 1280w, ' + base + '-2048.jpg 2048w';
+      vImg.sizes = '100vw';
+      vImg.alt = img.alt;
+      vCap.textContent = img.dataset.caption || img.alt;
+      vCount.textContent = (vIndex + 1) + ' of ' + visibleTiles.length;
+      [1, -1].forEach(function (d) {
+        var n = $('img', visibleTiles[(vIndex + d + visibleTiles.length) % visibleTiles.length]);
+        var pre = new Image(); pre.src = n.dataset.base + (window.innerWidth > 1300 ? '-2048.jpg' : '-1280.jpg');
+      });
+    }
+    function viewerOpen(tile) {
+      vIndex = Math.max(0, visibleTiles.indexOf(tile));
+      viewerShow(vIndex);
+      if (typeof viewer.showModal === 'function') viewer.showModal(); else viewer.setAttribute('open', '');
+      document.body.classList.add('no-scroll');
+      $('[data-viewer-next]').focus();
+    }
+    function viewerClose() {
+      if (typeof viewer.close === 'function' && viewer.open) viewer.close(); else viewer.removeAttribute('open');
+    }
+    viewer.addEventListener('close', function () {
+      document.body.classList.remove('no-scroll');
+      if (lastTileBtn) lastTileBtn.focus();
+    });
+    gallery.addEventListener('click', function (e) {
+      var b = e.target.closest('.tile__btn');
+      if (!b) return;
+      lastTileBtn = b;
+      viewerOpen(b.closest('.tile'));
+    });
+    $('[data-viewer-prev]').addEventListener('click', function () { viewerShow(vIndex - 1); });
+    $('[data-viewer-next]').addEventListener('click', function () { viewerShow(vIndex + 1); });
+    $('[data-viewer-close]').addEventListener('click', viewerClose);
+    viewer.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); viewerShow(vIndex + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); viewerShow(vIndex - 1); }
+      if (e.key === 'Escape' && !viewer.showModal) viewerClose();
+    });
+    var frame = $('[data-viewer-frame]');
+    frame.addEventListener('click', function (e) { if (e.target === frame) viewerClose(); });
+    var swipeX = null;
+    frame.addEventListener('pointerdown', function (e) { swipeX = e.clientX; });
+    frame.addEventListener('pointerup', function (e) {
+      if (swipeX === null) return;
+      var dx = e.clientX - swipeX; swipeX = null;
+      if (Math.abs(dx) > 50) viewerShow(vIndex + (dx < 0 ? 1 : -1));
+    });
+
+    /* ==================================================================
+       Geography helpers
+       ================================================================== */
+    function metresBetween(lat1, lon1, lat2, lon2) {
+      var R = 6371000, toRad = Math.PI / 180;
+      var dLat = (lat2 - lat1) * toRad, dLon = (lon2 - lon1) * toRad;
+      var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(lat1 * toRad) * Math.cos(lat2 * toRad) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+      return 2 * R * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+    // Waiheke and nearby gulf islands: reached by ferry, so they don't count.
+    var WAIHEKE = [[174.945, -36.80], [174.95, -36.76], [175.05, -36.735], [175.215, -36.76], [175.215, -36.82], [175.13, -36.865], [175.04, -36.86], [174.98, -36.83]];
+    function inPolygon(lon, lat, poly) {
+      var inside = false;
+      for (var i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+        var xi = poly[i][0], yi = poly[i][1], xj = poly[j][0], yj = poly[j][1];
+        if (((yi > lat) !== (yj > lat)) && (lon < (xj - xi) * (lat - yi) / (yj - yi) + xi)) inside = !inside;
+      }
+      return inside;
+    }
+    function onIsland(lat, lon) {
+      if (inPolygon(lon, lat, WAIHEKE)) return true;
+      if (lon > 175.22 && lat > -36.5) return true;          // Aotea Great Barrier and the outer gulf
+      if (lon > 174.76 && lon < 174.92 && lat > -36.47 && lat < -36.37) return true; // Kawau
+      return false;
+    }
+    function inAucklandBox(lat, lon) {
+      var b = CFG.aucklandBox;
+      return lat > b.s && lat < b.n && lon > b.w && lon < b.e;
+    }
+
+    /* ==================================================================
+       Network helpers
+       ================================================================== */
+    function getJSON(url, ms, opts) {
+      opts = opts || {};
+      var ctrl = new AbortController();
+      var timer = setTimeout(function () { ctrl.abort(); }, ms || 12000);
+      if (opts.signal) {
+        if (opts.signal.aborted) ctrl.abort();
+        else opts.signal.addEventListener('abort', function () { ctrl.abort(); }, { once: true });
+      }
+      var init = { method: opts.method || 'GET', signal: ctrl.signal };
+      if (opts.body) init.body = opts.body;
+      return fetch(url, init).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).finally(function () { clearTimeout(timer); });
+    }
+    function overpass(query, ms) {
+      var urls = CFG.overpass.slice();
+      function attempt() {
+        var url = urls.shift();
+        if (!url) return Promise.reject(new Error('No stop data service responded'));
+        return getJSON(url, ms, { method: 'POST', body: new URLSearchParams({ data: query }) })
+          .catch(function () { return attempt(); });
+      }
+      return attempt();
+    }
+    var nominatimAt = 0;
+    function nominatim(path) {
+      var wait = Math.max(0, nominatimAt + 1100 - Date.now());   // their limit: one request a second
+      nominatimAt = Date.now() + wait;
+      return sleep(wait).then(function () { return getJSON(CFG.nominatim + path, 12000); });
+    }
+
+    /* ==================================================================
+       Addresses
+       ================================================================== */
+    function placeFromPhoton(f) {
+      var p = f.properties || {};
+      var c = f.geometry.coordinates;
+      var street = p.street || '';
+      var primary = p.housenumber && street ? p.housenumber + ' ' + street : (p.name || street || '');
+      var suburb = p.district || p.locality || p.suburb || '';
+      var city = p.city || p.county || '';
+      if (!suburb) suburb = city;
+      return finishPlace({ lat: c[1], lon: c[0], primary: primary, suburb: suburb, city: city,
+        state: p.state || '', countrycode: (p.countrycode || '').toUpperCase() });
+    }
+    function placeFromNominatim(r) {
+      var a = r.address || {};
+      var road = a.road || a.pedestrian || a.footway || a.residential || a.path || '';
+      var primary = a.house_number && road ? a.house_number + ' ' + road : (road || r.name || String(r.display_name || '').split(',')[0]);
+      var suburb = a.suburb || a.neighbourhood || a.quarter || a.city_district || a.village || a.town || a.hamlet || '';
+      var city = a.city || a.town || a.county || '';
+      if (!suburb) suburb = city;
+      return finishPlace({ lat: +r.lat, lon: +r.lon, primary: primary, suburb: suburb, city: city,
+        state: a.state || a.region || '', countrycode: (a.country_code || '').toUpperCase() });
+    }
+    function finishPlace(p) {
+      var parts = [p.primary];
+      if (p.suburb && p.suburb !== p.primary) parts.push(p.suburb);
+      if (p.city && p.city !== p.suburb && p.city !== p.primary) parts.push(p.city);
+      p.label = parts.filter(Boolean).join(', ');
+      p.secondary = parts.slice(1).filter(Boolean).join(', ');
+      return p;
+    }
+    var geo = {
+      suggest: function (q, signal) {
+        var b = CFG.aucklandBox;
+        var params = new URLSearchParams({ q: q, limit: '7', lat: String(CFG.mapCentre[0]), lon: String(CFG.mapCentre[1]), bbox: [b.w, b.s, b.e, b.n].join(',') });
+        return getJSON(CFG.photon + '/api/?' + params.toString(), 8000, { signal: signal }).then(function (j) {
+          var seen = {};
+          return (j.features || []).map(placeFromPhoton).filter(function (p) {
+            if (p.countrycode && p.countrycode !== 'NZ') return false;
+            if (!p.primary || seen[p.label]) return false;
+            seen[p.label] = true;
+            return true;
+          }).slice(0, 5);
+        });
+      },
+      search: function (q) {
+        return geo.suggest(q).then(function (list) { return list[0] || null; }, function () { return undefined; })
+          .then(function (found) {
+            if (found) return found;
+            var params = new URLSearchParams({ q: q, format: 'jsonv2', addressdetails: '1', limit: '1', countrycodes: 'nz', viewbox: '174.15,-35.85,175.6,-37.45' });
+            return nominatim('/search?' + params.toString()).then(function (j) {
+              return Array.isArray(j) && j.length ? placeFromNominatim(j[0]) : null;
+            }, function (err) {
+              if (found === null) return null;   // the first service answered "nothing found"
+              throw err;
+            });
+          });
+      },
+      reverse: function (lat, lon) {
+        var keep = function (p) { p.lat = lat; p.lon = lon; return p; };
+        var params = new URLSearchParams({ lat: String(lat), lon: String(lon) });
+        return getJSON(CFG.photon + '/reverse?' + params.toString(), 8000).then(function (j) {
+          if (j.features && j.features.length) return keep(placeFromPhoton(j.features[0]));
+          throw new Error('none');
+        }).catch(function () {
+          var p2 = new URLSearchParams({ lat: String(lat), lon: String(lon), format: 'jsonv2', zoom: '18', addressdetails: '1' });
+          return nominatim('/reverse?' + p2.toString()).then(function (j) {
+            if (j && !j.error) return keep(placeFromNominatim(j));
+            throw new Error('none');
+          });
+        }).catch(function () {
+          return finishPlace({ lat: lat, lon: lon, primary: 'Dropped pin', suburb: '', city: '', state: '', countrycode: '', pinOnly: true });
+        });
+      }
+    };
+
+    /* ==================================================================
+       My area = within CFG.zoneRadius metres of a bus stop or train station.
+       The address check uses exactly the same rule as the green on the map,
+       so the answer always matches what people can see.
+       ================================================================== */
+    var STOP_FILTERS = [
+      '["highway"="bus_stop"]["disused"!="yes"]',
+      '["public_transport"="platform"]["bus"="yes"]',
+      '["railway"~"^(station|halt)$"]',
+      '["public_transport"="station"]["train"="yes"]'
+    ];
+    function stopKind(t) {
+      if (!t) return null;
+      if (t.disused === 'yes' || t.abandoned === 'yes' || t['disused:highway'] || t.usage === 'tourism' ||
+          t['railway:preserved'] === 'yes' || t.historic || t.tourism) return null;
+      var rail = /^(station|halt)$/.test(t.railway || '') || (t.train === 'yes' && !t.bus);
+      if (rail && !/^(tram|light_rail|subway|funicular|monorail)$/.test(t.station || '')) return 'train';
+      if (t.highway === 'bus_stop' || t.bus === 'yes') return 'bus';
+      return null;
+    }
+    var regionStops = null;   // rows of [lat, lon, 0 bus | 1 train, name]
+    function stopsNear(lat, lon) {
+      var a = '(around:' + CFG.searchRadius + ',' + lat.toFixed(6) + ',' + lon.toFixed(6) + ')';
+      var q = '[out:json][timeout:25];(' + STOP_FILTERS.map(function (f) { return 'node' + f + a + ';'; }).join('') + ');out body qt;';
+      return overpass(q, 16000).then(function (data) {
+        var out = [];
+        (data.elements || []).forEach(function (el) {
+          var kind = stopKind(el.tags);
+          if (!kind || el.lat == null || onIsland(el.lat, el.lon)) return;
+          out.push([el.lat, el.lon, kind === 'train' ? 1 : 0, (el.tags && el.tags.name) || '']);
+        });
+        return out;
+      });
+    }
+    function nearestStop(lat, lon, stops) {
+      var best = null, bestD = Infinity;
+      for (var i = 0; i < stops.length; i++) {
+        var s = stops[i];
+        if (Math.abs(s[0] - lat) > 0.03 || Math.abs(s[1] - lon) > 0.04) continue;
+        var d = metresBetween(lat, lon, s[0], s[1]);
+        if (d < bestD) { bestD = d; best = s; }
+      }
+      return best ? { d: bestD, kind: best[2] === 1 ? 'train' : 'bus', name: best[3] || '' } : null;
+    }
+    function checkPlace(place) {
+      var base = { place: place };
+      var auckland = place.state ? /auckland/i.test(place.state) : inAucklandBox(place.lat, place.lon);
+      if (place.countrycode && place.countrycode !== 'NZ') auckland = false;
+      if (!auckland) return Promise.resolve(Object.assign(base, { status: 'no', reason: 'region' }));
+      var text = (place.label + ' ' + place.suburb + ' ' + place.city).toLowerCase();
+      if (onIsland(place.lat, place.lon) || /waiheke|great barrier|aotea|kawau|rakino|motutapu|rangitoto/.test(text)) {
+        return Promise.resolve(Object.assign(base, { status: 'no', reason: 'island' }));
+      }
+      var stops = loadArea().catch(function () { return stopsNear(place.lat, place.lon); });
+      return stops.then(function (list) {
+        var near = nearestStop(place.lat, place.lon, list);
+        var inside = !!near && near.d <= CFG.zoneRadius;
+        return Object.assign(base, { status: inside ? 'yes' : 'no', reason: inside ? '' : 'far', nearest: near });
+      }).catch(function () {
+        return Object.assign(base, { status: 'error', reason: 'area' });
+      });
+    }
+    function mapLink(p) {
+      if (!p || p.lat == null) return '';
+      var la = p.lat.toFixed(5), lo = p.lon.toFixed(5);
+      return 'https://www.openstreetmap.org/?mlat=' + la + '&mlon=' + lo + '#map=18/' + la + '/' + lo;
+    }
+    // What customers see: just in or out.
+    function areaWords(res) {
+      if (res && res.status === 'yes') return 'In the service area';
+      if (res && res.status === 'no') return 'Outside the service area';
+      return 'Not checked';
+    }
+    // The extra detail only goes into the request email.
+    function coverageSummary(res) {
+      if (!res) return 'Not checked';
+      var n = res.nearest, near = '';
+      if (n) near = ' (nearest stop about ' + Math.max(10, Math.round(n.d / 10) * 10) + ' m away' + (n.name ? ': ' + n.name : '') + ')';
+      if (res.status === 'yes') return 'In service area' + near;
+      if (res.status === 'no') {
+        if (res.reason === 'region') return 'Outside service area (outside Auckland)';
+        if (res.reason === 'island') return 'Outside service area (island)';
+        return 'Outside service area' + (near || ' (no stop nearby)');
+      }
+      if (res.status === 'notfound') return 'Not checked (address not found)';
+      return 'Not checked (map services unavailable)';
+    }
+
+    /* ==================================================================
+       Address suggestions (combobox)
+       ================================================================== */
+    function makeCombo(input, list, onPick) {
+      var items = [], active = -1, timer = null, ctrl = null, cache = {};
+      input.setAttribute('role', 'combobox');
+      input.setAttribute('aria-autocomplete', 'list');
+      input.setAttribute('aria-expanded', 'false');
+      input.setAttribute('aria-controls', list.id);
+      function close() {
+        list.hidden = true; active = -1;
+        input.setAttribute('aria-expanded', 'false');
+        input.removeAttribute('aria-activedescendant');
+      }
+      function render() {
+        if (!items.length) { close(); return; }
+        list.innerHTML = items.map(function (p, i) {
+          return '<li class="combo__opt" role="option" id="' + list.id + '-' + i + '" aria-selected="' + (i === active) + '">' +
+            '<strong>' + esc(p.primary) + '</strong>' + (p.secondary ? '<span>' + esc(p.secondary) + '</span>' : '') + '</li>';
+        }).join('');
+        list.hidden = false;
+        input.setAttribute('aria-expanded', 'true');
+        if (active >= 0) input.setAttribute('aria-activedescendant', list.id + '-' + active);
+        else input.removeAttribute('aria-activedescendant');
+      }
+      function pick(i) {
+        var p = items[i];
+        if (!p) return;
+        input.value = p.primary;
+        close();
+        onPick(p);
+      }
+      input.addEventListener('input', function () {
+        clearTimeout(timer);
+        var q = input.value.trim();
+        if (q.length < 3) { items = []; render(); return; }
+        timer = setTimeout(function () {
+          if (cache[q]) { items = cache[q]; active = -1; render(); return; }
+          if (ctrl) ctrl.abort();
+          ctrl = new AbortController();
+          geo.suggest(q, ctrl.signal).then(function (res) {
+            cache[q] = res;
+            if (input.value.trim() !== q) return;
+            items = res; active = -1; render();
+          }, function () { /* suggestions are a nice-to-have; the Check button still works */ });
+        }, 280);
+      });
+      input.addEventListener('keydown', function (e) {
+        if (list.hidden || !items.length) return;
+        if (e.key === 'ArrowDown') { e.preventDefault(); active = (active + 1) % items.length; render(); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); active = (active - 1 + items.length) % items.length; render(); }
+        else if (e.key === 'Enter' && active >= 0) { e.preventDefault(); pick(active); }
+        else if (e.key === 'Escape') { e.preventDefault(); close(); }
+      });
+      list.addEventListener('mousedown', function (e) { e.preventDefault(); });
+      list.addEventListener('click', function (e) {
+        var li = e.target.closest('[role="option"]');
+        if (li) pick(Number(li.id.split('-').pop()));
+      });
+      input.addEventListener('blur', function () { setTimeout(close, 150); });
+      return { close: close };
+    }
+
+    /* ==================================================================
+       Map (Leaflet, loaded only when the section is near)
+       ================================================================== */
+    var zoneNote = $('[data-zone-note]');
+    var mapView = {
+      L: null, map: null, ready: false, renderer: null, zoneLayer: null, pinLayer: null,
+      pendingStops: null, pendingPlace: null,
+
+      load: function () {
+        if (this.loading) return this.loading;
+        var self = this;
+        function loadOne(i) {
+          if (window.L) return Promise.resolve(window.L);
+          if (i >= CFG.leafletJs.length) return Promise.reject(new Error('Map library unavailable'));
+          var css = document.createElement('link');
+          css.rel = 'stylesheet'; css.href = CFG.leafletCss[i];
+          var cssReady = new Promise(function (resolve) {
+            css.onload = resolve; css.onerror = resolve;
+            setTimeout(resolve, 4000);
+          });
+          document.head.appendChild(css);
+          var jsReady = new Promise(function (resolve, reject) {
+            var s = document.createElement('script');
+            s.src = CFG.leafletJs[i]; s.async = true;
+            s.onload = function () { window.L ? resolve(window.L) : reject(new Error('no L')); };
+            s.onerror = function () { reject(new Error('load failed')); };
+            document.head.appendChild(s);
+          });
+          return Promise.all([jsReady, cssReady]).then(function (r) { return r[0]; })
+            .catch(function () { css.remove(); return loadOne(i + 1); });
+        }
+        this.loading = loadOne(0).then(function (L) { self.init(L); }, function () {
+          zoneNote.hidden = true;
+          var msg = document.createElement('div');
+          msg.className = 'map__fallback';
+          msg.textContent = 'The map couldn’t load, but the address check above still works.';
+          $('[data-map-wrap]').appendChild(msg);
+        });
+        return this.loading;
+      },
+
+      init: function (L) {
+        this.L = L;
+        var map = L.map('coverage-map', {
+          zoomControl: false, scrollWheelZoom: false, doubleClickZoom: false, dragging: !coarsePointer,
+          minZoom: 9, maxZoom: 17, maxBounds: [[-37.9, 173.7], [-35.4, 176.0]], maxBoundsViscosity: 0.8
+        });
+        map.setView(CFG.mapCentre, window.innerWidth < 700 ? 10 : 11);
+        L.control.zoom({ position: 'topright' }).addTo(map);
+        map.attributionControl.setPrefix(false);
+        map.attributionControl.addAttribution('Area data: Auckland Transport');
+        L.tileLayer(CFG.tiles, {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+        }).addTo(map);
+        var pane = map.createPane('zone');
+        pane.style.zIndex = 350;
+        pane.style.pointerEvents = 'none';
+        pane.style.opacity = '0.42';   // one opacity for the whole area, so overlapping circles read as one shape
+        this.renderer = L.canvas({ pane: 'zone', padding: 0.5 });
+        map.on('click', function (e) { checker.fromMap(e.latlng.lat, e.latlng.lng); });
+        this.cooperativeGestures(map);
+        // Leaflet only re-measures on window resize, so watch the box itself too.
+        if ('ResizeObserver' in window) new ResizeObserver(function () { map.invalidateSize(); }).observe(map.getContainer());
+        this.map = map;
+        this.ready = true;
+        if (this.pendingStops) { this.drawZone(this.pendingStops); this.pendingStops = null; }
+        if (this.pendingPlace) { this.showPin(this.pendingPlace); this.pendingPlace = null; }
+      },
+
+      cooperativeGestures: function (map) {
+        var el = map.getContainer();
+        var hint = $('[data-map-hint]');
+        var hideTimer = null, acc = 0;
+        var isMac = /Mac|iPhone|iPad/.test(navigator.platform || '');
+        function flash(text) {
+          hint.textContent = text;
+          hint.classList.add('is-on');
+          clearTimeout(hideTimer);
+          hideTimer = setTimeout(function () { hint.classList.remove('is-on'); }, 1400);
+        }
+        el.addEventListener('wheel', function (e) {
+          if (e.ctrlKey || e.metaKey) {
+            e.preventDefault();
+            acc += e.deltaY;
+            if (Math.abs(acc) >= 40) {
+              map.setZoomAround(map.mouseEventToContainerPoint(e), map.getZoom() + (acc < 0 ? 1 : -1));
+              acc = 0;
+            }
+          } else {
+            flash(isMac ? 'Use ⌘ + scroll to zoom the map' : 'Use Ctrl + scroll to zoom the map');
+          }
+        }, { passive: false });
+        if (coarsePointer) {
+          el.addEventListener('touchmove', function (e) {
+            if (e.touches.length === 1) flash('Use two fingers to move the map');
+          }, { passive: true });
+        }
+      },
+
+      drawZone: function (stops) {
+        if (!this.ready) { this.pendingStops = stops; return; }
+        var L = this.L;
+        var opts = { renderer: this.renderer, interactive: false, radius: CFG.zoneRadius, stroke: false, fill: true, fillColor: CFG.zoneColour, fillOpacity: 1 };
+        var layers = stops.map(function (s) { return L.circle([s[0], s[1]], opts); });
+        if (this.zoneLayer) this.zoneLayer.remove();
+        this.zoneLayer = L.layerGroup(layers).addTo(this.map);
+      },
+
+      showPin: function (place) {
+        if (!this.ready) { this.pendingPlace = place; return; }
+        var L = this.L, map = this.map;
+        this.clearPin();
+        this.pinLayer = L.marker([place.lat, place.lon], {
+          icon: L.divIcon({ className: 'pin pin--you', html: '<span></span>', iconSize: [34, 34], iconAnchor: [17, 17] }),
+          keyboard: false, interactive: false
+        }).addTo(map);
+        var z = Math.max(map.getZoom(), 15);
+        if (reduceMotion) map.setView([place.lat, place.lon], z);
+        else map.flyTo([place.lat, place.lon], z, { duration: 0.8 });
+      },
+
+      clearPin: function () {
+        if (this.pinLayer) { this.pinLayer.remove(); this.pinLayer = null; }
+      }
+    };
+
+    /* The whole area, cached for a week */
+    function readStopsCache() {
+      try {
+        var raw = localStorage.getItem(CFG.cacheKey);
+        if (!raw) return null;
+        var obj = JSON.parse(raw);
+        if (!obj || Date.now() - obj.t > CFG.cacheDays * 864e5) return null;
+        return obj.s;
+      } catch (e) { return null; }
+    }
+    function writeStopsCache(stops) {
+      try { localStorage.setItem(CFG.cacheKey, JSON.stringify({ t: Date.now(), s: stops })); } catch (e) { /* storage full or blocked */ }
+    }
+    // One layer, paged 1000 at a time (the service's limit).
+    function fetchAreaLayer(url) {
+      var countUrl = url + '?' + new URLSearchParams({ where: '1=1', returnCountOnly: 'true', f: 'json' }).toString();
+      return getJSON(countUrl, 15000).then(function (c) {
+        if (!c || c.error || !c.count) throw new Error('No count');
+        var pages = [];
+        for (var off = 0; off < c.count; off += 1000) {
+          pages.push(getJSON(url + '?' + new URLSearchParams({
+            where: '1=1', outFields: 'OBJECTID', returnGeometry: 'true', outSR: '4326', geometryPrecision: '5',
+            orderByFields: 'OBJECTID', resultOffset: String(off), resultRecordCount: '1000', f: 'json'
+          }).toString(), 20000));
+        }
+        return Promise.all(pages);
+      }).then(function (pages) {
+        var out = [];
+        pages.forEach(function (pg) {
+          if (!pg || pg.error) throw new Error('Page failed');
+          (pg.features || []).forEach(function (f) {
+            var g = f.geometry;
+            if (g && isFinite(g.x) && isFinite(g.y)) out.push([Math.round(g.y * 1e5) / 1e5, Math.round(g.x * 1e5) / 1e5]);
+          });
+        });
+        return out;
+      });
+    }
+    var areaPromise = null;
+    function loadArea() {
+      if (regionStops) return Promise.resolve(regionStops);
+      if (areaPromise) return areaPromise;
+      var cached = readStopsCache();
+      var p = cached ? Promise.resolve(cached) :
+        Promise.all(CFG.areaLayers.map(fetchAreaLayer)).then(function (layers) {
+          var stops = [];
+          layers.forEach(function (list, k) {
+            list.forEach(function (pt) { if (!onIsland(pt[0], pt[1])) stops.push([pt[0], pt[1], k]); });
+          });
+          if (stops.length < 1000) throw new Error('Too few stops came back');
+          writeStopsCache(stops);
+          return stops;
+        });
+      areaPromise = p.then(function (stops) {
+        regionStops = stops;
+        mapView.drawZone(stops);
+        zoneNote.hidden = true;
+        return stops;
+      }, function (err) {
+        areaPromise = null;   // let the next check try again
+        zoneNote.hidden = false;
+        zoneNote.textContent = 'The green area couldn’t load right now, but the address check still works.';
+        throw err;
+      });
+      return areaPromise;
+    }
+
+    /* ==================================================================
+       Address check
+       ================================================================== */
+    var resultBox = $('[data-result]');
+    var checkInput = $('#check-address');
+    var checkForm = $('[data-check-form]');
+    var lastPicked = null;
+    var lastResult = null;
+
+    function verdictHTML(res) {
+      var p = res.place;
+      var addr = p && !p.pinOnly ? '<span class="verdict__addr">' + esc(p.label) + '</span>' : '';
+      if (res.status === 'yes') {
+        return '<div class="verdict verdict--yes">' + icon('i-check') + '<span class="verdict__text">Yes, that’s in the service area</span>' +
+          '<button type="button" class="btn btn--go btn--small" data-quote-here>Get a quote for this address</button>' + addr + '</div>';
+      }
+      if (res.status === 'no') {
+        return '<div class="verdict verdict--no">' + icon('i-cross') + '<span class="verdict__text">Sorry, that’s outside the service area</span>' + addr + '</div>';
+      }
+      if (res.status === 'notfound') {
+        return '<div class="verdict verdict--warn">' + icon('i-alert') + '<span class="verdict__text">Couldn’t find that address</span>' +
+          '<span class="verdict__addr">Try adding the suburb, for example “10 Queen Street, Auckland Central”.</span></div>';
+      }
+      var why = res.reason === 'search' ? 'The address search isn’t responding.' : 'The map data isn’t loading.';
+      return '<div class="verdict verdict--warn">' + icon('i-alert') + '<span class="verdict__text">Couldn’t check that right now</span>' +
+        '<button type="button" class="btn btn--line btn--small" data-retry>Try again</button>' +
+        '<span class="verdict__addr">' + why + ' Please try again in a minute.</span></div>';
+    }
+    function showLoading(msg) {
+      resultBox.innerHTML = '<div class="verdict verdict--loading"><span class="spinner" aria-hidden="true"></span><span>' + esc(msg || 'Checking…') + '</span></div>';
+    }
+    function showResult(res) {
+      lastResult = res;
+      resultBox.innerHTML = verdictHTML(res);
+      if (res.place && (res.status === 'yes' || res.status === 'no')) {
+        mapView.showPin(res.place);
+        mapView.load();
+      }
+    }
+    var mapToken = 0;
+    var checker = {
+      run: function (place) {
+        var t = ++mapToken;
+        showLoading('Checking…');
+        return checkPlace(place).then(function (res) {
+          if (t !== mapToken) return;
+          showResult(res);
+          return res;
+        });
+      },
+      fromText: function (text) {
+        if (!text) { checkInput.focus(); return; }
+        if (lastPicked && lastPicked.primary === text) return checker.run(lastPicked);
+        showLoading('Finding the address…');
+        var t = ++mapToken;
+        return geo.search(text).then(function (place) {
+          if (t !== mapToken) return;
+          if (!place) { showResult({ status: 'notfound' }); return; }
+          lastPicked = place;
+          return checker.run(place);
+        }, function () {
+          if (t === mapToken) showResult({ status: 'error', reason: 'search' });
+        });
+      },
+      fromMap: function (lat, lon) {
+        showLoading('Finding the address…');
+        var t = ++mapToken;
+        return geo.reverse(lat, lon).then(function (place) {
+          if (t !== mapToken) return;
+          lastPicked = place;
+          if (!place.pinOnly) checkInput.value = place.primary;
+          return checker.run(place);
+        });
+      }
+    };
+    makeCombo(checkInput, $('#check-address-list'), function (place) { lastPicked = place; checker.run(place); });
+    checkForm.addEventListener('submit', function (e) { e.preventDefault(); checker.fromText(checkInput.value.trim()); });
+    resultBox.addEventListener('click', function (e) {
+      if (e.target.closest('[data-retry]')) {
+        if (lastResult && lastResult.place) checker.run(lastResult.place); else checker.fromText(checkInput.value.trim());
+      } else if (e.target.closest('[data-quote-here]')) {
+        quote.useCheck(lastResult);
+      }
+    });
+    $$('[data-focus-checker]').forEach(function (a) {
+      a.addEventListener('click', function () { setTimeout(function () { checkInput.focus({ preventScroll: true }); }, reduceMotion ? 0 : 650); });
+    });
+
+    // Start loading the map and the green area a little before the section scrolls into view.
+    var coverageSection = $('#coverage');
+    var coverageStarted = false;
+    function startCoverage() {
+      if (coverageStarted) return;
+      coverageStarted = true;
+      mapView.load();
+      loadArea().catch(function () { /* the note on the map explains; checks fall back to a small lookup */ });
+    }
+    if ('IntersectionObserver' in window) {
+      var covIO = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { startCoverage(); covIO.disconnect(); }
+      }, { rootMargin: '700px 0px' });
+      covIO.observe(coverageSection);
+    } else { startCoverage(); }
+    if (location.hash === '#coverage' || location.hash === '#transit-areas') startCoverage();
+
+    /* ==================================================================
+       Quote form
+       ================================================================== */
+    var form = $('#quote-form');
+    form.noValidate = true;   // the script shows its own messages; without it, the browser's checks still apply
+    var serviceInputs = $$('input[name="service"]', form);
+    var mainAddress = $('#main-address');
+    var locationInput = $('#location-input');
+    var bookingType = $('#booking-type');
+    var routeToggle = $('#route-toggle');
+    var routeBuilder = $('#route-builder');
+    var extraStops = $('#extra-stops');
+    var addStopBtn = $('#add-stop-btn');
+    var routeCount = $('#route-count');
+    var printEnabled = $('#print-enabled');
+    var printFields = $('#print-fields');
+    var printInputs = $$('input[name="print_size"], input[name="print_finish"]', form);
+    var coverageField = $('#coverage-check');
+    var mapLinkField = $('#map-link');
+    var formCheck = $('[data-form-check]');
+    var estCheck = $('#est-check');
+    var actionFeedback = $('#action-feedback');
+    var formFeedback = $('[data-form-feedback]');
+    var MAX_LOCATIONS = 6;
+    var EXTRA_STOP_PRICE = 35;
+    var SAVED_KEY = 'birdseye:lastRequest';
+    var preparedRequestText = '';
+    var formResult = null;
+    var formPlace = null;
+    var suburbAuto = false;
+
+    function checkedInput(name) { return $('input[name="' + name + '"]:checked', form); }
+
+    function getLocations() {
+      var list = [{ suburb: locationInput.value.trim(), address: mainAddress.value.trim(), label: 'Main location' }];
+      $$('.stop-card', extraStops).forEach(function (card, i) {
+        list.push({
+          suburb: $('.stop-suburb', card).value.trim(),
+          address: $('.stop-address', card).value.trim(),
+          label: 'Stop ' + (i + 2)
+        });
+      });
+      return list;
+    }
+    function getQuoteBreakdown() {
+      var service = checkedInput('service') || serviceInputs[0];
+      var baseAmount = Number(service.dataset.price || 75);
+      var serviceText = service.dataset.label;
+      var locations = getLocations();
+      var extraLocationCount = Math.max(0, locations.length - 1);
+      var routeAmount = extraLocationCount * EXTRA_STOP_PRICE;
+      var printAmount = 0, printText = 'Not included';
+      if (printEnabled.checked) {
+        var size = checkedInput('print_size'), finish = checkedInput('print_finish');
+        printAmount = Number(size.dataset.add || 0) + Number(finish.dataset.add || 0);
+        printText = size.value + ' ' + finish.value + ' (' + money(printAmount) + ', 1–2 weeks)';
+      }
+      return {
+        serviceText: serviceText, baseAmount: baseAmount, locations: locations,
+        extraLocationCount: extraLocationCount, routeAmount: routeAmount,
+        printAmount: printAmount, printText: printText, totalAmount: baseAmount + routeAmount + printAmount
+      };
+    }
+    function updateEstimate() {
+      var q = getQuoteBreakdown();
+      $('#est-service-label').textContent = q.serviceText;
+      $('#est-base-price').textContent = money(q.baseAmount);
+      $('#est-stop-count').textContent = q.extraLocationCount ? '(' + q.extraLocationCount + ' × ' + money(EXTRA_STOP_PRICE) + ')' : '(none)';
+      $('#est-route-price').textContent = money(q.routeAmount);
+      if (printEnabled.checked) {
+        var size = checkedInput('print_size'), finish = checkedInput('print_finish');
+        $('#est-print-price').textContent = size.value + ' ' + finish.value.toLowerCase() + ', ' + money(q.printAmount);
+      } else {
+        $('#est-print-price').textContent = 'Not included';
+      }
+      $('#est-total-price').textContent = money(q.totalAmount);
+      $('[data-mini-total]').textContent = money(q.totalAmount);
+    }
+
+    /* Multi-stop route */
+    var suburbOptions = $('#suburb-list');
+    function renumberStops() {
+      var cards = $$('.stop-card', extraStops);
+      cards.forEach(function (card, i) {
+        var n = i + 2;
+        $('.stop-card__head strong', card).textContent = 'Stop ' + n;
+        var sub = $('.stop-suburb', card), adr = $('.stop-address', card);
+        sub.name = 'additional_location_' + n; sub.id = 'stop-suburb-' + n;
+        adr.name = 'additional_address_' + n; adr.id = 'stop-address-' + n;
+        $('label[data-for="suburb"]', card).htmlFor = sub.id;
+        $('label[data-for="address"]', card).htmlFor = adr.id;
+      });
+      var total = cards.length + 1;
+      routeCount.textContent = total + ' of ' + MAX_LOCATIONS + ' locations';
+      addStopBtn.disabled = total >= MAX_LOCATIONS;
+      addStopBtn.textContent = total >= MAX_LOCATIONS ? 'That’s the maximum of six' : 'Add another stop';
+    }
+    function addStop() {
+      if ($$('.stop-card', extraStops).length >= MAX_LOCATIONS - 1) return;
+      var card = document.createElement('div');
+      card.className = 'stop-card';
+      card.innerHTML =
+        '<div class="stop-card__head"><strong>Stop</strong><button type="button" class="linkbtn" data-remove-stop>Remove</button></div>' +
+        '<div class="field"><label class="field__label" data-for="suburb">Suburb</label><input class="input stop-suburb" type="text" required list="suburb-list" autocomplete="off"></div>' +
+        '<div class="field"><label class="field__label" data-for="address">Street address <small>optional</small></label><input class="input stop-address" type="text" autocomplete="off" placeholder="Street number and name"></div>';
+      extraStops.appendChild(card);
+      renumberStops();
+      updateEstimate();
+      $('.stop-suburb', card).focus();
+    }
+    extraStops.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-remove-stop]');
+      if (!btn) return;
+      btn.closest('.stop-card').remove();
+      if (!$$('.stop-card', extraStops).length) { routeToggle.checked = false; syncRoute(); return; }
+      renumberStops();
+      updateEstimate();
+    });
+    extraStops.addEventListener('input', updateEstimate);
+    function syncRoute() {
+      var on = routeToggle.checked;
+      routeBuilder.hidden = !on;
+      bookingType.value = on ? 'route' : 'single';
+      if (!on) extraStops.innerHTML = '';
+      else if (!$$('.stop-card', extraStops).length) addStop();
+      renumberStops();
+      updateEstimate();
+    }
+    routeToggle.addEventListener('change', syncRoute);
+    addStopBtn.addEventListener('click', addStop);
+
+    /* Prints */
+    function syncPrint() {
+      printFields.hidden = !printEnabled.checked;
+      printInputs.forEach(function (i) { i.disabled = !printEnabled.checked; });
+      updateEstimate();
+    }
+    printEnabled.addEventListener('change', syncPrint);
+    form.addEventListener('change', function (e) {
+      if (e.target.name === 'service' || e.target.name === 'print_size' || e.target.name === 'print_finish') updateEstimate();
+    });
+
+    var dateInput = $('#preferred-date');
+    dateInput.min = new Date().toLocaleDateString('en-CA');
+
+    /* Area check inside the form */
+    function setFormCheck(res) {
+      formResult = res || null;
+      coverageField.value = coverageSummary(res);
+      mapLinkField.value = res && res.place ? mapLink(res.place) : '';
+      var btn = '<button type="button" class="linkbtn" data-form-check-btn>Check it’s in the service area</button>';
+      var cls = 'addr-check', html;
+      if (!res) {
+        html = btn;
+        estCheck.textContent = 'Area not checked yet';
+      } else if (res.status === 'yes') {
+        cls += ' addr-check--yes';
+        html = icon('i-check') + '<span>That address is in the service area.</span>';
+        estCheck.textContent = 'Area check: in the service area';
+      } else if (res.status === 'no') {
+        cls += ' addr-check--no';
+        html = icon('i-cross') + '<span>That address is outside the service area.</span>';
+        estCheck.textContent = 'Area check: outside the service area';
+      } else if (res.status === 'notfound') {
+        cls += ' addr-check--error';
+        html = icon('i-alert') + '<span>Couldn’t find that address.</span> ' + btn;
+        estCheck.textContent = 'Area not checked yet';
+      } else {
+        cls += ' addr-check--error';
+        html = icon('i-alert') + '<span>Couldn’t check that right now.</span> ' + btn;
+        estCheck.textContent = 'Area not checked yet';
+      }
+      formCheck.className = cls;
+      formCheck.innerHTML = html;
+    }
+    var formToken = 0;
+    function formCheckPlace(place) {
+      var t = ++formToken;
+      formPlace = place;
+      formCheck.className = 'addr-check';
+      formCheck.innerHTML = '<span class="spinner" aria-hidden="true"></span><span>Checking…</span>';
+      return checkPlace(place).then(function (res) {
+        if (t === formToken) setFormCheck(res);
+      });
+    }
+    function formCheckFromText() {
+      var text = mainAddress.value.trim();
+      if (!text) { mainAddress.focus(); return; }
+      var q = locationInput.value.trim() ? text + ', ' + locationInput.value.trim() : text;
+      formCheck.className = 'addr-check';
+      formCheck.innerHTML = '<span class="spinner" aria-hidden="true"></span><span>Finding the address…</span>';
+      var t = ++formToken;
+      geo.search(q).then(function (place) {
+        if (t !== formToken) return;
+        if (!place) { setFormCheck({ status: 'notfound' }); return; }
+        if (!locationInput.value.trim() && place.suburb) { locationInput.value = place.suburb; suburbAuto = true; }
+        formCheckPlace(place);
+      }, function () { if (t === formToken) setFormCheck({ status: 'error' }); });
+    }
+    formCheck.addEventListener('click', function (e) { if (e.target.closest('[data-form-check-btn]')) formCheckFromText(); });
+    makeCombo(mainAddress, $('#main-address-list'), function (place) {
+      if (place.suburb && (!locationInput.value.trim() || suburbAuto)) { locationInput.value = place.suburb; suburbAuto = true; }
+      formCheckPlace(place);
+    });
+    mainAddress.addEventListener('input', function () {
+      formToken++;   // drop any check still running for the old text
+      if (formResult || formPlace || formCheck.querySelector('.spinner')) { formPlace = null; setFormCheck(null); }
+    });
+    locationInput.addEventListener('input', function () { suburbAuto = false; });
+
+    var quote = {
+      useCheck: function (res) {
+        if (!res || !res.place) return;
+        formToken++;
+        var p = res.place;
+        if (!p.pinOnly) mainAddress.value = p.primary;
+        if (p.suburb) { locationInput.value = p.suburb; suburbAuto = true; }
+        formPlace = p;
+        setFormCheck(res);
+        document.getElementById('quote').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        var target = p.pinOnly ? mainAddress : (checkedInput('service') || serviceInputs[0]);
+        setTimeout(function () { target.focus({ preventScroll: true }); }, reduceMotion ? 0 : 700);
+      }
+    };
+
+    /* Pick a service from the price list or roof section */
+    $$('[data-pick-service]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var r = $('input[name="service"][value="' + a.dataset.pickService + '"]', form);
+        if (r) { r.checked = true; updateEstimate(); }
+      });
+    });
+
+    /* Summary text (emailed, copied or downloaded) */
+    function buildSummaryText() {
+      var q = getQuoteBreakdown();
+      var val = function (id, fallback) { var v = document.getElementById(id).value.trim(); return v || fallback; };
+      var time = checkedInput('preferred_time');
+      var lines = q.locations.map(function (l, i) {
+        return (i + 1) + '. ' + (l.suburb || 'Not selected') + (l.address ? ' — ' + l.address : '');
+      });
+      return [
+        'BIRDS-EYES DRONE SERVICES — BOOKING REQUEST',
+        '===========================================',
+        'Name: ' + val('full-name', 'Not provided'),
+        'Email: ' + val('email-addr', 'Not provided'),
+        'Phone: ' + val('phone-number', 'Not provided'),
+        'Service: ' + q.serviceText,
+        'Booking type: ' + (routeToggle.checked ? 'Multi-stop route' : 'Single location'),
+        'Locations:'
+      ].concat(lines).concat([
+        'Area check: ' + areaWords(formResult),
+        mapLinkField.value ? 'Map: ' + mapLinkField.value : 'Map: not available',
+        'Preferred date: ' + (dateInput.value || 'Flexible / to be arranged'),
+        'Preferred time: ' + (time ? time.value : 'Flexible'),
+        'First location / service: ' + money(q.baseAmount),
+        'Additional route stops: ' + q.extraLocationCount + ' × ' + money(EXTRA_STOP_PRICE) + ' = ' + money(q.routeAmount),
+        'Print add-on: ' + q.printText,
+        'ESTIMATED TOTAL: ' + money(q.totalAmount) + ' NZD',
+        '',
+        'Notes: ' + val('notes-input', 'None'),
+        '',
+        'Please confirm flight feasibility, availability, and the final quote before accepting this booking.'
+      ]).join('\n');
+    }
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text).then(function () { return true; });
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      ta.remove();
+      return Promise.resolve(ok);
+    }
+    function downloadText(text) {
+      var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url; a.download = 'birds-eyes-booking-request.txt';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1500);
+    }
+    $('[data-copy-summary]').addEventListener('click', function () {
+      copyText(preparedRequestText || buildSummaryText()).then(function (ok) {
+        actionFeedback.textContent = ok ? 'Summary copied.' : 'Your browser blocked copying. Use Download summary instead.';
+      }, function () { actionFeedback.textContent = 'Your browser blocked copying. Use Download summary instead.'; });
+    });
+    $('[data-download-summary]').addEventListener('click', function () {
+      downloadText(preparedRequestText || buildSummaryText());
+      actionFeedback.textContent = 'Summary downloaded.';
+    });
+
+    /* Validation and sending */
+    function fieldLabel(input) {
+      var l = input.id ? $('label[for="' + input.id + '"]') : null;
+      return l ? l.childNodes[0].textContent.trim() : 'a required field';
+    }
+    form.addEventListener('submit', function (e) {
+      formFeedback.textContent = '';
+      $$('.is-invalid', form).forEach(function (i) { i.classList.remove('is-invalid'); });
+      var invalid = $$('input, textarea', form).filter(function (i) { return !i.disabled && i.willValidate && !i.checkValidity(); });
+      if (invalid.length) {
+        e.preventDefault();
+        invalid.forEach(function (i) { i.classList.add('is-invalid'); });
+        var first = invalid[0];
+        var problem = first.type === 'email' && first.value ? 'Check the email address.' : 'Please fill in ' + fieldLabel(first).toLowerCase() + '.';
+        formFeedback.textContent = problem;
+        first.focus();
+        return;
+      }
+      var honeypot = $('#company-website');
+      if (honeypot && honeypot.value.trim()) { e.preventDefault(); return; }
+
+      preparedRequestText = buildSummaryText();
+      $('#form-summary').value = preparedRequestText;
+      $('#form-subject').value = 'New Birds-Eyes quote request — ' + $('#full-name').value.trim();
+      var returnUrl = new URL(window.location.href);
+      returnUrl.searchParams.set('quote', 'sent');
+      returnUrl.hash = 'quote';
+      $('#form-next').value = returnUrl.toString();
+      try { sessionStorage.setItem(SAVED_KEY, preparedRequestText); } catch (err) { /* private mode */ }
+      var submit = $('[data-submit]');
+      submit.textContent = 'Sending…';
+      submit.setAttribute('aria-disabled', 'true');
+      // No preventDefault: the browser posts the named fields straight to FormSubmit, as before.
+    });
+    form.addEventListener('input', function (e) {
+      if (e.target.classList.contains('is-invalid') && e.target.checkValidity()) e.target.classList.remove('is-invalid');
+      if (formFeedback.textContent && !$('.is-invalid', form)) formFeedback.textContent = '';
+    });
+
+    /* Back from FormSubmit */
+    var success = $('#quote-success');
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('quote') === 'sent') {
+      success.hidden = false;
+      var saved = null;
+      try { saved = sessionStorage.getItem(SAVED_KEY); } catch (err) { saved = null; }
+      var dl = $('[data-download-saved]');
+      if (saved) {
+        dl.hidden = false;
+        dl.addEventListener('click', function () { downloadText(saved); });
+      }
+      params.delete('quote');
+      var clean = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + '#quote';
+      window.history.replaceState({}, document.title, clean);
+      setTimeout(function () {
+        success.scrollIntoView({ behavior: 'auto', block: 'center' });
+        success.focus({ preventScroll: true });
+      }, 60);
+    }
+    $('[data-dismiss-success]').addEventListener('click', function () {
+      success.hidden = true;
+      try { sessionStorage.removeItem(SAVED_KEY); } catch (err) { /* ignore */ }
+      form.reset();
+      setFormCheck(null);
+      syncRoute(); syncPrint();
+      $('[data-submit]').textContent = 'Send quote request';
+      $('[data-submit]').removeAttribute('aria-disabled');
+      form.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    });
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) { $('[data-submit]').textContent = 'Send quote request'; $('[data-submit]').removeAttribute('aria-disabled'); }
+    });
+
+    syncRoute();
+    syncPrint();
+    setFormCheck(null);
+    updateEstimate();
+  })();
+  </script>
+</body>
+</html>
