@@ -18,8 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-  <link rel="stylesheet" href="assets/css/site.css?v=3">
-  <script src="assets/js/site.js?v=3" defer></script>
+  <link rel="stylesheet" href="assets/css/site.css?v=4">
+  <script src="assets/js/site.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -70,7 +70,7 @@
       <a href="about.html">About</a>
       <a href="quote.html" aria-current="page">Get a quote</a>
     </nav>
-    <p>Questions? Email <a href="mailto:romanflint@icloud.com">romanflint@icloud.com</a></p>
+    <p>Questions? Email <a href="mailto:birdseyesnz@gmail.com">birdseyesnz@gmail.com</a></p>
   </div>
 
   <main id="main">
@@ -96,7 +96,7 @@
         </div>
 
         <div class="quote__grid">
-          <form class="qform" id="quote-form" action="https://formsubmit.co/romanflint@icloud.com" method="POST">
+          <form class="qform" id="quote-form" action="https://formsubmit.co/birdseyesnz@gmail.com" method="POST">
             <input type="hidden" name="_subject" id="form-subject" value="New Birds-Eyes quote request">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" id="form-next" value="">
@@ -119,13 +119,26 @@
                 </label>
                 <label class="choice">
                   <input type="radio" name="service" value="roof-survey" data-price="90" data-label="Roof and property overview">
-                  <span class="choice__body"><span class="choice__name">Roof and property overview</span><span class="choice__meta">Photos and video of the roof, then close passes</span><span class="choice__price">$90</span></span>
+                  <span class="choice__body"><span class="choice__name">Roof and property overview</span><span class="choice__meta">Whole roof, then close-up passes</span><span class="choice__price">$90</span></span>
                 </label>
                 <label class="choice">
                   <input type="radio" name="service" value="commercial-pack" data-price="135" data-label="Small commercial property (20–40 photos + 2–5 min of video)">
                   <span class="choice__body"><span class="choice__name">Small commercial property</span><span class="choice__meta">20–40 photos + 2–5 min of 4K video</span><span class="choice__price">$135</span></span>
                 </label>
+                <label class="choice">
+                  <input type="radio" name="service" value="construction-progress" data-label="Construction progress (custom quote)">
+                  <span class="choice__body"><span class="choice__name">Construction progress</span><span class="choice__meta">Repeat visits from the same angles</span><span class="choice__price choice__price--text">Custom quote</span></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="service" value="larger-commercial" data-label="Larger commercial job (custom quote)">
+                  <span class="choice__body"><span class="choice__name">Larger commercial job</span><span class="choice__meta">Bigger or more complicated sites</span><span class="choice__price choice__price--text">Custom quote</span></span>
+                </label>
+                <label class="choice choice--wide">
+                  <input type="radio" name="service" value="something-else" data-label="Something else (custom quote)">
+                  <span class="choice__body"><span class="choice__name">Something else</span><span class="choice__meta">Describe the job in the last step</span><span class="choice__price choice__price--text">Custom quote</span></span>
+                </label>
               </div>
+              <p class="qhint" data-custom-hint hidden>Custom jobs are priced individually. Your estimate still shows travel and any print, and the full price is confirmed with you by email.</p>
             </fieldset>
 
             <fieldset class="qstep">
@@ -240,8 +253,8 @@
                   <input type="tel" id="phone-number" name="phone" class="input" autocomplete="tel">
                 </div>
                 <div class="field">
-                  <label class="field__label" for="notes-input">Anything else to mention? <small>optional</small></label>
-                  <textarea id="notes-input" name="notes" rows="4" class="input" placeholder="Access, gates or animals, the angles you want, or anything special about the job"></textarea>
+                  <label class="field__label" for="notes-input"><span data-notes-label>Anything else to mention?</span> <small data-notes-optional>optional</small></label>
+                  <textarea id="notes-input" name="notes" rows="4" class="input" data-missing="Please describe the job in the last step." placeholder="Access, gates or animals, the angles you want, or anything special about the job"></textarea>
                 </div>
               </div>
             </fieldset>
@@ -397,7 +410,7 @@
       <div>
         <h2>Contact</h2>
         <ul role="list">
-          <li><a href="mailto:romanflint@icloud.com">romanflint@icloud.com</a></li>
+          <li><a href="mailto:birdseyesnz@gmail.com">birdseyesnz@gmail.com</a></li>
           <li>Auckland, New Zealand</li>
         </ul>
       </div>

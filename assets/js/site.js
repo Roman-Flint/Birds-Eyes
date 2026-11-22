@@ -582,6 +582,10 @@
     var awayHint = $('[data-away-hint]');
     var flatHint = $('[data-apartment-hint]');
     var dateInput = $('#preferred-date');
+    var customHint = $('[data-custom-hint]');
+    var notesInput = $('#notes-input');
+    var notesLabel = $('[data-notes-label]');
+    var notesOptional = $('[data-notes-optional]');
     var SAVED_KEY = 'birdseye:lastRequest';
     var preparedRequestText = '';
     var formResult = null;     // last area check
@@ -611,7 +615,8 @@
     }
     function getQuoteBreakdown() {
       var service = checkedInput('service') || serviceInputs[0];
-      var baseAmount = Number(service.dataset.price || 75);
+      var custom = !service.dataset.price;   // custom jobs have no set price: they're quoted by email
+      var baseAmount = custom ? 0 : Number(service.dataset.price);
       var travel = travelFor(formPlace);
       var printAmount = 0, printText = 'Not included';
       if (printEnabled.checked) {
@@ -621,7 +626,7 @@
       }
       var travelAmount = travel ? travel.amount : 0;
       return {
-        serviceText: service.dataset.label, baseAmount: baseAmount, travel: travel, travelAmount: travelAmount,
+        custom: custom, serviceText: service.dataset.label, baseAmount: baseAmount, travel: travel, travelAmount: travelAmount,
         printAmount: printAmount, printText: printText, totalAmount: baseAmount + travelAmount + printAmount
       };
     }
@@ -633,7 +638,7 @@
     function updateEstimate() {
       var q = getQuoteBreakdown();
       $('#est-service-label').textContent = q.serviceText;
-      $('#est-base-price').textContent = money(q.baseAmount);
+      $('#est-base-price').textContent = q.custom ? 'Quoted by email' : money(q.baseAmount);
       $('#est-travel-price').textContent = travelWords(q);
       if (printEnabled.checked) {
         var size = checkedInput('print_size'), finish = checkedInput('print_finish');
@@ -641,12 +646,16 @@
       } else {
         $('#est-print-price').textContent = 'Not included';
       }
-      $('#est-total-price').textContent = money(q.totalAmount);
-      $('[data-mini-total]').textContent = money(q.totalAmount);
+      var totalEl = $('#est-total-price'), miniEl = $('[data-mini-total]');
+      totalEl.textContent = q.custom ? 'Quoted by email' : money(q.totalAmount);
+      miniEl.textContent = q.custom ? 'Custom quote' : money(q.totalAmount);
+      totalEl.classList.toggle('is-text', q.custom);
+      miniEl.classList.toggle('is-text', q.custom);
+      $('.estimate__total small').hidden = q.custom;
       // for the email only
       travelField.value = q.travel ? money(q.travel.amount) + ' (about ' + q.travel.minutes + ' min one way)' :
         (formResult && formResult.status === 'no' ? 'Not worked out (outside the service area)' : 'Not worked out (address not located)');
-      totalField.value = money(q.totalAmount) + ' NZD (estimate)';
+      totalField.value = q.custom ? 'Custom quote (package priced by email)' : money(q.totalAmount) + ' NZD (estimate)';
     }
 
     /* Hints that depend on choices */
@@ -655,6 +664,18 @@
       awayHint.hidden = !(onSite && onSite.value === 'Go ahead without the client');
       var type = checkedInput('property_type');
       flatHint.hidden = !(type && type.value === 'Apartment or unit');
+    }
+
+    /* Custom jobs: say how they're priced; "Something else" needs a description */
+    function syncService() {
+      var s = checkedInput('service');
+      var custom = !!s && !s.dataset.price;
+      var other = !!s && s.value === 'something-else';
+      customHint.hidden = !custom;
+      notesInput.required = other;
+      notesLabel.textContent = other ? 'Describe the job' : 'Anything else to mention?';
+      notesOptional.hidden = other;
+      if (!other) notesInput.classList.remove('is-invalid');
     }
 
     /* Prints */
@@ -666,6 +687,7 @@
     printEnabled.addEventListener('change', syncPrint);
     form.addEventListener('change', function (e) {
       var n = e.target.name;
+      if (n === 'service') syncService();
       if (n === 'service' || n === 'print_size' || n === 'print_finish') updateEstimate();
       if (n === 'on_site' || n === 'property_type') syncHints();
     });
@@ -778,11 +800,11 @@
         'Preferred time: ' + (time ? time.value : 'Flexible'),
         'On the day: ' + (onSite ? onSite.value : 'Not given'),
         '',
-        'Package price: ' + money(q.baseAmount),
+        'Package price: ' + (q.custom ? 'Custom quote, priced by email' : money(q.baseAmount)),
         'Travel: ' + travelWords(q),
         'Print: ' + q.printText,
-        'ESTIMATED TOTAL: ' + money(q.totalAmount) + ' NZD',
-        'This is an estimate only. The final price is confirmed by email and may change.',
+        'ESTIMATED TOTAL: ' + (q.custom ? 'To be quoted by email' : money(q.totalAmount) + ' NZD'),
+        q.custom ? 'This job is priced individually and confirmed by email.' : 'This is an estimate only. The final price is confirmed by email and may change.',
         '',
         'Notes: ' + val('notes-input', 'None')
       ].join('\n');
@@ -828,7 +850,8 @@
         e.preventDefault();
         invalid.forEach(function (i) { i.classList.add('is-invalid'); });
         var first = invalid[0];
-        var problem = first.type === 'email' && first.value ? 'Check the email address.' : 'Please fill in ' + fieldLabel(first).toLowerCase() + '.';
+        var problem = first.dataset.missing ||
+          (first.type === 'email' && first.value ? 'Check the email address.' : 'Please fill in ' + fieldLabel(first).toLowerCase() + '.');
         formFeedback.textContent = problem;
         first.focus();
         return;
@@ -879,7 +902,7 @@
       form.reset();
       formPlace = null; lookupFailed = false; suburbAuto = false;
       setFormCheck(null);
-      syncPrint(); syncHints();
+      syncService(); syncPrint(); syncHints();
       $('[data-submit]').textContent = 'Send quote request';
       $('[data-submit]').removeAttribute('aria-disabled');
       form.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
@@ -888,6 +911,7 @@
       if (e.persisted) { $('[data-submit]').textContent = 'Send quote request'; $('[data-submit]').removeAttribute('aria-disabled'); }
     });
 
+    syncService();
     syncPrint();
     syncHints();
     setFormCheck(null);
