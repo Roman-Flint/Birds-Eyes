@@ -296,3 +296,73 @@ No ladder, no climbing, no risk. See every part of your roof in photos and video
 Roof checks are around $90. Link in bio.
 
 #roofinspection #homemaintenance #safetyfirst #dronephotography #auckland
+
+## 45-holiday-rentals
+Running a holiday rental? Guests want to see more than the bedrooms. Aerial photos show the pool, the garden and the space around your place before they book.
+
+House shoots from $75. Link in bio.
+
+#holidayrental #airbnbnz #dronephotography #auckland #aerialphotography
+
+## 46-new-build
+Just finished building? After all that work, get a shot of the finished house and section from above. It's a great way to remember the project.
+
+Link in bio for an estimate.
+
+#newbuildnz #newhome #aucklandhomes #dronephotography #auckland
+
+## 47-whats-nearby
+Buyers don't just want to see the house. They want to know what's around it. Aerial photos show the bush, paddocks, neighbours and outlook all in one shot.
+
+Get a quote at the link in bio.
+
+#aucklandrealestate #propertymarketing #dronephotography #auckland #aerialphotography
+
+## 48-driveway
+Long driveways and tricky access are hard to explain in words. From above, buyers can see exactly how you get in, where to park and how the land is laid out.
+
+Link in bio for a quote.
+
+#lifestyleblock #ruralnz #aucklandproperty #dronephotography #auckland
+
+## 49-new-year-listing
+Thinking of selling? Aerial photos give buyers the full picture before they visit. It's 5–10 edited photos for $75, or add 4K video for $105, and you don't need to be home on the day.
+
+Link in bio to get started.
+
+#aucklandrealestate #sellingyourhome #dronephotography #auckland #propertymarketing
+
+## 50-photos-or-video
+Not sure which package to pick? Photos are perfect for listings. Video shows how everything fits together. You can get 5–10 photos for $75, or 10–20 photos plus 30–90 seconds of 4K video for $105.
+
+Link in bio for an estimate.
+
+#dronephotography #dronevideo #auckland #realestatephotography #aucklandhomes
+
+## 51-property-managers
+Property managers, checking roofs doesn't have to mean ladders. You get photos and video of the whole roof, plus close-ups of gutters and flashings, ready to send to owners or roofers.
+
+Get in touch through the link in bio.
+
+#propertymanagement #roofinspection #aucklandproperty #dronephotography #auckland
+
+## 52-yearly-roof-check
+When did you last actually see your roof? A quick drone check shows rust, lifted sheets and blocked gutters, so you can get them sorted early.
+
+Roof checks are around $90. Link in bio.
+
+#roofinspection #homemaintenance #aucklandhomes #dronephotography #auckland
+
+## 53-every-angle
+A good shoot covers every angle: straight down to show the layout, and from the side to show the house and outlook. Together they give buyers the whole picture.
+
+House shoots from $75. Link in bio.
+
+#realestatephotography #dronephotography #auckland #aucklandhomes #aerialphotography
+
+## 54-business-from-above
+Your business looks different from above. Get 20–40 edited photos and 2–5 minutes of 4K video of your shop, venue or site for your website and socials.
+
+Small commercial shoots are $135. Link in bio.
+
+#aucklandbusiness #smallbusinessnz #commercialphotography #dronephotography #auckland
