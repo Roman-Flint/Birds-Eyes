@@ -15,6 +15,7 @@
   <meta property="og:title" content="Birds-Eyes Drone Services">
   <meta property="og:description" content="Aerial photos and 4K video of Auckland homes, apartments, lifestyle blocks, roofs and small businesses. See what each package includes and get an estimate.">
   <meta property="og:url" content="https://birdseyes.co.nz/">
+  <link rel="canonical" href="https://birdseyes.co.nz/">
   <meta property="og:image" content="https://birdseyes.co.nz/assets/social-preview.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -27,10 +28,10 @@
     /* Old single-page links (index.html#quote and so on) now live on their own pages. */
     (function () {
       var q = location.search, h = location.hash.slice(1);
-      if (/[?&]quote=sent/.test(q)) { location.replace('quote.html' + q); return; }
-      var to = { portfolio: 'gallery.html', services: 'services.html', 'print-delivery': 'services.html#prints',
-        'roof-checks': 'services.html#roof-checks', coverage: 'quote.html', 'transit-areas': 'quote.html',
-        quote: 'quote.html', about: 'about.html' }[h];
+      if (/[?&]quote=sent/.test(q)) { location.replace('/quote' + q); return; }
+      var to = { portfolio: '/gallery', services: '/services', 'print-delivery': '/services#prints',
+        'roof-checks': '/services#roof-checks', coverage: '/quote', 'transit-areas': '/quote',
+        quote: '/quote', about: '/about' }[h];
       if (to) location.replace(to);
     })();
   </script>
@@ -38,7 +39,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"LocalBusiness","name":"Birds-Eyes Drone Services","description":"Drone photos and 4K video of Auckland homes, apartments, lifestyle blocks, roofs and small businesses.","email":"birdseyesnz@gmail.com","priceRange":"$75–$135 (estimates)","areaServed":{"@type":"City","name":"Auckland"},"address":{"@type":"PostalAddress","addressLocality":"Auckland","addressCountry":"NZ"}}
   </script>
-  <script src="assets/js/site.js?v=4" defer></script>
+  <script src="assets/js/site.js?v=5" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -58,19 +59,19 @@
 
   <header class="site-header" data-header>
     <div class="wrap site-header__inner">
-      <a href="index.html" class="brand" aria-label="Birds-Eyes Drone Services, home" aria-current="page">
+      <a href="/" class="brand" aria-label="Birds-Eyes Drone Services, home" aria-current="page">
         <svg viewBox="4.5 0.6 631.1 185.2" aria-hidden="true" focusable="false"><use href="#logo-compact"></use></svg>
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Photos</a>
-        <a href="fleet.html">Our fleet</a>
-        <a href="faq.html">FAQ</a>
-        <a href="about.html">About</a>
-        <a href="quote.html" class="btn btn--go btn--small">Get a quote</a>
+        <a href="/services">Services</a>
+        <a href="/gallery">Photos</a>
+        <a href="/fleet">Our fleet</a>
+        <a href="/faq">FAQ</a>
+        <a href="/about">About</a>
+        <a href="/quote" class="btn btn--go btn--small">Get a quote</a>
       </nav>
       <div class="header-actions">
-        <a href="quote.html" class="btn btn--go btn--small">Get a quote</a>
+        <a href="/quote" class="btn btn--go btn--small">Get a quote</a>
         <button type="button" class="menu-btn" aria-expanded="false" aria-controls="drawer" data-menu>
           <svg class="icon-open" aria-hidden="true"><use href="#i-menu"></use></svg>
           <svg class="icon-close" aria-hidden="true"><use href="#i-cross"></use></svg>
@@ -81,13 +82,13 @@
   </header>
   <div class="drawer on-dark" id="drawer" hidden>
     <nav aria-label="Mobile">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="services.html">Services and prices</a>
-      <a href="gallery.html">Photos</a>
-      <a href="fleet.html">Our fleet</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="quote.html">Get a quote</a>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/services">Services and prices</a>
+      <a href="/gallery">Photos</a>
+      <a href="/fleet">Our fleet</a>
+      <a href="/faq">FAQ</a>
+      <a href="/about">About</a>
+      <a href="/quote">Get a quote</a>
     </nav>
     <p>Questions? Email <a href="mailto:birdseyesnz@gmail.com">birdseyesnz@gmail.com</a></p>
   </div>
@@ -106,8 +107,8 @@
         <h1 class="h1 hero__title" id="hero-title">Drone photos and 4K video of Auckland properties</h1>
         <p class="hero__lede">Aerial photography for homes, apartments, lifestyle blocks, roofs and small businesses around Auckland. Every shoot is planned, flown and edited for your property. Prices start at approx. $75.</p>
         <div class="hero__actions">
-          <a href="quote.html" class="btn btn--go">Get a quote</a>
-          <a href="services.html" class="btn btn--ghost">See packages and prices</a>
+          <a href="/quote" class="btn btn--go">Get a quote</a>
+          <a href="/services" class="btn btn--ghost">See packages and prices</a>
         </div>
       </div>
       <div class="wrap hero__foot">
@@ -127,32 +128,32 @@
             <h2 class="h2" id="packs-title">What you get</h2>
             <p class="lede">Four packages, each edited and delivered by download link. Other jobs get a custom quote.</p>
           </div>
-          <a class="more-link" href="services.html">Full package details</a>
+          <a class="more-link" href="/services">Full package details</a>
         </div>
         <ul class="packs" role="list">
           <li class="pack">
             <h3 class="pack__name">Standard house shoot</h3>
             <p class="pack__get">5–10 photos</p>
             <p class="pack__desc">The house and section from the angles that show it best.</p>
-            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $75</p><a class="pack__link" href="quote.html?service=house-photos">Get a quote<span class="visually-hidden"> for a standard house shoot</span></a></div>
+            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $75</p><a class="pack__link" href="/quote?service=house-photos">Get a quote<span class="visually-hidden"> for a standard house shoot</span></a></div>
           </li>
           <li class="pack">
             <h3 class="pack__name">House shoot with video</h3>
             <p class="pack__get">10–20 photos <span>plus 30–90 seconds of 4K video</span></p>
             <p class="pack__desc">Everything in the house shoot, plus smooth sweeps, reveals and orbits.</p>
-            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $105</p><a class="pack__link" href="quote.html?service=house-video">Get a quote<span class="visually-hidden"> for a house shoot with video</span></a></div>
+            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $105</p><a class="pack__link" href="/quote?service=house-video">Get a quote<span class="visually-hidden"> for a house shoot with video</span></a></div>
           </li>
           <li class="pack">
             <h3 class="pack__name">Roof and property overview</h3>
             <p class="pack__get">The whole roof <span>plus close-up passes over gutters, valleys and flashings</span></p>
             <p class="pack__desc">Photos and video you can share with a roofer, builder or insurer.</p>
-            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $90</p><a class="pack__link" href="quote.html?service=roof-survey">Get a quote<span class="visually-hidden"> for a roof and property overview</span></a></div>
+            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $90</p><a class="pack__link" href="/quote?service=roof-survey">Get a quote<span class="visually-hidden"> for a roof and property overview</span></a></div>
           </li>
           <li class="pack">
             <h3 class="pack__name">Small commercial property</h3>
             <p class="pack__get">20–40 photos <span>plus 2–5 minutes of 4K video</span></p>
             <p class="pack__desc">For shops, offices, venues and small sites.</p>
-            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $135</p><a class="pack__link" href="quote.html?service=commercial-pack">Get a quote<span class="visually-hidden"> for a small commercial property</span></a></div>
+            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $135</p><a class="pack__link" href="/quote?service=commercial-pack">Get a quote<span class="visually-hidden"> for a small commercial property</span></a></div>
           </li>
         </ul>
         <p class="fineprint">Prices are estimates in NZ dollars and can change. Your final price is confirmed by email before anything is booked.</p>
@@ -166,14 +167,14 @@
             <h2 class="h2" id="shoots-title">Recent shoots</h2>
             <p class="lede">Homes, lifestyle blocks, glasshouses and roofs from around Auckland.</p>
           </div>
-          <a class="more-link" href="gallery.html">See all photos</a>
+          <a class="more-link" href="/gallery">See all photos</a>
         </div>
         <ul class="strip" role="list">
-        <li><a href="gallery.html#lifestyle-block-wide"><img src="assets/photos/lifestyle-block-wide-1280.jpg" srcset="assets/photos/lifestyle-block-wide-640.jpg 640w, assets/photos/lifestyle-block-wide-1280.jpg 1280w, assets/photos/lifestyle-block-wide-2048.jpg 2048w" sizes="(max-width: 900px) 100vw, 620px" width="1280" height="720" loading="lazy" decoding="async" alt="A lifestyle block from the air: house, olive grove, glasshouses, sheds and vineyard rows"></a></li>
-        <li><a href="gallery.html#home-pool-overhead"><img src="assets/photos/home-pool-overhead-1280.jpg" srcset="assets/photos/home-pool-overhead-640.jpg 640w, assets/photos/home-pool-overhead-1280.jpg 1280w, assets/photos/home-pool-overhead-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="House, pool and garden from directly overhead, with the driveway and lawn"></a></li>
-        <li><a href="gallery.html#glasshouse-paddock"><img src="assets/photos/glasshouse-paddock-1280.jpg" srcset="assets/photos/glasshouse-paddock-640.jpg 640w, assets/photos/glasshouse-paddock-1280.jpg 1280w, assets/photos/glasshouse-paddock-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="Twin-span glasshouse in a mown paddock, with bush and hills behind"></a></li>
-        <li><a href="gallery.html#roof-closeup-rust"><img src="assets/photos/roof-closeup-rust-1280.jpg" srcset="assets/photos/roof-closeup-rust-640.jpg 640w, assets/photos/roof-closeup-rust-1280.jpg 1280w, assets/photos/roof-closeup-rust-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="Close-up of a corrugated iron shed roof showing rust spots along the sheets"></a></li>
-        <li><a href="gallery.html#packing-shed-vines"><img src="assets/photos/packing-shed-vines-1280.jpg" srcset="assets/photos/packing-shed-vines-640.jpg 640w, assets/photos/packing-shed-vines-1280.jpg 1280w, assets/photos/packing-shed-vines-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="Large shed beside curving vineyard rows, with the house and olive trees to one side"></a></li>
+        <li><a href="/gallery#lifestyle-block-wide"><img src="assets/photos/lifestyle-block-wide-1280.jpg" srcset="assets/photos/lifestyle-block-wide-640.jpg 640w, assets/photos/lifestyle-block-wide-1280.jpg 1280w, assets/photos/lifestyle-block-wide-2048.jpg 2048w" sizes="(max-width: 900px) 100vw, 620px" width="1280" height="720" loading="lazy" decoding="async" alt="A lifestyle block from the air: house, olive grove, glasshouses, sheds and vineyard rows"></a></li>
+        <li><a href="/gallery#home-pool-overhead"><img src="assets/photos/home-pool-overhead-1280.jpg" srcset="assets/photos/home-pool-overhead-640.jpg 640w, assets/photos/home-pool-overhead-1280.jpg 1280w, assets/photos/home-pool-overhead-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="House, pool and garden from directly overhead, with the driveway and lawn"></a></li>
+        <li><a href="/gallery#glasshouse-paddock"><img src="assets/photos/glasshouse-paddock-1280.jpg" srcset="assets/photos/glasshouse-paddock-640.jpg 640w, assets/photos/glasshouse-paddock-1280.jpg 1280w, assets/photos/glasshouse-paddock-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="Twin-span glasshouse in a mown paddock, with bush and hills behind"></a></li>
+        <li><a href="/gallery#roof-closeup-rust"><img src="assets/photos/roof-closeup-rust-1280.jpg" srcset="assets/photos/roof-closeup-rust-640.jpg 640w, assets/photos/roof-closeup-rust-1280.jpg 1280w, assets/photos/roof-closeup-rust-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="Close-up of a corrugated iron shed roof showing rust spots along the sheets"></a></li>
+        <li><a href="/gallery#packing-shed-vines"><img src="assets/photos/packing-shed-vines-1280.jpg" srcset="assets/photos/packing-shed-vines-640.jpg 640w, assets/photos/packing-shed-vines-1280.jpg 1280w, assets/photos/packing-shed-vines-2048.jpg 2048w" sizes="(max-width: 900px) 50vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="Large shed beside curving vineyard rows, with the house and olive trees to one side"></a></li>
         </ul>
       </div>
     </section>
@@ -191,8 +192,8 @@
           <li><h3>Delivery</h3><p>Photos and video arrive by download link. Prints take 1–2 weeks.</p></li>
         </ol>
         <div class="actions-row">
-          <a class="btn btn--go" href="quote.html">Get a quote</a>
-          <a class="more-link" href="faq.html">Read the FAQ</a>
+          <a class="btn btn--go" href="/quote">Get a quote</a>
+          <a class="more-link" href="/faq">Read the FAQ</a>
         </div>
       </div>
     </section>
@@ -207,13 +208,13 @@
       <nav aria-label="Footer">
         <h2>Pages</h2>
         <ul role="list">
-          <li><a href="services.html">Services and prices</a></li>
-          <li><a href="gallery.html">Photos</a></li>
-          <li><a href="fleet.html">Our fleet</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="quote.html">Get a quote</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="/services">Services and prices</a></li>
+          <li><a href="/gallery">Photos</a></li>
+          <li><a href="/fleet">Our fleet</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/quote">Get a quote</a></li>
+          <li><a href="/privacy">Privacy</a></li>
         </ul>
       </nav>
       <div>

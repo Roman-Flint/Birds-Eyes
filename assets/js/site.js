@@ -29,6 +29,11 @@
 
   var $ = function (s, el) { return (el || document).querySelector(s); };
   var $$ = function (s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); };
+
+  // Show clean addresses (/quote rather than /quote.html) if someone arrives on an old link.
+  if (location.protocol !== 'file:' && /\.html$/.test(location.pathname)) {
+    history.replaceState(history.state, '', location.pathname.replace(/(index)?\.html$/, '') + location.search + location.hash);
+  }
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var coarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
