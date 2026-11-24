@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-  <link rel="stylesheet" href="assets/css/site.css?v=8">
+  <link rel="stylesheet" href="assets/css/site.css?v=9">
   <script>
     /* Old single-page links (index.html#quote and so on) now live on their own pages. */
     (function () {
@@ -132,28 +132,40 @@
         </div>
         <ul class="packs" role="list">
           <li class="pack">
-            <h3 class="pack__name">Standard house shoot</h3>
-            <p class="pack__get">5–10 photos</p>
+            <div class="pack__top">
+              <h3 class="pack__name">Standard house shoot</h3>
+              <p class="pack__price"><small>approx.</small> $75</p>
+            </div>
+            <ul class="pack__list" role="list"><li>5–10 edited photos</li></ul>
             <p class="pack__desc">The house and section from the angles that show it best.</p>
-            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $75</p><a class="pack__link" href="/quote?service=house-photos">Get a quote<span class="visually-hidden"> for a standard house shoot</span></a></div>
+            <a class="btn btn--line btn--small pack__btn" href="/quote?service=house-photos">Get a quote<span class="visually-hidden"> for a standard house shoot</span></a>
           </li>
           <li class="pack">
-            <h3 class="pack__name">House shoot with video</h3>
-            <p class="pack__get">10–20 photos <span>plus 30–90 seconds of 4K video</span></p>
-            <p class="pack__desc">Everything in the house shoot, plus smooth sweeps, reveals and orbits.</p>
-            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $105</p><a class="pack__link" href="/quote?service=house-video">Get a quote<span class="visually-hidden"> for a house shoot with video</span></a></div>
+            <div class="pack__top">
+              <h3 class="pack__name">House shoot with video</h3>
+              <p class="pack__price"><small>approx.</small> $105</p>
+            </div>
+            <ul class="pack__list" role="list"><li>10–20 edited photos</li><li>30–90 seconds of 4K video</li></ul>
+            <p class="pack__desc">Smooth sweeps, reveals and orbits around the property.</p>
+            <a class="btn btn--line btn--small pack__btn" href="/quote?service=house-video">Get a quote<span class="visually-hidden"> for a house shoot with video</span></a>
           </li>
           <li class="pack">
-            <h3 class="pack__name">Roof and property overview</h3>
-            <p class="pack__get">The whole roof <span>plus close-up passes over gutters, valleys and flashings</span></p>
-            <p class="pack__desc">Photos and video you can share with a roofer, builder or insurer.</p>
-            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $90</p><a class="pack__link" href="/quote?service=roof-survey">Get a quote<span class="visually-hidden"> for a roof and property overview</span></a></div>
+            <div class="pack__top">
+              <h3 class="pack__name">Roof and property overview</h3>
+              <p class="pack__price"><small>approx.</small> $90</p>
+            </div>
+            <ul class="pack__list" role="list"><li>Photos and video of the whole roof</li><li>Close-ups of gutters, valleys and flashings</li></ul>
+            <p class="pack__desc">Files you can share with a roofer, builder or insurer.</p>
+            <a class="btn btn--line btn--small pack__btn" href="/quote?service=roof-survey">Get a quote<span class="visually-hidden"> for a roof and property overview</span></a>
           </li>
           <li class="pack">
-            <h3 class="pack__name">Small commercial property</h3>
-            <p class="pack__get">20–40 photos <span>plus 2–5 minutes of 4K video</span></p>
+            <div class="pack__top">
+              <h3 class="pack__name">Small commercial property</h3>
+              <p class="pack__price"><small>approx.</small> $135</p>
+            </div>
+            <ul class="pack__list" role="list"><li>20–40 edited photos</li><li>2–5 minutes of 4K video</li></ul>
             <p class="pack__desc">For shops, offices, venues and small sites.</p>
-            <div class="pack__foot"><p class="pack__price"><small style="margin: 0">approx.</small> $135</p><a class="pack__link" href="/quote?service=commercial-pack">Get a quote<span class="visually-hidden"> for a small commercial property</span></a></div>
+            <a class="btn btn--line btn--small pack__btn" href="/quote?service=commercial-pack">Get a quote<span class="visually-hidden"> for a small commercial property</span></a>
           </li>
         </ul>
         <p class="fineprint">Prices are estimates in NZ dollars and can change. Your final price is confirmed by email before anything is booked.</p>
