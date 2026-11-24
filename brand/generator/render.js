@@ -7,7 +7,7 @@
 //   light : photo, h, hs?, sub?, inset?, ipos?, tag?, ticks?, pos?
 //   card  : h, hs?, eyebrow?, sub?, steps?|list?|ticks?, strip? (photo names), sh?
 //   grid  : photos (4 names), h, hs?, sub?
-//   print : photo, h, hs?, eyebrow?, sub?
+//   print : photo, h, hs?, eyebrow?, sub?, ribbon? (true adds a Christmas ribbon and bow)
 // Photo names are files in assets/photos without "-2048.jpg", e.g. "home-pool-overhead".
 // Use <span class="k">...</span> in h for the yellow highlight and <br> for line breaks.
 const path = require('path');

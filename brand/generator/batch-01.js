@@ -17,7 +17,7 @@ window.BATCH = [
  {id:'19-orchards', t:'panel', photo:'packing-shed-vines', h:'Vineyards, orchards<br><span class="k">and farms</span>', sub:'Rows, sheds and the lay of the land, captured in photos and 4K video.'},
  {id:'20-selling-privately', t:'light', photo:'home-pool-angled', inset:'home-pool-overhead', h:'Selling privately?<br>Look professional.', sub:'Aerial photos make a private listing stand out on Trade Me and social media.'},
  {id:'21-insurance', t:'light', photo:'shed-roofs-pergola', inset:'roof-closeup-rust', ipos:'55% 50%', h:'Clear roof photos<br>for your insurer', sub:'Photos and video of the whole roof, plus close-ups of any damage.', tag:'$90 roof check'},
- {id:'22-christmas', t:'print', photo:'home-pool-overhead', eyebrow:'Gift idea', h:'The family home,<br><span class="k">from above</span>', hs:92, sub:'A framed aerial print makes a gift nobody else will give.'},
+ {id:'22-christmas', t:'print', ribbon:true, photo:'home-pool-overhead', eyebrow:'Gift idea', h:'The family home,<br><span class="k">from above</span>', hs:92, sub:'A framed aerial print makes a gift nobody else will give.'},
  {id:'23-summer', t:'hero', photo:'lifestyle-block-overhead', h:'Summer is the<br>time to <span class="k">shoot</span>', sub:'Green lawns, blue pools and long days. Your property never looks better from above.', eyebrow:'Book for summer'},
  {id:'24-agents', t:'panel', photo:'home-pool-angled', h:'Real estate agents:<br><span class="k">aerials for every listing</span>', hs:96, ticks:['Delivered by download link','Vendors don’t need to be home','Photos and 4K video for listings and socials']}
 ];
