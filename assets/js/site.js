@@ -48,6 +48,39 @@
   if (location.protocol !== 'file:' && /\.html$/.test(location.pathname)) {
     history.replaceState(history.state, '', location.pathname.replace(/(index)?\.html$/, '') + location.search + location.hash);
   }
+  /* Dark mode toggle. The <head> script sets data-theme before the page paints. */
+  (function () {
+    var root = document.documentElement;
+    var KEY = 'birdseye:theme';
+    function sync() {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      $$('[data-theme-toggle]').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(dark));
+        b.title = dark ? 'Light mode' : 'Dark mode';
+        var label = b.querySelector('.visually-hidden');
+        if (label) label.textContent = dark ? 'Switch to light mode' : 'Switch to dark mode';
+      });
+    }
+    $$('[data-theme-toggle]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem(KEY, next); } catch (e) { /* private mode */ }
+        sync();
+      });
+    });
+    // Follow the device setting until the visitor picks one.
+    try {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var follow = function (ev) {
+        var saved = null;
+        try { saved = localStorage.getItem(KEY); } catch (e2) { /* blocked */ }
+        if (saved !== 'dark' && saved !== 'light') { root.setAttribute('data-theme', ev.matches ? 'dark' : 'light'); sync(); }
+      };
+      if (mq.addEventListener) mq.addEventListener('change', follow);
+    } catch (e3) { /* old browser */ }
+    sync();
+  })();
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var coarsePointer = window.matchMedia('(pointer: coarse)').matches;
 

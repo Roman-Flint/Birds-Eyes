@@ -23,7 +23,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-  <link rel="stylesheet" href="assets/css/site.css?v=12">
+  <script>try{var t=localStorage.getItem('birdseye:theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="assets/css/site.css?v=14">
   <script>
     /* Old single-page links (index.html#quote and so on) now live on their own pages. */
     (function () {
@@ -39,7 +40,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://birdseyes.co.nz/#website", "url": "https://birdseyes.co.nz/", "name": "Birds-Eyes Drone Services", "alternateName": "Birds-Eyes", "inLanguage": "en-NZ"}, {"@type": "ProfessionalService", "@id": "https://birdseyes.co.nz/#business", "name": "Birds-Eyes Drone Services", "url": "https://birdseyes.co.nz/", "logo": "https://birdseyes.co.nz/assets/apple-touch-icon.png", "image": "https://birdseyes.co.nz/assets/social-preview.jpg", "description": "Drone photography and 4K aerial video for Auckland homes, real estate listings, lifestyle blocks, roof checks and small businesses.", "email": "roman@birdseyes.co.nz", "priceRange": "$75–$135", "currenciesAccepted": "NZD", "address": {"@type": "PostalAddress", "addressLocality": "Auckland", "addressRegion": "Auckland", "addressCountry": "NZ"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Auckland"}, {"@type": "AdministrativeArea", "name": "West Auckland"}, {"@type": "AdministrativeArea", "name": "Central Auckland"}, {"@type": "AdministrativeArea", "name": "North Shore"}, {"@type": "AdministrativeArea", "name": "East Auckland"}, {"@type": "AdministrativeArea", "name": "South Auckland"}], "knowsAbout": ["Drone photography", "Aerial photography", "Real estate photography", "Aerial video", "Drone roof inspection"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Drone photography packages", "itemListElement": [{"@type": "Offer", "price": "75", "priceCurrency": "NZD", "url": "https://birdseyes.co.nz/services", "itemOffered": {"@type": "Service", "name": "Standard house shoot", "description": "5–10 edited aerial photos of the house and section."}}, {"@type": "Offer", "price": "105", "priceCurrency": "NZD", "url": "https://birdseyes.co.nz/services", "itemOffered": {"@type": "Service", "name": "House shoot with video", "description": "10–20 edited aerial photos plus 30–90 seconds of 4K drone video."}}, {"@type": "Offer", "price": "90", "priceCurrency": "NZD", "url": "https://birdseyes.co.nz/services", "itemOffered": {"@type": "Service", "name": "Roof and property overview", "description": "Drone photos and video of the whole roof, with close-up passes over gutters, valleys and flashings."}}, {"@type": "Offer", "price": "135", "priceCurrency": "NZD", "url": "https://birdseyes.co.nz/services", "itemOffered": {"@type": "Service", "name": "Small commercial property", "description": "20–40 edited aerial photos plus 2–5 minutes of 4K drone video."}}]}}]}
   </script>
-  <script src="assets/js/site.js?v=7" defer></script>
+  <script src="assets/js/site.js?v=8" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -69,9 +70,11 @@
         <a href="/faq">FAQ</a>
         <a href="/about">About</a>
         <a href="/quote" class="btn btn--go btn--small">Get a quote</a>
+        <button type="button" class="theme-btn" data-theme-toggle aria-pressed="false" title="Dark mode"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 14.3A8.6 8.6 0 0 1 9.7 3.3a.75.75 0 0 0-.95-.95A10.1 10.1 0 1 0 21.65 15.25a.75.75 0 0 0-.95-.95Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.8v2.4M12 19.8v2.4M1.8 12h2.4M19.8 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M4.8 19.2l1.7-1.7M17.5 6.5l1.7-1.7"/></g></svg><span class="visually-hidden">Dark mode</span></button>
       </nav>
       <div class="header-actions">
         <a href="/quote" class="btn btn--go btn--small">Get a quote</a>
+        <button type="button" class="theme-btn" data-theme-toggle aria-pressed="false" title="Dark mode"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 14.3A8.6 8.6 0 0 1 9.7 3.3a.75.75 0 0 0-.95-.95A10.1 10.1 0 1 0 21.65 15.25a.75.75 0 0 0-.95-.95Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.8v2.4M12 19.8v2.4M1.8 12h2.4M19.8 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M4.8 19.2l1.7-1.7M17.5 6.5l1.7-1.7"/></g></svg><span class="visually-hidden">Dark mode</span></button>
         <button type="button" class="menu-btn" aria-expanded="false" aria-controls="drawer" data-menu>
           <svg class="icon-open" aria-hidden="true"><use href="#i-menu"></use></svg>
           <svg class="icon-close" aria-hidden="true"><use href="#i-cross"></use></svg>
