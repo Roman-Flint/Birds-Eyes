@@ -59,7 +59,7 @@ Photos plus video is $105. Link in bio.
 #dronevideo #4kvideo #dronephotography #auckland #realestatevideo
 
 ## 13-small-business
-Got a shop, office, venue or small site? Aerial photos and video are a great way to show it off on your website and socials. You get 20–40 edited photos and 2–5 minutes of 4K video.
+Got a shop, office, venue or small site? Aerial photos and video are a great way to show it off on your website and socials. You get 20–40 photos and 2–5 minutes of 4K video.
 
 Small commercial shoots are $135. Link in bio.
 
@@ -80,7 +80,7 @@ Questions? Link in bio or send a message.
 #dronesafety #dronephotography #auckland #nzdrone #aerialphotography
 
 ## 16-what-you-get
-Wondering what you actually get? A standard house shoot is 5–10 edited photos from the angles that show your place best, with full-resolution files and web-ready copies for listings.
+Wondering what you actually get? A standard house shoot is 5–10 photos from the angles that show your place best, with full-resolution files and web-ready copies for listings.
 
 $75. Link in bio for an estimate.
 
@@ -326,7 +326,7 @@ Link in bio for a quote.
 #lifestyleblock #ruralnz #aucklandproperty #dronephotography #auckland
 
 ## 49-new-year-listing
-Thinking of selling? Aerial photos give buyers the full picture before they visit. It's 5–10 edited photos for $75, or add 4K video for $105, and you don't need to be home on the day.
+Thinking of selling? Aerial photos give buyers the full picture before they visit. It's 5–10 photos for $75, or add 4K video for $105, and you don't need to be home on the day.
 
 Link in bio to get started.
 
@@ -361,7 +361,7 @@ House shoots from $75. Link in bio.
 #realestatephotography #dronephotography #auckland #aucklandhomes #aerialphotography
 
 ## 54-business-from-above
-Your business looks different from above. Get 20–40 edited photos and 2–5 minutes of 4K video of your shop, venue or site for your website and socials.
+Your business looks different from above. Get 20–40 photos and 2–5 minutes of 4K video of your shop, venue or site for your website and socials.
 
 Small commercial shoots are $135. Link in bio.
 

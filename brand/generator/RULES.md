@@ -16,6 +16,7 @@ Used by the daily Instagram top-up when the list of ready-made posts runs out.
 - No emojis, in images or captions.
 - Only use the aerial photos in `assets/photos` (names without `-2048.jpg`).
 - Only state facts that are on the website: prices (house shoot 5–10 photos $75, house shoot with video 10–20 photos + 30–90 s of 4K video $105, roof and property overview $90, small commercial 20–40 photos + 2–5 min of 4K video $135; prints A3 $20, A2 $32, A1 $45 matte, gloss +$5, framed +$40, 1–2 weeks), delivery by download link, the client doesn't need to be home, CAA Part 101 and airspace checked for every address, estimates confirmed by email before booking.
+- Don’t keep saying “edited photos”: just say “photos”.
 - No made-up reviews, testimonials, client names, statistics or turnaround times.
 - Don't repeat an existing post's headline. Pick topics that haven't been covered, or a fresh angle on one that has. Seasonal topics should suit the date they'll post (Auckland seasons; no Christmas posts after 12 December).
 - Captions: first person, friendly and plain, 2–4 short sentences, end with "Link in bio." (or similar), then 5 hashtags including #dronephotography and #auckland.
