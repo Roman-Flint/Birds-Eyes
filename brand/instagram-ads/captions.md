@@ -146,3 +146,153 @@ Real estate agents in Auckland: aerial photos and 4K video for your listings, de
 Get in touch through the link in bio.
 
 #aucklandrealestate #realestateagent #realestatephotography #dronephotography #auckland
+
+## 25-pools
+A pool always looks better from above. You see the whole backyard: the pool, the deck, the lawn and how it all fits together. Great for listings and holiday rentals.
+
+House shoots from $75. Link in bio.
+
+#aucklandhomes #pool #dronephotography #auckland #aerialphotography
+
+## 26-garden
+Spent months getting the garden just right? Get a photo of the whole thing from above while it's looking its best. It's a great way to remember all the work you put in.
+
+Link in bio for an estimate.
+
+#aucklandgardens #gardenlife #dronephotography #auckland #nzgardens
+
+## 27-after-storm
+After a big storm, the last thing you want to do is climb onto the roof. A drone check shows lifted sheets, blocked gutters and damage clearly, with photos you can send straight to your roofer or insurer.
+
+Roof checks are around $90. Link in bio.
+
+#aucklandweather #roofinspection #stormdamage #dronephotography #auckland
+
+## 28-up-high
+Most people have never seen their own home from the air. It's a completely different view of somewhere you know really well.
+
+Curious what yours looks like? Get an estimate at the link in bio.
+
+#auckland #dronephotography #aerialphotography #aucklandhomes #fromabove
+
+## 29-files
+Every shoot comes with full-resolution files plus web-ready copies sized for listings and social media, so you can use them straight away.
+
+Link in bio to get started.
+
+#realestatephotography #dronephotography #auckland #aucklandrealestate #aerialphotography
+
+## 30-print-sizes
+Want your place on the wall? Here are the print prices:
+
+A3: $20
+A2: $32
+A1: $45
+
+All in matte. Gloss adds $5 and framed adds $40. Add a print when you request your shoot at the link in bio.
+
+#aerialprint #wallart #homedecor #dronephotography #auckland
+
+## 31-weather
+Auckland weather can change fast. Drones can't fly safely in rain or strong wind, so if the forecast isn't good enough on the day, you'll get a message to pick another one.
+
+Link in bio to book.
+
+#aucklandweather #dronephotography #auckland #dronesafety #aerialphotography
+
+## 32-download
+Your photos and video come by download link. No apps to install, no logins, no USB sticks. Full-resolution photos, web-ready copies and 4K video files, all in one place.
+
+Get an estimate at the link in bio.
+
+#dronephotography #auckland #realestatephotography #aucklandhomes #aerialphotography
+
+## 33-no-upfront
+Your estimate is free and takes about two minutes. The final price is confirmed with you by email, and you don't pay anything until you're happy with it.
+
+Try it at the link in bio.
+
+#auckland #dronephotography #aucklandsmallbusiness #aucklandhomes #aerialphotography
+
+## 34-checklist
+Got a shoot coming up? A few quick things make a big difference from above:
+
+Move cars off the driveway
+Put the bins away
+Mow the lawns if you can
+Tidy outdoor furniture and toys
+Uncover the pool
+
+Save this for later. Link in bio to book.
+
+#realestatetips #sellingyourhome #dronephotography #auckland #aucklandhomes
+
+## 35-first-photo
+When people scroll through listings, the first photo is the one that makes them click. An aerial shot shows the whole property in one go.
+
+House shoots from $75. Link in bio.
+
+#aucklandrealestate #realestatemarketing #dronephotography #auckland #propertymarketing
+
+## 36-sheds
+Got sheds, barns or outbuildings? From above you can see every building on the property, how they're laid out and how to get to them. Handy for selling, insurance or just keeping a record.
+
+Link in bio for a quote.
+
+#lifestyleblock #farmlifenz #dronephotography #auckland #ruralnz
+
+## 37-plan-project
+Planning a new deck, fence or garden? An overhead photo shows your whole section from above, so you can see the layout and plan it out before you start.
+
+Link in bio for an estimate.
+
+#diynz #landscaping #homeprojects #dronephotography #auckland
+
+## 38-before-reno
+Renovating or landscaping soon? Get aerial photos before the work starts. You'll want them later for the before-and-after.
+
+Link in bio.
+
+#renovationnz #beforeandafter #aucklandhomes #dronephotography #auckland
+
+## 39-christmas-prints
+Want an aerial print as a Christmas present? Prints take 1–2 weeks, so the earlier you book your shoot, the better.
+
+Link in bio to get started.
+
+#christmasgiftideas #aucklandgifts #aerialprint #dronephotography #auckland
+
+## 40-big-roofs
+Big roofs on sheds, glasshouses and commercial buildings are hard and risky to check by hand. A drone can cover the whole roof in one flight, with close-ups wherever you need them.
+
+Get a quote at the link in bio.
+
+#roofinspection #commercialproperty #nzgrowers #dronephotography #auckland
+
+## 41-west-auckland
+A local drone photography business based in West Auckland, covering most of urban Auckland. Pop your address into the quote form to check you're covered.
+
+Link in bio.
+
+#westauckland #aucklandsmallbusiness #supportlocal #dronephotography #auckland
+
+## 42-website-photos
+Aerial photos make your business stand out on your website, socials and Google Business profile. Shops, offices, venues, growers and small sites.
+
+Small commercial shoots are $135. Link in bio.
+
+#aucklandbusiness #smallbusinessnz #commercialphotography #dronephotography #auckland
+
+## 43-sections
+Selling a bare section? From above, buyers can see the size, slope, access and what's around it, things that are hard to show from the ground.
+
+Get a quote at the link in bio.
+
+#landforsale #aucklandrealestate #section #dronephotography #auckland
+
+## 44-no-ladder
+No ladder, no climbing, no risk. See every part of your roof in photos and video, taken from above.
+
+Roof checks are around $90. Link in bio.
+
+#roofinspection #homemaintenance #safetyfirst #dronephotography #auckland
