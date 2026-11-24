@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Buffer__get_account",
+      "mcp__Buffer__list_channels",
+      "mcp__Buffer__list_posts",
+      "mcp__Buffer__get_post",
+      "mcp__Buffer__create_post",
+      "Bash(node brand/generator/render.js:*)",
+      "Bash(git status:*)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(curl -sI:*)"
+    ]
+  }
+}
