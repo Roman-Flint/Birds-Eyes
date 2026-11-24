@@ -110,7 +110,7 @@ ul, ol { margin: 0; padding: 0; }
 }
 .site-header__inner { height: 100%; display: flex; align-items: center; gap: 20px; }
 .brand { display: inline-flex; color: inherit; border-radius: 4px; }
-.brand svg { height: 56px; width: auto; fill: currentColor; }
+.brand svg { height: 44px; width: auto; fill: currentColor; }
 .nav { margin-left: auto; display: flex; align-items: center; gap: 28px; }
 .nav a:not(.btn) {
   font-weight: 500; font-size: 16px; text-decoration: none; padding: 4px 0;
@@ -142,7 +142,7 @@ ul, ol { margin: 0; padding: 0; }
   :root { --header-h: 64px; }
   .nav { display: none; }
   .header-actions { display: flex; }
-  .brand svg { height: 48px; }
+  .brand svg { height: 36px; }
 }
 
 /* ======================================================================
