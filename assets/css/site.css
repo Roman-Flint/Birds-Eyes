@@ -765,3 +765,8 @@ textarea.input { min-height: 112px; resize: vertical; }
 .policy strong { color: var(--ink); font-weight: 600; }
 .policy a { color: var(--canopy); font-weight: 600; text-underline-offset: 3px; }
 .policy__date { margin-top: 44px; font-size: 15px; }
+
+/* Bigger tap areas for small text links on touch screens (looks the same) */
+@media (pointer: coarse) {
+  .more-link, .linkbtn, .minibar a { display: inline-block; padding-block: 10px; margin-block: -10px; }
+}
