@@ -685,7 +685,7 @@
     }
     function travelWords(q) {
       if (q.travel) return (q.travel.amount ? money(q.travel.amount) : 'No charge') +
-        ' (about ' + q.travel.minutes + ' min ' + q.travel.mode + ')';
+        ' (about ' + q.travel.minutes + ' min)';
       if (lookupFailed || (formResult && formResult.status === 'no')) return 'Confirmed by email';
       return mainAddress.value.trim() ? 'Needs the address checked' : 'Add the address';
     }
