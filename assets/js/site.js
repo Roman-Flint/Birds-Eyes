@@ -22,8 +22,22 @@
     cacheDays: 7,
     aucklandBox: { s: -37.45, w: 174.15, n: -35.85, e: 175.6 },
     searchCentre: [-36.88, 174.76],
-    // Estimate settings: start point, minutes = base + perKm x distance, then price per block of minutes.
-    travel: { from: [-36.8797, 174.6316], baseMinutes: 10, perKm: 3, blockMinutes: 20, blockPrice: 10 }
+    // Travel estimate: Roman gets to every shoot by bus and train from Henderson.
+    // Times are rough public-transport estimates from straight-line distances; the charge is
+    // blockPrice for every full blockMinutes of the one-way trip.
+    travel: {
+      from: [-36.8813, 174.6313],   // Henderson train station
+      startMinutes: 10,             // getting to Henderson station and waiting for the train
+      waitMinutes: 8,               // waiting for each bus
+      trainKmh: 28,                 // average train speed, measured in a straight line
+      busKmh: 16,                   // average bus speed in a straight line, including changes
+      trainBoard: 4,                // extra minutes per train trip (stops, doors, platform)
+      walkMetresPerMin: 80,
+      walkDetour: 1.3,              // streets are longer than a straight line
+      maxWalkFromStation: 1200,     // metres: further than this, take a bus from the station
+      blockMinutes: 20,
+      blockPrice: 10
+    }
   };
 
 
@@ -385,6 +399,18 @@
     }
     return best ? { d: bestD, kind: best[2] === 1 ? 'train' : 'bus', name: best[3] || '' } : null;
   }
+  // Nearest train station, from the whole-region data (null if it hasn't loaded).
+  function nearestStation(lat, lon) {
+    if (!regionStops) return null;
+    var best = null, bestD = Infinity;
+    for (var i = 0; i < regionStops.length; i++) {
+      var s = regionStops[i];
+      if (s[2] !== 1) continue;
+      var d = metresBetween(lat, lon, s[0], s[1]);
+      if (d < bestD) { bestD = d; best = s; }
+    }
+    return best ? { lat: best[0], lon: best[1], d: bestD } : null;
+  }
   function checkPlace(place) {
     var base = { place: place };
     var auckland = place.state ? /auckland/i.test(place.state) : inAucklandBox(place.lat, place.lon);
@@ -611,12 +637,34 @@
     /* Estimate */
     function travelFor(place) {
       if (!place || place.lat == null || place.lon == null) return null;
-      // Outside Auckland or on an island: worked out by hand instead.
-      if (formResult && formResult.status === 'no' && (formResult.reason === 'region' || formResult.reason === 'island')) return null;
+      // Only worked out for addresses in the service area (near a bus stop or train station).
+      if (!formResult || formResult.status !== 'yes') return null;
       var t = CFG.travel;
-      var km = metresBetween(t.from[0], t.from[1], place.lat, place.lon) / 1000;
-      var minutes = Math.round(t.baseMinutes + t.perKm * km);
-      return { minutes: minutes, amount: Math.floor(minutes / t.blockMinutes) * t.blockPrice };
+      function walk(m) { return m * t.walkDetour / t.walkMetresPerMin; }
+      function bus(km) { return t.waitMinutes + km / t.busKmh * 60; }
+      function train(km) { return t.trainBoard + km / t.trainKmh * 60; }
+      var lastWalk = walk(formResult.nearest ? formResult.nearest.d : 300);
+      var kmDirect = metresBetween(t.from[0], t.from[1], place.lat, place.lon) / 1000;
+
+      // 1. Walking, for jobs close to home
+      var best = { minutes: walk(kmDirect * 1000), mode: 'on foot' };
+      // 2. Buses all the way
+      var byBus = t.startMinutes + bus(kmDirect) + lastWalk;
+      if (byBus < best.minutes) best = { minutes: byBus, mode: 'by bus' };
+
+      // 3. Train to the station nearest the address, then walk or catch a bus
+      var st = nearestStation(place.lat, place.lon);
+      if (st) {
+        var ride = t.startMinutes + train(metresBetween(t.from[0], t.from[1], st.lat, st.lon) / 1000);
+        if (st.d <= t.maxWalkFromStation) {
+          var byTrain = ride + walk(st.d);
+          if (byTrain < best.minutes) best = { minutes: byTrain, mode: 'by train' };
+        }
+        var trainBus = ride + bus(st.d / 1000) + lastWalk;
+        if (trainBus < best.minutes) best = { minutes: trainBus, mode: 'by train and bus' };
+      }
+      var minutes = Math.max(5, Math.round(best.minutes / 5) * 5);
+      return { minutes: minutes, mode: best.mode, amount: Math.floor(minutes / t.blockMinutes) * t.blockPrice };
     }
     function getQuoteBreakdown() {
       var service = checkedInput('service') || serviceInputs[0];
@@ -636,7 +684,8 @@
       };
     }
     function travelWords(q) {
-      if (q.travel) return q.travel.amount ? money(q.travel.amount) : 'No charge';
+      if (q.travel) return (q.travel.amount ? money(q.travel.amount) : 'No charge') +
+        ' (about ' + q.travel.minutes + ' min ' + q.travel.mode + ')';
       if (lookupFailed || (formResult && formResult.status === 'no')) return 'Confirmed by email';
       return mainAddress.value.trim() ? 'Needs the address checked' : 'Add the address';
     }
@@ -658,7 +707,7 @@
       miniEl.classList.toggle('is-text', q.custom);
       $('.estimate__total small').hidden = q.custom;
       // for the email only
-      travelField.value = q.travel ? money(q.travel.amount) + ' (about ' + q.travel.minutes + ' min one way)' :
+      travelField.value = q.travel ? money(q.travel.amount) + ' (about ' + q.travel.minutes + ' min one way ' + q.travel.mode + ' from Henderson)' :
         (formResult && formResult.status === 'no' ? 'Not worked out (outside the service area)' : 'Not worked out (address not located)');
       totalField.value = q.custom ? 'Custom quote (package priced by email)' : money(q.totalAmount) + ' NZD (estimate)';
     }
