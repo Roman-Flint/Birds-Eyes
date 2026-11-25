@@ -940,8 +940,15 @@
         first.focus();
         return;
       }
-      var honeypot = $('#company-website');
-      if (honeypot && honeypot.value.trim()) { e.preventDefault(); return; }
+      var honeypot = $('input[name="_honey"]', form);
+      if (honeypot && honeypot.value.trim()) {
+        // People never see this field, but autofill can still fill it in. Clear it and say so,
+        // rather than doing nothing. Bots post straight to FormSubmit, which checks it as well.
+        e.preventDefault();
+        honeypot.value = '';
+        formFeedback.textContent = 'That didn\u2019t go through. Please press Send again.';
+        return;
+      }
 
       updateEstimate();
       preparedRequestText = buildSummaryText();
@@ -1071,9 +1078,18 @@
       e.preventDefault();
       next();
     });
+    // While sending, say so on the phone bar too (the main button is off-screen there).
+    function setSending(on) {
+      if (!miniBtn) return;
+      if (on) { miniBtn.setAttribute('aria-disabled', 'true'); if (miniLabel) miniLabel.textContent = 'Sending\u2026'; }
+      else { miniBtn.removeAttribute('aria-disabled'); if (miniLabel) miniLabel.textContent = current === steps.length ? 'Send request' : 'Continue'; }
+    }
+    window.addEventListener('pageshow', function (e) { if (e.persisted) setSending(false); });
     // If sending was stopped by a field on an earlier step, go back to it.
     form.addEventListener('submit', function (e) {
-      if (!e.defaultPrevented) return;
+      if (!e.defaultPrevented) { setSending(true); return; }
+      var msg = $('[data-form-feedback]', form);
+      if (msg && msg.textContent && window.innerWidth <= 960) msg.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
       var bad = $('.is-invalid', form);
       var step = bad ? bad.closest('[data-wstep]') : null;
       if (step && Number(step.dataset.wstep) !== current) {
@@ -1083,8 +1099,15 @@
         bad.focus();
       }
     });
+    // After sending, show only the "sent" message until they choose to start another request.
+    var sent = $('#quote-success'), grid = $('.quote__grid');
+    if (sent && !sent.hidden && grid) grid.hidden = true;
     var again = $('[data-dismiss-success]');
-    if (again) again.addEventListener('click', function () { show(1, false); });
+    if (again) again.addEventListener('click', function () {
+      if (grid) grid.hidden = false;
+      show(1, false);
+      form.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    });
 
     // Arriving from the home page with an address (quote?service=...&address=...&step=2)
     var params = new URLSearchParams(window.location.search);
