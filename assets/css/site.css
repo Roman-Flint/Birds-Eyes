@@ -117,8 +117,6 @@ ul, ol { margin: 0; padding: 0; }
 .btn svg { width: 18px; height: 18px; flex: none; }
 .btn--go { background: var(--kowhai); color: var(--bush); border-color: #DDAA12; }
 .btn--go:hover { background: var(--kowhai-hover); }
-.btn--dark { background: var(--bush); color: #fff; }
-.btn--dark:hover { background: var(--bush-3); }
 .btn--ghost { border-color: rgba(255, 255, 255, 0.7); color: #fff; background: rgba(10, 30, 18, 0.18); }
 .btn--ghost:hover { border-color: #fff; background: rgba(10, 30, 18, 0.35); }
 .btn--line { border-color: var(--line-2); background: var(--surface); color: var(--ink); }
@@ -340,25 +338,13 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 /* ======================================================================
-   Prices
+   Extras (services page)
    ====================================================================== */
-.price-list { list-style: none; margin-top: 40px; border-top: 1px solid var(--line); }
-.price {
-  display: grid; grid-template-columns: minmax(0, 1fr) 140px 150px; align-items: center; gap: 10px 32px;
-  padding: 26px 0; border-bottom: 1px solid var(--line);
-}
-.price__name { font: 600 clamp(25px, 2.4vw, 31px)/1.1 var(--font-cond); }
-.price__desc { margin-top: 6px; color: var(--ink-2); max-width: 64ch; }
-.price__amount { font: 600 clamp(38px, 3.8vw, 50px)/1 var(--font-cond); text-align: right; font-variant-numeric: lining-nums; }
-.price .btn { justify-self: end; }
 .extras { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 48px; margin-top: 34px; }
 .extra h3 { font: 600 24px/1.15 var(--font-cond); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
 .extra h3 span { font-size: 22px; color: var(--canopy); }
 .extra p { margin-top: 6px; color: var(--ink-2); }
 @media (max-width: 720px) {
-  .price { grid-template-columns: minmax(0, 1fr) auto; gap: 14px 16px; }
-  .price__main { grid-column: 1 / -1; }
-  .price__amount { text-align: left; }
   .extras { grid-template-columns: 1fr; }
 }
 
@@ -379,7 +365,6 @@ ul, ol { margin: 0; padding: 0; }
 .combo__opt strong { font-weight: 600; }
 .combo__opt span { font-size: 14px; color: var(--ink-3); }
 .combo__opt[aria-selected="true"], .combo__opt:hover { background: var(--hover-bg); }
-.combo__foot { padding: 6px 10px 2px; font-size: 12px; color: var(--ink-3); }
 
 /* ======================================================================
    Fields
@@ -432,7 +417,6 @@ textarea.input { min-height: 112px; resize: vertical; }
   display: grid; place-items: center; background: var(--surface); border: 2px solid var(--strong);
   font: 700 17px/1 var(--font); color: var(--strong);
 }
-.qstep__hint { margin: -10px 0 16px; color: var(--ink-3); font-size: 15px; }
 
 .choices { display: grid; gap: 10px; }
 .choices--services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -484,7 +468,7 @@ textarea.input { min-height: 112px; resize: vertical; }
 .addr-check { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 2px; font-size: 15px; color: var(--ink-2); }
 .addr-check svg { width: 18px; height: 18px; flex: none; }
 .addr-check--yes { color: var(--good); }
-.addr-check--close, .addr-check--error { color: var(--warn); }
+.addr-check--error { color: var(--warn); }
 .addr-check--no { color: var(--bad); }
 .addr-check .linkbtn { font-size: 15px; }
 
@@ -509,7 +493,6 @@ textarea.input { min-height: 112px; resize: vertical; }
 .estimate__check { padding: 11px 13px; border-radius: 9px; background: rgba(255, 255, 255, .08); font-size: 14px; color: rgba(255, 255, 255, .9); }
 .estimate__actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .estimate__feedback { min-height: 20px; font-size: 14px; color: var(--pasture); }
-.estimate__fine { font-size: 13px; color: rgba(255, 255, 255, .62); }
 
 .minibar { display: none; }
 @media (max-width: 1020px) {

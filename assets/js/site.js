@@ -22,8 +22,7 @@
     cacheDays: 7,
     aucklandBox: { s: -37.45, w: 174.15, n: -35.85, e: 175.6 },
     searchCentre: [-36.88, 174.76],
-    // Travel estimate: Roman gets to every shoot by bus and train from Henderson.
-    // Times are rough public-transport estimates from straight-line distances; the charge is
+    // Travel estimate from Henderson. Times are rough estimates from straight-line distances; the charge is
     // blockPrice for every full blockMinutes of the one-way trip.
     travel: {
       from: [-36.8813, 174.6313],   // Henderson train station
@@ -39,7 +38,6 @@
       blockPrice: 10
     }
   };
-
 
   var $ = function (s, el) { return (el || document).querySelector(s); };
   var $$ = function (s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); };
@@ -82,7 +80,6 @@
     sync();
   })();
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var coarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
   function esc(str) {
     return String(str == null ? '' : str).replace(/[&<>"']/g, function (c) {
