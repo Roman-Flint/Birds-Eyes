@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
   <script>try{var t=localStorage.getItem('birdseye:theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-  <link rel="stylesheet" href="assets/css/site.css?v=16">
+  <link rel="stylesheet" href="assets/css/site.css?v=15">
   <script>
     /* Old single-page links (index.html#quote and so on) now live on their own pages. */
     (function () {
@@ -36,7 +36,7 @@
       if (to) location.replace(to);
     })();
   </script>
-  <link rel="preload" as="image" href="assets/video/hero-poster.jpg?v=2">
+  <link rel="preload" as="image" href="assets/video/hero-poster.jpg">
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://birdseyes.co.nz/#website", "url": "https://birdseyes.co.nz/", "name": "Birds-Eyes Drone Services", "alternateName": "Birds-Eyes", "inLanguage": "en-NZ"}, {"@type": "ProfessionalService", "@id": "https://birdseyes.co.nz/#business", "name": "Birds-Eyes Drone Services", "url": "https://birdseyes.co.nz/", "logo": "https://birdseyes.co.nz/assets/apple-touch-icon.png", "image": "https://birdseyes.co.nz/assets/social-preview.jpg", "description": "Drone photography and 4K aerial video for Auckland homes, real estate listings, lifestyle blocks, roof checks and small businesses.", "email": "Roman@BirdsEyes.co.nz", "telephone": "+64 21 652 202", "sameAs": ["https://www.instagram.com/birds.eyesnz/"], "priceRange": "$75–$135", "currenciesAccepted": "NZD", "address": {"@type": "PostalAddress", "addressLocality": "Auckland", "addressRegion": "Auckland", "addressCountry": "NZ"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Auckland"}, {"@type": "AdministrativeArea", "name": "West Auckland"}, {"@type": "AdministrativeArea", "name": "Central Auckland"}, {"@type": "AdministrativeArea", "name": "North Shore"}, {"@type": "AdministrativeArea", "name": "East Auckland"}, {"@type": "AdministrativeArea", "name": "South Auckland"}], "knowsAbout": ["Drone photography", "Aerial photography", "Real estate photography", "Aerial video", "Drone roof inspection"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Drone photography packages", "itemListElement": [{"@type": "Offer", "price": "75", "priceCurrency": "NZD", "url": "https://birdseyes.co.nz/services", "itemOffered": {"@type": "Service", "name": "Standard house shoot", "description": "5–10 aerial photos of the house and section."}}, {"@type": "Offer", "price": "105", "priceCurrency": "NZD", "url": "https://birdseyes.co.nz/services", "itemOffered": {"@type": "Service", "name": "House shoot with video", "description": "10–20 aerial photos plus 30–90 seconds of 4K drone video."}}, {"@type": "Offer", "price": "90", "priceCurrency": "NZD", "url": "https://birdseyes.co.nz/services", "itemOffered": {"@type": "Service", "name": "Roof and property overview", "description": "Drone photos and video of the whole roof, with close-up passes over gutters, valleys and flashings."}}, {"@type": "Offer", "price": "135", "priceCurrency": "NZD", "url": "https://birdseyes.co.nz/services", "itemOffered": {"@type": "Service", "name": "Small commercial property", "description": "20–40 aerial photos plus 2–5 minutes of 4K drone video."}}]}}]}
   </script>
@@ -99,10 +99,11 @@
   <main id="main">
     <section class="hero on-dark" id="top" aria-labelledby="hero-title">
       <div class="hero__media" aria-hidden="true">
-        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg?v=2" data-hero-video>
-          <source src="assets/video/hero-720.mp4?v=2" type="video/mp4" media="(max-width: 900px)">
-          <source src="assets/video/hero-1080.mp4?v=2" type="video/mp4">
+        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" data-hero-video>
+          <source src="assets/video/hero-720.mp4" type="video/mp4" media="(max-width: 900px)">
+          <source src="assets/video/hero-1080.mp4" type="video/mp4">
         </video>
+        <div class="hero__tint"></div>
         <div class="hero__shade"></div>
       </div>
       <div class="wrap hero__content">
