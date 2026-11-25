@@ -189,10 +189,8 @@ ul, ol { margin: 0; padding: 0; }
   display: grid; grid-template-rows: 1fr auto;
   color: #fff; background: #183a24;
 }
-.hero__media { position: absolute; inset: 0; z-index: -1; background: #1b3d27 url("../video/hero-poster.jpg") center / cover no-repeat; }
+.hero__media { position: absolute; inset: 0; z-index: -1; background: #1b3d27 url("../video/hero-poster.jpg?v=2") center / cover no-repeat; }
 .hero__video { width: 100%; height: 100%; object-fit: cover; }
-/* the green tint: recolours the footage while keeping its light and shade */
-.hero__tint { position: absolute; inset: 0; background: #2C8A4B; mix-blend-mode: color; opacity: .66; }
 .hero__shade {
   position: absolute; inset: 0;
   background:
