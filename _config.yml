@@ -1,0 +1,5 @@
+# GitHub Pages settings.
+# brand/ holds Instagram images, captions, the post generator and its rules. They stay in the
+# repository (Buffer loads the images from GitHub) but are not published on birdseyes.co.nz.
+exclude:
+  - brand

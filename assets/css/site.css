@@ -260,7 +260,7 @@ ul, ol { margin: 0; padding: 0; }
 .filter:hover { border-color: var(--ink-3); }
 .filter span { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .filter[aria-pressed="true"] { background: var(--strong); border-color: var(--strong); color: var(--on-strong); }
-.filter[aria-pressed="true"] span { color: rgba(255, 255, 255, .75); }
+.filter[aria-pressed="true"] span { color: inherit; opacity: .72; }
 
 .gallery {
   list-style: none; margin-top: 36px;
