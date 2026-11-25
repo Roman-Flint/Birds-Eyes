@@ -1000,4 +1000,131 @@
     syncHints();
     setFormCheck(null);
   }
+
+  /* ==================================================================
+     Quote form: one step at a time (quote.html)
+     ================================================================== */
+  if (quoteForm) initWizard(quoteForm);
+
+  function initWizard(form) {
+    var steps = $$('[data-wstep]', form);
+    if (!steps.length) return;
+    var marks = $$('[data-progress-step]', form);
+    var miniBtn = $('[data-wnext-mini]', form);
+    var miniLabel = $('[data-wnext-label]', form);
+    var submitBtn = $('[data-submit]', form);
+    var current = 1;
+    form.classList.add('is-wizard');
+    $('[data-progress]', form).hidden = false;
+    if (miniBtn) miniBtn.hidden = false;
+
+    function labelFor(input) {
+      var l = input.id ? form.querySelector('label[for="' + input.id + '"]') : null;
+      var t = l ? l.textContent : (input.getAttribute('aria-label') || 'this');
+      return t.replace(/optional/i, '').trim().toLowerCase();
+    }
+    // Same rules as the final check when the form is sent, applied to one step.
+    function checkStep(step) {
+      var fb = $('[data-wfeedback]', step);
+      $$('.is-invalid', step).forEach(function (i) { i.classList.remove('is-invalid'); });
+      var bad = $$('input, textarea, select', step).filter(function (i) { return !i.disabled && i.willValidate && !i.checkValidity(); });
+      if (!bad.length) { if (fb) fb.textContent = ''; return true; }
+      bad.forEach(function (i) { i.classList.add('is-invalid'); });
+      var first = bad[0];
+      if (fb) fb.textContent = first.dataset.missing || (first.type === 'email' && first.value ? 'Check the email address.' : 'Please fill in ' + labelFor(first) + '.');
+      first.focus();
+      return false;
+    }
+    function show(n, move) {
+      current = Math.max(1, Math.min(steps.length, n));
+      steps.forEach(function (s) { s.classList.toggle('is-active', Number(s.dataset.wstep) === current); });
+      marks.forEach(function (m) {
+        var k = Number(m.dataset.progressStep);
+        m.classList.toggle('is-done', k < current);
+        m.classList.toggle('is-now', k === current);
+        if (k === current) m.setAttribute('aria-current', 'step'); else m.removeAttribute('aria-current');
+      });
+      if (miniLabel) miniLabel.textContent = current === steps.length ? 'Send request' : 'Continue';
+      if (move) {
+        var top = form.getBoundingClientRect().top + window.scrollY - (header ? header.offsetHeight : 0) - 16;
+        if (window.scrollY > top) window.scrollTo({ top: top, behavior: reduceMotion ? 'auto' : 'smooth' });
+        var step = steps[current - 1];
+        step.setAttribute('tabindex', '-1');
+        step.focus({ preventScroll: true });
+      }
+    }
+    function next() { if (checkStep(steps[current - 1])) show(current + 1, true); }
+
+    form.addEventListener('click', function (e) {
+      if (e.target.closest('[data-wnext]')) { e.preventDefault(); next(); }
+      else if (e.target.closest('[data-wback]')) { e.preventDefault(); show(current - 1, true); }
+    });
+    if (miniBtn) miniBtn.addEventListener('click', function () {
+      if (current < steps.length) { next(); return; }
+      if (typeof form.requestSubmit === 'function') form.requestSubmit(submitBtn); else submitBtn.click();
+    });
+    // Enter moves to the next step instead of sending a half-filled form.
+    form.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' || e.defaultPrevented || current === steps.length) return;
+      var t = e.target;
+      if (t.tagName === 'TEXTAREA' || t.tagName === 'BUTTON' || t.tagName === 'A') return;
+      e.preventDefault();
+      next();
+    });
+    // If sending was stopped by a field on an earlier step, go back to it.
+    form.addEventListener('submit', function (e) {
+      if (!e.defaultPrevented) return;
+      var bad = $('.is-invalid', form);
+      var step = bad ? bad.closest('[data-wstep]') : null;
+      if (step && Number(step.dataset.wstep) !== current) {
+        show(Number(step.dataset.wstep), true);
+        var fb = $('[data-wfeedback]', step), main = $('[data-form-feedback]', form);
+        if (fb && main) fb.textContent = main.textContent;
+        bad.focus();
+      }
+    });
+    var again = $('[data-dismiss-success]');
+    if (again) again.addEventListener('click', function () { show(1, false); });
+
+    // Arriving from the home page with an address (quote?service=...&address=...&step=2)
+    var params = new URLSearchParams(window.location.search);
+    var addr = (params.get('address') || '').trim().slice(0, 200);
+    var start = parseInt(params.get('step'), 10);
+    show(start >= 1 && start <= steps.length ? start : 1, false);
+    if (params.has('address') || params.has('step')) {
+      params.delete('address');
+      params.delete('step');
+      window.history.replaceState(window.history.state, '', window.location.pathname + (params.toString() ? '?' + params.toString() : ''));
+    }
+    var addrInput = $('#main-address');
+    if (addr && addrInput) {
+      addrInput.value = addr;
+      setTimeout(function () {
+        addrInput.focus({ preventScroll: true });
+        addrInput.dispatchEvent(new Event('input', { bubbles: true }));
+      }, 60);
+    }
+  }
+
+  /* ==================================================================
+     FAQ search (faq.html)
+     ================================================================== */
+  var faqSearch = $('[data-faq-search]');
+  if (faqSearch) {
+    var faqItems = $$('details.qa');
+    var faqGroups = $$('[data-faq-group]');
+    var faqEmpty = $('[data-faq-empty]');
+    var faqText = faqItems.map(function (d) { return d.textContent.toLowerCase(); });
+    faqSearch.addEventListener('input', function () {
+      var words = faqSearch.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      var any = false;
+      faqItems.forEach(function (d, i) {
+        var hit = words.every(function (w) { return faqText[i].indexOf(w) !== -1; });
+        d.hidden = !hit;
+        if (hit) any = true;
+      });
+      faqGroups.forEach(function (g) { g.hidden = !$$('details.qa', g).some(function (d) { return !d.hidden; }); });
+      if (faqEmpty) faqEmpty.hidden = any;
+    });
+  }
 })();
