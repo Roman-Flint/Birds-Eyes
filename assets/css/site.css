@@ -209,7 +209,7 @@ ul, ol { margin: 0; padding: 0; }
   position: absolute; inset: 0;
   background:
     linear-gradient(180deg, rgba(7, 24, 13, .66) 0, rgba(7, 24, 13, 0) 24%),
-    linear-gradient(0deg, rgba(7, 24, 13, .1) 0, rgba(7, 24, 13, .72) calc(var(--hero-fade) + 60px), rgba(7, 24, 13, .42) 45%, rgba(7, 24, 13, 0) 74%),
+    linear-gradient(0deg, rgba(7, 24, 13, .3) var(--hero-fade), rgba(7, 24, 13, .18) 45%, rgba(7, 24, 13, 0) 70%),
     linear-gradient(90deg, rgba(7, 24, 13, .55) 0, rgba(7, 24, 13, 0) 62%);
 }
 .hero__content { align-self: end; padding-top: calc(var(--header-h) + 56px); padding-bottom: 30px; }
