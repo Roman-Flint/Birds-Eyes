@@ -189,6 +189,18 @@ ul, ol { margin: 0; padding: 0; }
   display: grid; grid-template-rows: 1fr auto;
   color: #fff; background: #183a24;
 }
+/* the video fades into the page background below it */
+.hero { --hero-fade: clamp(140px, 22vh, 220px); }
+.hero::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; z-index: -1; height: var(--hero-fade);
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--paper) 0%, transparent) 0,
+    color-mix(in srgb, var(--paper) 22%, transparent) 30%,
+    color-mix(in srgb, var(--paper) 62%, transparent) 60%,
+    color-mix(in srgb, var(--paper) 90%, transparent) 84%,
+    var(--paper) 100%);
+  pointer-events: none;
+}
 .hero__media { position: absolute; inset: 0; z-index: -1; background: #1b3d27 url("../video/hero-poster.jpg") center / cover no-repeat; }
 .hero__video { width: 100%; height: 100%; object-fit: cover; }
 /* the green tint: recolours the footage while keeping its light and shade */
@@ -197,7 +209,7 @@ ul, ol { margin: 0; padding: 0; }
   position: absolute; inset: 0;
   background:
     linear-gradient(180deg, rgba(7, 24, 13, .66) 0, rgba(7, 24, 13, 0) 24%),
-    linear-gradient(0deg, var(--bush) 0, rgba(23, 50, 31, .92) 14%, rgba(23, 50, 31, .45) 42%, rgba(23, 50, 31, 0) 74%),
+    linear-gradient(0deg, rgba(7, 24, 13, .1) 0, rgba(7, 24, 13, .72) calc(var(--hero-fade) + 60px), rgba(7, 24, 13, .42) 45%, rgba(7, 24, 13, 0) 74%),
     linear-gradient(90deg, rgba(7, 24, 13, .55) 0, rgba(7, 24, 13, 0) 62%);
 }
 .hero__content { align-self: end; padding-top: calc(var(--header-h) + 56px); padding-bottom: 30px; }
@@ -206,7 +218,7 @@ ul, ol { margin: 0; padding: 0; }
 .hero__actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
 .hero__foot {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  padding-bottom: 24px; font-size: 14px; color: rgba(255, 255, 255, .72);
+  padding-bottom: var(--hero-fade); font-size: 14px; color: rgba(255, 255, 255, .72);
 }
 .hero__toggle {
   display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 6px 14px 6px 10px;
