@@ -684,3 +684,37 @@ input[type="date"].input { padding-right: 12px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- Phone: shorter home page ---------- */
+.swipe-hint, .travel-card { display: none; }
+@media (max-width: 960px) {
+  .sec { padding-block: 52px; }
+  .sec--flush { padding-top: 0; }
+  .sec--top { padding-top: 8px; }
+  .sec-head { margin-bottom: 24px; gap: 14px; }
+  .hero__media .vf { aspect-ratio: 16 / 11; }
+  .hero__copy .lede { font-size: 16.5px; }
+  .aud { min-height: 210px; }
+  .swipe-hint { display: block; margin-bottom: 4px; color: var(--ink-3); }
+  .plans--swipe { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+    margin-inline: calc(-1 * var(--gutter)); padding: 18px var(--gutter) 10px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .plans--swipe::-webkit-scrollbar { display: none; }
+  .plans--swipe .plan { flex: 0 0 84%; scroll-snap-align: start; }
+  .steps { gap: 18px; }
+  .step h3 { font-size: 18px; }
+  .step p { font-size: 15px; }
+  .work { grid-template-rows: 200px 130px 130px; }
+  .regions { grid-template-columns: 1fr 1fr; gap: 16px 18px; margin-top: 26px; }
+  .region h3 { font-size: 15px; }
+  .region p { font-size: 13.5px; }
+  .rings { display: none; }
+  .travel-card { display: block; }
+  .rules { gap: 12px; }
+  .rule { padding: 20px; }
+  .rule h3 { margin-top: 10px; font-size: 19px; }
+  .rule p:last-child { font-size: 15px; }
+  .qa summary { padding: 18px 0; font-size: 17px; }
+  .cta { padding: 32px 24px; }
+  .ftr { padding-top: 48px; }
+  .ftr__grid { gap: 28px; padding-bottom: 36px; }
+}
