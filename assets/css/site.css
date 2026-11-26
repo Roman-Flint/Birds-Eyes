@@ -746,3 +746,4 @@ input[type="date"].input { padding-right: 12px; }
 .travel-card { display: block; }
 .cover__aside .travel-card { max-width: 480px; margin-left: auto; }
 @media (max-width: 960px) { .cover__aside .travel-card { max-width: none; } }
+.hero__copy .display { font-size: clamp(44px, 4.9vw, 74px); }
